@@ -1,0 +1,99 @@
+@import 'constants.scss';
+
+#direttivo {
+  overflow: hidden;
+  width: 100%;
+
+  h1{
+    margin: 0;
+  }
+}
+
+$content-height: 630px;
+
+.scalable-wrapper {
+  position: relative;
+  width: 75%; // arbitraria
+  height: $content-height;
+  resize: both;
+  margin: 1.5rem auto;
+}
+
+@media (max-width: ($break-sm - 1)) {
+  .scalable-wrapper {
+    width: 100%;
+  }
+}
+
+.scalable-content {
+  position: absolute;
+  width: 1200px;
+  height: $content-height;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  /* *** * *** */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#ventaglio {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+  width: 100%;
+  height: 100%;
+}
+
+.ventaglio-item {
+  position: absolute;
+  width: 250px;
+  height: 480px;
+  padding-left: 1.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.ventaglio-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3rem 1.5rem;
+  background: white;
+  color: $blue;
+  border: 3px solid $blue;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.ventaglio-content h1 {
+  font-size: 29px;
+}
+
+.ventaglio-content button {
+  margin-bottom: 1.5rem;
+}
+
+.ventaglio-item:nth-child(1) {
+  transform-origin: 0 100%;
+  transform: translate(100%, 5%) rotate(30deg);
+}
+
+.ventaglio-item:nth-child(2) {
+  transform-origin: 0 100%;
+  transform: translate(50%, 0%) rotate(15deg);
+}
+
+.ventaglio-item:nth-child(5) {
+  transform-origin: 100% 100%;
+  transform: translate(-100%, 5%) rotate(-30deg);
+}
+
+.ventaglio-item:nth-child(4) {
+  transform-origin: 100% 100%;
+  transform: translate(-50%, 0%) rotate(-15deg);
+}

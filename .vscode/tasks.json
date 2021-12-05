@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Sass Compile",
+      "type": "shell",
+      "command": "sass --watch ./sass/index.scss ./public/css/index.min.css --style compressed",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Run Nodemon",
+      "type": "npm",
+      "script": "test",
+      "problemMatcher": [],
+      "group": "build"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+@import 'constants.scss';
+
+#main-top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $nav-z;
+  height: $nav-height;
+  width: 100%;
+  padding: 0.5px 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  transition: transform 0.2s;
+}
+
+#main-top-nav.nav-closed {
+  transform: translateY(-100%);
+}
+
+#main-top-nav div {
+  flex-grow: 1;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#main-top-nav div button {
+  margin-left: auto;
+}
+
+#main-top-nav .nav-logo {
+  height: 90%;
+  padding-right: 1.2rem;
+  text-decoration: none;
+  color: $blue;
+}
+
+#main-top-nav a {
+  padding: 0 1.2rem;
+  text-decoration: none;
+  color: $blue;
+}
+
+#main-top-nav .btn {
+  margin-left: auto;
+}
+
+#mobile-hamburger {
+  height: 90%;
+  margin-left: auto;
+}
+
+#offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 2rem;
+  padding-bottom: 5rem;
+  margin: 0;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateX(-100%);
+  transition: transform 0s;
+
+  z-index: 1;
+}
+
+#offcanvas.open {
+  transform: translateX(0%);
+  transition: transform ease-in-out 0.5s;
+}
+
+.offcanvasToggler {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+#offcanvas nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#offcanvas nav a {
+  margin-bottom: 3rem;
+  color: $dark-blue;
+}
+
+#offcanvas img {
+  width: 10rem;
+  margin: 0 auto 4rem auto;
+}
