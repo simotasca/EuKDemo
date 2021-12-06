@@ -15,18 +15,19 @@
   <!-- NAVBAR -->
   <header>
 
-    <nav id="main-top-nav" class="mid-text fw-bold">
-      <div class="hide-on-mobile">
+    <nav id="main-top-nav" class="hide-on-mobile mid-text fw-bold">
+      <div>
         <img class="nav-logo" src="./resources/img/euro-koshe.webp" alt="logo" />
         <a href="#">Home</a>
         <a href="#chi-siamo">Chi Siamo</a>
         <a href="#come-certificarsi">Come Certificarsi</a>
-        <a href="#contatti">Contatti</a>
+        <a href="#contatti-target">Contatti</a>
         <button type="button" class="my-btn btn-orange my-btn-sm">Area Riservata</button>
       </div>
-      <img id="mobile-hamburger" src="resources/img/hamburger.svg" alt="menu icon"
-        class="offcanvasToggler hide-on-desktop">
     </nav>
+
+    <img id="mobile-hamburger" class="offcanvasToggler hide-on-desktop" src="resources/img/hamburger.svg"
+      alt="menu icon">
 
   </header>
 
@@ -37,6 +38,7 @@
       <a class="mid-title" href="#" onclick="toggleOffcanvas()"><b>Home</b></a>
       <a class="mid-title" href="#chi-siamo" onclick="toggleOffcanvas()"><b>Chi Siamo</b></a>
       <a class="mid-title" href="#come-certificarsi" onclick="toggleOffcanvas()"><b>Come Certificarsi</b></a>
+      <a class="mid-title" href="#contatti-target" onclick="toggleOffcanvas()"><b>Contatti</b></a>
       <a class="mid-title" href="#" onclick="toggleOffcanvas()">
         <button type="button" class="my-btn btn-orange mid-title">
           <b>Area Riservata</b>
@@ -61,8 +63,8 @@
         Ottieni la tua certificazione kosher dal certificatore n°1 in Italia.
       </p>
       <div class="main-buttons">
-        <button type="button" class="my-btn btn-blue mid-text">Richiedi una Consulenza</button>
-        <button type="button" class="my-btn btn-outline-brown mid-text">Come certificarsi</button>
+        <a class="my-btn btn-blue mid-text" href="#contatti-target">Richiedi una Consulenza</a>
+        <a class="my-btn btn-outline-brown mid-text" href="#come-certificarsi">Come certificarsi</a>
       </div>
     </div>
 
@@ -77,19 +79,20 @@
 
   <!--HOME MOBILE-->
   <main id="main-screen-mobile" class="hide-on-desktop">
-
     <img id="main-background-mobile" src="resources/img/torah.webp" alt="torah-tree" />
+    <img id="main-logo-mobile" src="resources/img/euro-koshe.webp" alt="torah-tree" />
+
     <div id="mobile-main-banner" class="backdrop-blur bg-white-50">
       <h1 class="big-title text-blue fw-bold">
         Euro<span class="text-brown">Kosher</span>
       </h1>
       <p class="big-text">Tutta la qualità del Kosher, in Italia e in Europa</p>
-      <button type="button" class="my-btn btn-blue mid-text fw-normal">
+      <a href="#contatti-target" class="my-btn btn-blue mid-text fw-normal">
         Richiedi una Consulenza
-      </button>
-      <button type="button" class="my-btn btn-outline-brown mid-text fw-normal">
+      </a>
+      <a href="#come-certificarsi" class="my-btn btn-outline-brown mid-text fw-normal">
         Come Certificarsi
-      </button>
+      </a>
     </div>
 
   </main>
@@ -131,7 +134,7 @@
           mercato e settori industriali riconoscono i prodotti kosher come più salutari e qualitativamente migliori.
         </p>
         <p>
-          Euro kosher fornisce assistenza alle industrie alimentari e a diversi marchi in tutta Europa, per
+          EuroKosher fornisce assistenza alle industrie alimentari e a diversi marchi in tutta Europa, per
           l'applicazione dei meticolosi standard Prescritti dalle regole alimentari ebraiche.
         </p>
         <p>
@@ -346,7 +349,7 @@
   <article id="modal-kaplan" class="rav-modal fw-bold">
     <div class="rav-modal__toggler big-text pointer">X</div>
     <div class="rav-modal__header">
-      <p>1976 | <span class="text-orange">Seattle, Washington</span></p>
+      <p>1976 | <span class="text-orange">Seattle</span></p>
       <h1 class="mid-title text-blue">Rav Menachem Mendel Kaplan</h1>
     </div>
 
@@ -374,51 +377,23 @@
   <article id="modal-schulz" class="rav-modal fw-bold">
     <div class="rav-modal__toggler big-text pointer">X</div>
     <div class="rav-modal__header">
-      <p>1953 | <span class="text-orange">Alessandria</span></p>
+      <p><span class="text-orange">Stati Uniti</span></p>
       <h1 class="mid-title text-blue">Betzalel Schutz</h1>
     </div>
 
     <div class="rav-modal__content">
       <div>
-        <h2 class="big-text text-orange">Le origini</h2>
+        <h2 class="big-text text-orange">Gli inizi dell’attività</h2>
         <p class="mid-text">
-          nasce nel 1953 ad Alessandria, in Egitto, e si trasferisce in Italia fin da bambino. Nel 1972, dopo il
-          diploma liceale, studia al Rabbinical College di Morristown, New Jersey, e in seguito presso la Yeshiva
-          Torat Emet a Gerusalemme, fino al 1979. Tornato a Brooklyn, viene ordinato rabbino alla Central Lubavitch
-          Yeshiva.
+          Per piu' di vent'anni Schutz ha fatto parte dell'ufficio di supervisione kosher del Rabbino Moshe Yehuda Leib
+          Landa, rabbino capo del comune di Bnei Brak, in Israele, dove è stato per oltre quindici anni direttore del
+          settore “Kashrut per gli ingredienti e l'industria alimentare”.
         </p>
-        <h2 class="big-text text-orange">Euro Kosher</h2>
-        <p class="mid-text">L'attività di supervisione kosher del rabbino Hazan ha inizio in risposta alle richieste
-          da parte di aziende statunitensi e di agenzie per la kashrut del Gran Rabbinato di Israele per
-          l'importazione di prodotti alimentari e ingredienti italiani in Israele. Il progetto diviene istituzione
-          agli inizi degli anni novanta, trasformandosi nell'odierna organizzazione EU-K Badatz Mehadrin Milan e
-          cresce di concerto allo sviluppo della costante attività del rabbino Hazan come guida della comunità locale.
-        </p>
-        <h2 class="big-text text-orange">Le opere</h2>
+        <h2 class="big-text text-orange">EuroKosher</h2>
         <p class="mid-text">
-          Dopo il suo ritorno in Italia nel 1980, il rabbino Hazan assume la direzione dell'Organizzazione Giovanile
-          Lubavitch, con l'incarico per i campi estivi e invernali e le attività sociali e educative per giovani.
-        </p>
-        <p class="mid-text">
-          Nel 1980 apre a Milano il centro Enzo Modena, con sinagoga e Talmud Torah, che dirige fino al 2006.
-        </p>
-        <p class="mid-text">
-          Nel 1994 apre il centro Beit Menachem a Milano e nel 1995 fonda la Casa Chabad nel ghetto di Venezia, che
-          oggi comprende una yeshiva e un famoso ristorante, e promuove iniziative rivolte agli ebrei veneziani e alle
-          comunità circostanti (Padova, Verona e Mantova), così come alle migliaia di turisti ebrei che visitano la
-          città lagunare.
-        </p>
-        <p class="mid-text">
-          Nel 1996 il rabbino Hazan diventa direttore della Scuola del Merkos, a Milano, che riunisce i cicli dalla
-          materna alle medie. Nel 2008 viene nominato rabbino della sinagoga milanese Ohel Yaakov.
-        </p>
-        <p class="mid-text">
-          Nel 2012 apre la Casa Chabad di Firenze e diventa direttore delle attività dell'associazione Merkos
-          L'Inyonei Chinuch in Italia.
-        </p>
-        <p class="mid-text">
-          Insieme con Rivka Garelik, alla quale è unito in matrimonio dal 1978, è orgoglioso
-          genitore di undici figli.
+          Nel 2015 entra a far parte dell'organico di Eurokosher, che da allora si giova della sua grande (trentennale)
+          esperienza pratica e competenza tecnica in una vasta gamma di campi attinenti alla certificazione kosher di
+          cibo e ingredienti.
         </p>
       </div>
     </div>
@@ -446,7 +421,7 @@
         <img class="fase-img" src="resources/img/icons/incontro.jpg" alt="incontro">
         <div class="fase-body">
           <h1 class="fase-number font-regular">1</h1>
-          <h1 class="mid-title text-orange">Incontro prelimitare gratuito</h1>
+          <h1 class="mid-title text-orange">Incontro preliminare gratuito</h1>
           <p class="mid-text long-text fw-bold">
             In questo primo incontro si valutano le idoneità dell'azienda alla certificazione.
           </p>
@@ -475,7 +450,7 @@
           <p class="mid-text long-text fw-bold">
             L'esame attento durante la fase produttiva verifica la messa in atto delle linee guida
             tracciate durante lo step precedente.
-            La suprvisione può essere più o meno frequente, in base alla complessità dei processi
+            La supervisione può essere più o meno frequente, in base alla complessità dei processi
             produttivi.
           </p>
         </div>
@@ -515,7 +490,7 @@
   <div class="divider"></div>
 
   <section id="partners">
-    
+
     <h1 class="big-title text-blue">
       Le Aziende Certificate
     </h1>
@@ -573,13 +548,13 @@
     </div>
 
   </section>
-  
+
   <div class="divider"></div>
   <div class="divider"></div>
-  
+
   <!-- CONTATTI -->
   <footer id="contatti" class="w-100 bg-dark text-white">
-    
+
     <div class="footer-cols w-100">
       <div class="footer-col">
         <h1>EuroKosher</h1>
@@ -595,7 +570,7 @@
         </nav>
       </div>
       <div class="footer-col col-contatti">
-        <h1>Contatti</h1>
+        <h1 id="contatti-target">Contatti</h1>
         <nav>
           <span>Via Benvenuto Cellini 2/A - 20129 Milano</span>
           <span>Tel: +39 02.294.14.170</span>
