@@ -1,8 +1,9 @@
 $blue: rgb(56, 134, 151);
+// $blue: rgb(56, 134, 151);
 $dark-blue: #296572;
-$brown: rgb(197, 83, 46);
 $orange-brown: rgb(171, 105, 63);
 $green: rgb(109, 134, 98);
+$brown: rgb(197, 83, 46);
 $orange: rgb(197, 83, 46);
 $dark: #212529;
 $light: #f8f9fa;
@@ -28,7 +29,7 @@ $break-xl: 1400px;
 
 @font-face {
   font-family: 'spartan-regular';
-  src: url('../resources/fonts/spartan-regular.ttf') format('truetype');
+  src: url('../resources/fonts/Spartan-Regular.ttf') format('truetype');
 }
 
 $font-spartan: 'spartan', Fallback, sans-serif;
