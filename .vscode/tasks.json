@@ -2,9 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Sass Compile",
+      "label": "Sass Compile Home",
       "type": "shell",
-      "command": "sass --watch ./sass/index.scss ./public/css/index.min.css --style compressed",
+      "command": "sass --watch ./sass/index/index.scss:./public/css/index.min.css --style compressed",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Sass Compile Login",
+      "type": "shell",
+      "command": "sass --watch ./sass/login.scss:./public/css/login.min.css --style compressed",
       "problemMatcher": [],
       "group": "build"
     },

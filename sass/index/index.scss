@@ -1,5 +1,5 @@
-@import 'base.scss';
-@import 'utils.scss';
+@import '../base.scss';
+@import '../utils.scss';
 @import 'navbar.scss';
 @import 'main-desktop.scss';
 @import 'main-mobile.scss';
@@ -11,3 +11,10 @@
 @import 'slideshow.scss';
 @import 'partner.scss';
 @import 'contatti.scss';
+
+
+#come-certificarsi,
+#contatti,
+#chi-siamo {
+  scroll-margin-top: calc($nav-height + 2.5em);
+}
