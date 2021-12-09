@@ -1,0 +1,327 @@
+@import './constants.scss';
+@import './utils.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: 'spartan-regular';
+  font-size: 14px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'spartan-regular';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-select {
+  padding: 0.3rem 0 0 0.5rem !important;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+/****************
+ *   TEMPLATE   *
+ ****************/
+
+#layout-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #163b67;
+  position: sticky;
+  width: 210px;
+  // width: 50px;
+  height: 100%;
+  padding: 0 1rem 1rem 1.5rem;
+
+  // border-right: 2px solid $blue;
+  // box-shadow: 2px 2px 5px #c0c0c0;
+
+  img {
+    width: 100%;
+    max-width: 100px;
+    display: block;
+    margin: 2rem auto 1.5rem auto;
+  }
+}
+
+.sml-text {
+  font-size: calc(0.7rem + 0.2vw);
+}
+
+.pc-nav {
+  position: relative;
+  flex: 1;
+
+  overflow-y: overlay;
+
+  $scrollbar-width: 2px;
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #4e4e4e71;
+  }
+}
+
+$icon-size: 30px;
+$my-grey: #65727e;
+
+.menu-item-pc {
+  cursor: pointer;
+  color: $my-grey;
+  padding: 1rem 0.5rem 0.6rem 0.5rem;
+
+  h1 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  div {
+    width: $icon-size;
+  }
+
+  border-left: 3px solid transparent;
+}
+
+.st0 {
+  fill: $my-grey;
+}
+
+@media (max-width: ($break-xs - 1)) {
+  #menu-container {
+    width: calc($icon-size + 2.5rem);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .menu-item-pc {
+    padding: 0;
+    padding-left: 0.5rem;
+  }
+}
+
+.menu-item-pc:focus,
+.menu-item-pc:hover {
+  color: $blue;
+}
+
+.menu-item-pc.selected-menu {
+  color: $blue;
+  border-left: 3px solid $blue;
+
+  .st0 {
+    fill: $blue;
+  }
+}
+
+.logout-icon {
+  width: 20px;
+  margin: 0;
+}
+
+.user-data {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: lighten($dark, 30);
+    border-left: 3px solid transparent;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  button {
+    flex: 0;
+    height: fit-content;
+    width: fit-content;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+#template-wrapper {
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+  box-shadow: 5px 5px 20px rgb(155, 155, 155);
+}
+
+#template {
+  width: 100%;
+  height: 100%;
+
+  h1 {
+    font-weight: bold;
+    color: $blue;
+  }
+}
+
+/***************
+ * AUDITS LIST *
+ ***************/
+
+#audits_container,
+#all_audits_container,
+#situa_audits_container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  position: relative;
+
+  $scrollbar-width: 3px;
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #00000071;
+  }
+}
+
+.audits_table {
+  position: absolute;
+  width: 100%;
+  max-height: 100%;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: ($break-sm - 1)) {
+  #audits_container,
+  #all_audits_container,
+  #situa_audits_container {
+    overflow-x: hidden;
+  }
+
+  .audits_table {
+    width: 100%;
+    table-layout: fixed;
+  }
+}
+
+th,
+td {
+  padding: 0.5rem 0.3rem;
+}
+
+.table-columns {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  //z-index: 1;
+  background: white;
+
+  color: grey;
+}
+
+.row_audit {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: #f0f0f0;
+  }
+}
+
+.status_audit {
+  width: 20px;
+  height: 20px;
+}
+
+.info_audit div {
+  height: 0px;
+  overflow-y: hidden;
+  padding-left: 3rem;
+}
+
+.info_audit--open div {
+  height: fit-content;
+}
+
+.tot_audits {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 0.7rem 1rem 0 0;
+  text-align: right;
+  color: black;
+  font-weight: bold;
+}
+
+#audit_view_container {
+  left: 10%;
+  top: 10%;
+  height: 500px;
+}
+
+.mobile-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.mobile-row__n {
+  width: 3rem;
+  flex-shrink: 0;
+}
+.mobile-row__content {
+  width: calc(100% - 3rem);
+}
+/*
+
+<div id="audits_container" class="container-fluid mt-md-2">
+    <div class="row mt-2">
+      <div class="col tot_audits">
+        <!-- AUDITS HERE -->
+      </div>
+    </div>
+    <div class="row border-top d-none no-audits">
+      Nessun audit trovato
+    </div>
+  </div>
+
+*/

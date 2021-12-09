@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 
 const app = express();
 
@@ -6,10 +7,22 @@ const app = express();
 app.use(express.static('public'));
 
 // paths
-// const path = require('path');
-/*app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});*/
+global.pages_dir = path.join(__dirname, "pages");
+global.partials_dir = path.join(__dirname, "partials");
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(pages_dir, "index.html"));
+});
+
+app.get('/login', function (req, res) {
+  res.sendFile(path.join(pages_dir, "login.html"));
+});
+
+var riservata = require('./routes/areaRiservata');
+app.use('/riservata', riservata);
+
+var mockData = require('./routes/mockData');
+app.use('/data', mockData);
 
 // error handling
 app.use((err, req, res, next) => {

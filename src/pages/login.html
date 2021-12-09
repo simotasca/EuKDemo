@@ -35,11 +35,15 @@
 <script>
   fetch("login.asp?codice=true").then(response => response.text()).then(codice => {
     if (codice != null) {
-      window.location.href = "area_riservata.html";
+      // window.location.href = "area_riservata.html";
+      // window.location.href = "riservata";
     }
   });
   
   function accedi() {
+    window.location.href = "riservata";
+    return;
+
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     let utente = login(email, password, function (utente) {

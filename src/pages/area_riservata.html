@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/area-riservata.min.css">
+</head>
+
+<body>
+  <div id="layout-wrapper">
+    <div id="menu-container">
+      <img src="resources/img/riservata/euk-logo.webp">
+      <nav class="pc-nav">
+        <div class="menu-item-pc selected-menu" onclick="showTemplate('riservata/myaudits')">
+          <h1 class="d-none d-sm-block">I miei audit</h1>
+          <div class="d-sm-none mb-4">
+            <svg class="menu-item-pc__icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 515.2 470.4"
+              style="enable-background:new 0 0 515.2 470.4;" xml:space="preserve">
+              <g>
+                <path class="st0" d="M448,89.6h-89.6C346,89.6,336,79.5,336,67.2C336,30.1,305.9,0,268.8,0H67.2C30.2,0,0,30.1,0,67.2v336
+                  c0,37.1,30.2,67.2,67.2,67.2h171.7c12.4,0,22.4-10,22.4-22.4c0-12.4-10-22.4-22.4-22.4l-171.7,0c-12.4,0-22.4-10.1-22.4-22.4l0-336
+                  c0-12.3,10-22.4,22.4-22.4h201.6c12.4,0,22.4,10.1,22.4,22.4c0,7.9,1.6,15.4,4.1,22.4H138.1c-12.4,0-22.4,10-22.4,22.4
+                  s10,22.4,22.4,22.4l220.3,0H448c12.4,0,22.4,10.1,22.4,22.4v64.5c0,12.4,10,22.4,22.4,22.4s22.4-10,22.4-22.4l0-64.5
+                  C515.2,119.7,485,89.6,448,89.6L448,89.6z" />
+                <path class="st0" d="M465.2,340.8c5.3-11.4,8.1-24,8.1-37.1c0-46-34.9-83.4-77.8-83.4s-77.8,37.4-77.8,83.4
+                  c0,13.1,2.8,25.7,8.1,37.1c-31,24.4-50,64.2-50,107.2c0,12.4,10,22.4,22.4,22.4h194.6c12.4,0,22.4-10,22.4-22.4
+                  C515.2,405,496.1,365.2,465.2,340.8L465.2,340.8z M323.1,425.6c5.9-25.7,21.8-47.3,43.7-57.9c6.4-3.1,11-9.1,12.3-16.1
+                  c1.3-7-0.8-14.2-5.7-19.4c-7-7.5-10.8-17.6-10.8-28.5c0-21.3,14.8-38.6,33-38.6s33,17.3,33,38.6c0,10.9-3.9,21-10.8,28.5
+                  c-4.9,5.2-7,12.4-5.7,19.4c1.3,7,5.8,13,12.3,16.1c21.9,10.6,37.8,32.2,43.7,57.9H323.1z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="menu-item-pc" onclick="showTemplate('riservata/allaudits')">
+          <h1 class="d-none d-sm-block">Tutti gli audit</h1>
+          <div class="d-sm-none my-4">
+            <svg class="menu-item-pc__icon" version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 515.2 470.4"
+              style="enable-background:new 0 0 515.2 470.4;" xml:space="preserve">
+              <path class="st0" d="M454.3,75.8h-77c-8.7,0-16.1-7.1-16.1-15.5c0-33.2-27.3-60.3-60.9-60.3L126.9,0C93.3,0,66,27.1,66,60.3
+                c0,1.9,0.6,3.7,1.1,5.5l-6.2,0C27.3,65.8,0,92.8,0,126.1v284c0,33.2,27.3,60.3,60.9,60.3h327.4c32.8,0,59.4-25.8,60.7-57.9
+                c1.8,0.4,3.4,1.1,5.4,1.1c33.6,0,60.9-27,60.9-60.2l0-217.3C515.2,102.8,487.9,75.8,454.3,75.8L454.3,75.8z M404.4,410.1
+                c0,8.4-7.4,15.5-16.1,15.5H60.9c-8.7,0-16.1-7.1-16.1-15.5v-284c0-8.4,7.4-15.5,16.1-15.5h173.3c8.7,0,16.1,7.1,16.1,15.5
+                c0,5.4,0.9,10.5,2.3,15.5l-130.7,0c-12.4,0-22.4,10-22.4,22.4c0,12.4,10,22.4,22.4,22.4h266.4c8.7,0,16.1,7.1,16.1,15.4L404.4,410.1
+                z M470.4,353.3c0,8.4-7.4,15.4-16.1,15.4c-1.8,0-3.4,0.6-5.1,1v-168c0-33.2-27.3-60.2-60.9-60.2h-77c-8.7,0-16.1-7.1-16.1-15.5
+                c0-33.2-27.3-60.3-60.9-60.3H109.7c0.5-1.8,1.1-3.5,1.1-5.5c0-8.4,7.4-15.5,16.1-15.5h173.3c8.7,0,16.1,7.1,16.1,15.5
+                c0,33.2,27.3,60.3,60.9,60.3h77c8.7,0,16.1,7.1,16.1,15.5L470.4,353.3z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="menu-item-pc" onclick="showTemplate('riservata/situazioneaudits')">
+          <h1 class="d-none d-sm-block">Situazione audit</h1>
+          <div class="d-sm-none my-4">
+            <svg class="menu-item-pc__icon" version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 515.2 470.4"
+              style="enable-background:new 0 0 515.2 470.4;" xml:space="preserve">
+              <g>
+                <path class="st0" d="M448,89.6h-89.6C346,89.6,336,79.5,336,67.2C336,30.1,305.9,0,268.8,0H67.2C30.2,0,0,30.1,0,67.2v336
+                  c0,33.4,25.7,67.2,83.1,67.2h135.4c12.4,0,22.4-10,22.4-22.4c0-12.4-10-22.4-22.4-22.4l-135.4,0c-9,0-38.3-1.6-38.3-22.4v-336
+                  c0-12.3,10-22.4,22.4-22.4h201.6c12.4,0,22.4,10.1,22.4,22.4c0,7.9,1.6,15.4,4.1,22.4H138.1c-12.4,0-22.4,10-22.4,22.4
+                  s10,22.4,22.4,22.4l220.3,0H448c12.4,0,22.4,10.1,22.4,22.4V188c0,12.4,10,22.4,22.4,22.4s22.4-10,22.4-22.4l0-31.2
+                  C515.2,119.7,485,89.6,448,89.6L448,89.6z" />
+                <path class="st0" d="M492.8,224h-155c-12.4,0-22.4,10-22.4,22.4v22.4h-44.8c-12.4,0-22.4,10-22.4,22.4v123.2c0,30.9,25.1,56,56,56
+                  h155c30.9,0,56-25.1,56-56v-168C515.2,234,505.2,224,492.8,224L492.8,224z M293,313.6h22.4v100.8c0,6.2-5,11.2-11.2,11.2
+                  c-6.1,0-11.2-5.1-11.2-11.2V313.6z M470.4,414.4c0,6.1-5.1,11.2-11.2,11.2H359.1c0.7-3.6,1.1-7.4,1.1-11.2V293.2
+                  c0.1-0.6,0.1-1.3,0.1-2s0-1.3-0.1-2v-20.4h110.2L470.4,414.4z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="menu-item-pc d-none d-sm-block" onclick="showTemplate('riservata/agend_photo.html')">
+          <h1>Agenda e foto audit</h1>
+        </div>
+        <div class="menu-item-pc d-none d-sm-block" onclick="showTemplate('riservata/certificates.html')">
+          <h1>Certificati e schede tecniche</h1>
+        </div>
+      </nav>
+      <div class="user-data">
+        <p id="username" class="d-none d-sm-block">zMarco Hazan</p>
+        <a href="/" class="my-btn btn-blue mb-0 mx-auto" type="button" name="button">
+          <span class="d-none d-sm-block">
+            logout
+          </span>
+          <img class="d-sm-none" src="resources/img/riservata/logout.svg" style=" width: 20px; margin: 0;" />
+        </a>
+        <p class="text-center d-sm-none p-0 mb-0" style="font-size: .8rem;">Logout</p>
+      </div>
+    </div>
+
+    <div id="main-container" class="container-fluid">
+      <div id="template-wrapper">
+        <div id="template">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="audit_view">
+    <!--POPUP AUDIT-->
+  </div>
+
+  <script type="text/javascript">
+    var codice_utente;
+    let items = document.getElementsByClassName("menu-item-pc");
+    for (i = 0; i < items.length; i++) {
+      items[i].addEventListener("click", function () {
+        removeselected();
+        this.classList.add("selected-menu");
+      })
+      items[i].addEventListener("click", function () {
+        removeselected();
+        this.classList.add("selected-menu");
+      })
+    }
+    function removeselected() {
+      let items = document.getElementsByClassName("menu-item-pc");
+      for (i = 0; i < items.length; i++) {
+        items[i].classList.remove("selected-menu");
+      }
+    }
+    var menushow = false;
+    function showmenucell() {
+      if (menushow) {
+        document.getElementById("menu-cell").classList.add("d-none");
+        menushow = false;
+      } else {
+        document.getElementById("menu-cell").classList.remove("d-none");
+        menushow = true;
+      }
+    }
+    // document.getElementById('menu-container').style.height = window.innerHeight + "px";
+    fetch('riservata/myaudits').then(result => result.text()).then(html => {
+      document.getElementById('template').innerHTML = html;
+      myauditsReady();
+    })
+
+    fetch("riservata/auditview").then(result => result.text()).then(html => {
+      document.getElementById('audit_view').innerHTML = html;
+    })
+
+    function showTemplate(url) {
+      fetch(url).then(result => result.text()).then(html => {
+        document.getElementById('template').innerHTML = html;
+        switch (url) {
+          case "riservata/myaudits":
+            myauditsReady();
+            break;
+          case "riservata/allaudits":
+            allAuditsReady();
+            break;
+          case "riservata/situazioneaudits":
+            auditSitReady();
+            break;
+          case "agend_photo.html":
+            agendPhotoReady();
+            break;
+          case "certificates.html":
+            certificatesReady();
+            break;
+        }
+      })
+    }
+
+  </script>
+
+  <script type="text/javascript" src="js/area_riservata/toggle.js"></script>
+  <script type="text/javascript" src="js/area_riservata/myaudits.js"></script>
+  <script type="text/javascript" src="js/area_riservata/allaudits.js"></script>
+  <script type="text/javascript" src="js/area_riservata/functions.js"></script>
+  <script type="text/javascript" src="js/area_riservata/situa_audits.js"></script>
+
+
+</html>

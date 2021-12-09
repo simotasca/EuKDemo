@@ -30,15 +30,9 @@
     display: flex;
     align-items: center;
 
-    button {
+    .my-btn {
       margin-left: auto;
     }
-  }
-
-  a {
-    padding: 0 1.2rem;
-    text-decoration: none;
-    color: $blue;
   }
 
   .btn {
@@ -51,6 +45,16 @@
   padding-right: 1.2rem;
   text-decoration: none;
   color: $blue;
+}
+
+.nav-links {
+  padding: 0 1.2rem;
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 #mobile-hamburger {
@@ -89,11 +93,11 @@
   }
 
   nav {
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-
+    
     a {
       margin-bottom: 3rem;
       color: $dark-blue;

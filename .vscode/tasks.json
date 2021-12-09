@@ -16,6 +16,13 @@
       "group": "build"
     },
     {
+      "label": "Sass Compile Area Riservata",
+      "type": "shell",
+      "command": "sass --watch ./sass/area-riservata.scss:./public/css/area-riservata.min.css --style compressed",
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
       "label": "Run Nodemon",
       "type": "npm",
       "script": "test",
