@@ -23,8 +23,8 @@ function sa_regioneselected() {
 function popolaSituaAudits() {
   let scheletro_situazione_audit = document.getElementById("row_situa_audit").innerHTML;
   let regione = document.getElementById("select_region_situaaudits").value;
-  let query = generaQuerySituaAudits(regione);
-  fetch(query).then(response => response.json()).then(json => {
+  // let query = generaQuerySituaAudits(regione);
+  fetch("data/situazione").then(response => response.json()).then(json => {
     let rows_container = document.getElementById("situa_audits_container").getElementsByTagName("table")[0];
     // rows_container.innerHTML = "";
     rows_container.querySelectorAll("tbody").forEach(b => b.remove())

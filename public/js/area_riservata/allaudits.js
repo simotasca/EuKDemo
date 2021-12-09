@@ -35,5 +35,5 @@ function popolaAuditsAllAudits() {
   let codCliente = document.getElementById("select_client_allaudits").value;
   let codAuditor = document.getElementById("select_auditor").value;
   let codRegione = document.getElementById("select_region_allaudits").value;
-  popolaAudits(document.getElementById("all_audits_container"), codCliente, codRegione, codAuditor);
+  popolaAudits(document.getElementById("all_audits_container"), codCliente, codRegione, codAuditor, "data/all");
 }

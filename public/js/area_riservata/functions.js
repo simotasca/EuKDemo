@@ -34,12 +34,12 @@ function popolaClienti(select, filtro) {
   })
 }
 
-function popolaAudits(container, codCliente, codRegione, codAuditor) {
+function popolaAudits(container, codCliente, codRegione, codAuditor, query) {
   fetch("riservata/rowaudit").then(response => response.text()).then(scheletro_row => {
     container.getElementsByClassName("no-audits")[0].classList.add("d-none");
     container.querySelectorAll("tbody").forEach(b => b.remove())
     
-    let query = generaQueryAudits(codCliente, codRegione, codAuditor);
+    // let query = generaQueryAudits(codCliente, codRegione, codAuditor);
     fetch(query).then(response => response.json()).then(json => {
       container.getElementsByClassName("tot_audits")[0].innerHTML = "TOT: " + json.length;
       for (i = 0; i < json.length; i++) {

@@ -1,0 +1,1002 @@
+[
+  {
+    "ID_audit": "5464",
+    "Data_audit": "12/16/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "San Giorgio di Nogaro",
+    "Provincia": "UD",
+    "Azienda": "Kemira Italy S.p.A ",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5465",
+    "Data_audit": "12/16/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "San Giorgio di Nogaro",
+    "Provincia": "UD",
+    "Azienda": "Oleificio San Giorgio S.p.a",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5460",
+    "Data_audit": "12/15/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Mereto di Tomba ",
+    "Provincia": "UD",
+    "Azienda": "Biofarma Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5461",
+    "Data_audit": "12/15/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Romans d'Isonzo",
+    "Provincia": "GO",
+    "Azienda": "Corimpex Service s.r.l.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5462",
+    "Data_audit": "12/15/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Trieste",
+    "Provincia": "TS",
+    "Azienda": "Illycaffè Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5463",
+    "Data_audit": "12/15/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Trieste",
+    "Provincia": "TS",
+    "Azienda": "Demus s.p.a.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5457",
+    "Data_audit": "12/14/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Merano",
+    "Provincia": "BZ",
+    "Azienda": "Hans Zipperle Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5458",
+    "Data_audit": "12/14/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Lana",
+    "Provincia": "BZ",
+    "Azienda": "Molino Merano Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5459",
+    "Data_audit": "12/14/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Predazzo ",
+    "Provincia": "TN",
+    "Azienda": "Pastificio Felicetti",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5455",
+    "Data_audit": "12/13/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Pergine Valsugana",
+    "Provincia": "TN",
+    "Azienda": "Dial Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5456",
+    "Data_audit": "12/13/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": " Cles ",
+    "Provincia": "TN",
+    "Azienda": "A.D. Chini Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5467",
+    "Data_audit": "12/9/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Carsoli ",
+    "Provincia": "AQ",
+    "Azienda": "Madama Oliva Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5450",
+    "Data_audit": "12/9/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Fara S. Martino",
+    "Provincia": "CH",
+    "Azienda": "Bioalimenta S.r.l ",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5451",
+    "Data_audit": "12/9/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Fara San Martino ",
+    "Provincia": "CH",
+    "Azienda": "Olearia Fratelli De Cecco",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5472",
+    "Data_audit": "12/7/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Sammichele di Bari ",
+    "Provincia": "BA",
+    "Azienda": "Tarall'oro S.r.l.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5471",
+    "Data_audit": "12/7/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Molfetta",
+    "Provincia": "BA",
+    "Azienda": "Medsol Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5470",
+    "Data_audit": "12/7/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Cerignola",
+    "Provincia": "FG",
+    "Azienda": "Bio Organica Italia srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5448",
+    "Data_audit": "12/6/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Manfredonia ",
+    "Provincia": "FG",
+    "Azienda": "Olearia Clemente Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5466",
+    "Data_audit": "12/6/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Ponte S. Marco",
+    "Provincia": "BS",
+    "Azienda": "A. Gandola & C. Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5452",
+    "Data_audit": "12/6/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Settimo Vittone ",
+    "Provincia": "TO",
+    "Azienda": "Lino Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5468",
+    "Data_audit": "12/6/2021",
+    "Cod_esito": "1",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5436",
+    "Data_audit": "12/2/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "San Michele Mondovì",
+    "Provincia": "CN",
+    "Azienda": "Silvachimica",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5442",
+    "Data_audit": "12/1/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Andria",
+    "Provincia": "BT",
+    "Azienda": "Olio Levante Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5446",
+    "Data_audit": "12/1/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Mesagne ",
+    "Provincia": "BR",
+    "Azienda": "Conserve Italia Soc. Coop. Agricola - (BR)",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5447",
+    "Data_audit": "12/1/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Fasano",
+    "Provincia": "BR",
+    "Azienda": "Nicola Pantaleo Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5434",
+    "Data_audit": "12/1/2021",
+    "Cod_esito": "1",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Tricerro",
+    "Provincia": "VC",
+    "Azienda": "Oryza Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5444",
+    "Data_audit": "12/1/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Canale",
+    "Provincia": "CN",
+    "Azienda": "Davide Campari Milano - Valpone",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5435",
+    "Data_audit": "12/1/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Caselle",
+    "Provincia": "TO",
+    "Azienda": "F.lli Milan s.r.l. (La Mole)",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5440",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Andria",
+    "Provincia": "BT",
+    "Azienda": "Olio Levante Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5438",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5445",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Lavérune",
+    "Provincia": "FR",
+    "Azienda": "Carte Noire Operations sas",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5429",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Montecchia di Crosara ",
+    "Provincia": "VR",
+    "Azienda": "Cesarin Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5430",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "S. Pietro di Morubio ",
+    "Provincia": "VR",
+    "Azienda": "Ital Green Oil Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5431",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Vigasio ",
+    "Provincia": "VR",
+    "Azienda": "Molino e Riseria F.lli Martini Snc",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5443",
+    "Data_audit": "11/30/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Manfredonia ",
+    "Provincia": "FG",
+    "Azienda": "Olearia Clemente Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5439",
+    "Data_audit": "11/29/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Andria",
+    "Provincia": "BT",
+    "Azienda": "Olio Levante Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5437",
+    "Data_audit": "11/29/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5426",
+    "Data_audit": "11/29/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Ravarino ",
+    "Provincia": "MO",
+    "Azienda": "Conserve Italia Soc. Coop. Agricola - (MO)",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5427",
+    "Data_audit": "11/29/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Modena",
+    "Provincia": "MO",
+    "Azienda": "Pastificio Zanini srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5428",
+    "Data_audit": "11/29/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Correggio",
+    "Provincia": "RE",
+    "Azienda": "Pastificio Barbieri srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5424",
+    "Data_audit": "11/26/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5422",
+    "Data_audit": "11/25/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5421",
+    "Data_audit": "11/24/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5416",
+    "Data_audit": "11/24/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Corbetta",
+    "Provincia": "MI",
+    "Azienda": "B Natural Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5410",
+    "Data_audit": "11/24/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Busto Arsizio",
+    "Provincia": "VA",
+    "Azienda": "A.D.E.A. Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5411",
+    "Data_audit": "11/24/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Busto Arsizio",
+    "Provincia": "VA",
+    "Azienda": "AgroHorizon",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5412",
+    "Data_audit": "11/24/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Paratico",
+    "Provincia": "BS",
+    "Azienda": "Tris Moka Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5417",
+    "Data_audit": "11/24/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Brescia",
+    "Provincia": "BS",
+    "Azienda": "Oleificio F.lli Barbi Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5420",
+    "Data_audit": "11/23/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5415",
+    "Data_audit": "11/23/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Codigoro ",
+    "Provincia": "FE",
+    "Azienda": "Conserve Italia Soc. Coop. Agricola - (FE)",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5425",
+    "Data_audit": "11/23/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Castelmassa",
+    "Provincia": "Ro",
+    "Azienda": "Cargill S.r.l.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5418",
+    "Data_audit": "11/22/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5419",
+    "Data_audit": "11/22/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5407",
+    "Data_audit": "11/22/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Confienza",
+    "Provincia": "PV",
+    "Azienda": "Co.Ri.So. srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5414",
+    "Data_audit": "11/22/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "S.Martino Buon Albergo",
+    "Provincia": "VR",
+    "Azienda": "Perdomini-IOC Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5408",
+    "Data_audit": "11/22/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Bàlzola ",
+    "Provincia": "AL",
+    "Azienda": "Riseria Vignola Giovanni S.p.a",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5409",
+    "Data_audit": "11/22/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Valle Lomellina",
+    "Provincia": "PV",
+    "Azienda": "Curti s.r.l",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5423",
+    "Data_audit": "11/18/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "none",
+    "Provincia": "none",
+    "Azienda": "Viaggio per trasferta al sud",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5403",
+    "Data_audit": "11/18/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5406",
+    "Data_audit": "11/18/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Novi Ligure",
+    "Provincia": "AL",
+    "Azienda": "Gambarotta Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5397",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Foggia",
+    "Provincia": "FG",
+    "Azienda": "Conserve Alimentari Futuragri",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5361",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Arquata Scrivia ",
+    "Provincia": "AL",
+    "Azienda": "La Suissa Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5391",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Trino ",
+    "Provincia": "VC",
+    "Azienda": "Riseria Martinotti s.r.l.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5362",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Moretta ",
+    "Provincia": "CN",
+    "Azienda": "Europiemont",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5392",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Pavia",
+    "Provincia": "PV",
+    "Azienda": "Riso Scotti s.p.a.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5405",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Piano di Sorrento",
+    "Provincia": "NA",
+    "Azienda": "Villa Massa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5404",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Moretta ",
+    "Provincia": "CN",
+    "Azienda": "In.Al.Pi Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5393",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Certosa di Pavia",
+    "Provincia": "PV",
+    "Azienda": "Società di Macinazione Molini Certosa Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5363",
+    "Data_audit": "11/17/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Novara",
+    "Provincia": "NO",
+    "Azienda": "Alce Novara",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5402",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "Pozzuolo Martesana",
+    "Provincia": "MI",
+    "Azienda": "Ferrero - Stab. Pozzuolo Martesana",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5388",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Asigliano Veneto",
+    "Provincia": "VI",
+    "Azienda": "GF Ovodry Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5394",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav Avraham Hazan",
+    "Localita": "Origgio",
+    "Provincia": "VA",
+    "Azienda": "Caldic Italia",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5377",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Massarosa",
+    "Provincia": "LU",
+    "Azienda": "Salov Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5389",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Occhiobello",
+    "Provincia": "RO",
+    "Azienda": "EPS Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5390",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Occhiobello ",
+    "Provincia": "RO",
+    "Azienda": "Eurovo Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5400",
+    "Data_audit": "11/16/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Binetto",
+    "Provincia": "BA",
+    "Azienda": "Olearia Schiralli Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5378",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Rovigo ",
+    "Provincia": "RO",
+    "Azienda": "Naturis SPA",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5399",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Giuseppe Tchilibon",
+    "Localita": "Bollate",
+    "Provincia": "MI",
+    "Azienda": "Sicna srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5357",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Concorezzo",
+    "Provincia": "MB",
+    "Azienda": "AromataGroup srl - Stab. di Concorezzo",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5401",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Meir Kob",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5385",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Pescantina ",
+    "Provincia": "VR",
+    "Azienda": "Monaldi Italia Spa - Pescantina",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5358",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Gessate",
+    "Provincia": "MI",
+    "Azienda": "FIORIO COLORI S.r.l ",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5386",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Vigasio",
+    "Provincia": "VR",
+    "Azienda": "Monaldi Italia Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5387",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "Colognola ai Colli",
+    "Provincia": "VR",
+    "Azienda": "Saladine Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5395",
+    "Data_audit": "11/15/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav Yossi Labi",
+    "Localita": "S.Giovanni Lupatoto",
+    "Provincia": "VR",
+    "Azienda": "Skaj's Alimenti srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5365",
+    "Data_audit": "11/11/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Solara di Bomporto",
+    "Provincia": "MO",
+    "Azienda": "Monari Federzoni Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5373",
+    "Data_audit": "11/11/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "none",
+    "Provincia": "none",
+    "Azienda": "Eurokosher for reporting",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5356",
+    "Data_audit": "11/11/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Orsenigo",
+    "Provincia": "CO",
+    "Azienda": "ICAM spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5376",
+    "Data_audit": "11/10/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav Avraham Hazan",
+    "Localita": "Pessione ",
+    "Provincia": "TO",
+    "Azienda": "Martini & Rossi Spa",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5372",
+    "Data_audit": "11/10/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "none",
+    "Provincia": "none",
+    "Azienda": "Eurokosher for reporting",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5343",
+    "Data_audit": "11/10/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Priverno",
+    "Provincia": "LT",
+    "Azienda": "Verdeoro s.r.l.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5354",
+    "Data_audit": "11/10/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Cremosano ",
+    "Provincia": "CR",
+    "Azienda": "Micromilk Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5344",
+    "Data_audit": "11/10/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Pomezia",
+    "Provincia": "RM",
+    "Azienda": "Colavita s.p.a.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5355",
+    "Data_audit": "11/10/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Concorezzo ",
+    "Provincia": "MB",
+    "Azienda": "Baiocco Srl",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5351",
+    "Data_audit": "11/9/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Rav M.M. Kaplan",
+    "Localita": "Bresso ",
+    "Provincia": "MI",
+    "Azienda": "Aromatagroup Srl - Stab. Bresso",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5371",
+    "Data_audit": "11/9/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "none",
+    "Provincia": "none",
+    "Azienda": "Eurokosher for reporting",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5342",
+    "Data_audit": "11/9/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Altavilla Salentina",
+    "Provincia": "SA",
+    "Azienda": "Azienda Agricola ScorzielloRosario",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5341",
+    "Data_audit": "11/8/2021",
+    "Cod_esito": "2",
+    "Audit_Auditor": "Moshe Hazan",
+    "Localita": "Rende",
+    "Provincia": "CS",
+    "Azienda": "JRS Silvateam Food Ingredients S.r.l.",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5370",
+    "Data_audit": "11/8/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Reuven Sadun",
+    "Localita": "none",
+    "Provincia": "none",
+    "Azienda": "Eurokosher for reporting",
+    "array": [1, 2, 3, 4]
+  },
+  {
+    "ID_audit": "5375",
+    "Data_audit": "11/8/2021",
+    "Cod_esito": "0",
+    "Audit_Auditor": "Meir Kob",
+    "Localita": "Alba",
+    "Provincia": "CN",
+    "Azienda": "Ferrero Spa",
+    "array": [1, 2, 3, 4]
+  }
+]
