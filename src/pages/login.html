@@ -35,12 +35,14 @@
 <script>
   fetch("login.asp?codice=true").then(response => response.text()).then(codice => {
     if (codice != null) {
+      // FIXME è una demo quindi il login è fake
       // window.location.href = "area_riservata.html";
       // window.location.href = "riservata";
     }
   });
   
   function accedi() {
+    // FIXME fake login
     window.location.href = "riservata";
     return;
 

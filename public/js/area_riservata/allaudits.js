@@ -1,7 +1,9 @@
 function allAuditsReady() {
+  // TODO: vedi situa_audits.js auditSitReady()
   setToggle();
   popolaSelectsAllAudits();
   popolaAuditsAllAudits();
+  // TODO: meglio lasciare ste cose al css
   //document.getElementById("all_audits_container").style.height = window.innerHeight + "px";
 }
 

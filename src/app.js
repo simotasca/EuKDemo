@@ -2,14 +2,12 @@ const express = require("express");
 const path = require('path');
 
 const app = express();
-
-// static files
 app.use(express.static('public'));
 
-// paths
 global.pages_dir = path.join(__dirname, "pages");
 global.partials_dir = path.join(__dirname, "partials");
 
+// routes
 app.get('/', function (req, res) {
   res.sendFile(path.join(pages_dir, "index.html"));
 });

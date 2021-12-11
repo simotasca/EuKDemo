@@ -2,7 +2,8 @@ const queryaziende = "http://www.eurokosher.it/api/EUK_API_codici_nomi_aziende.a
 const queryregioni = "http://www.eurokosher.it/api/EUK_API_codici_nomi_regioni.asp";
 const queryauditors = "http://www.eurokosher.it/api/EUK_API_codici_nomi_auditors.asp";
 const queryaudits = "http://www.eurokosher.it/api/EUK_API_audits.asp";
-const queryviewaudit = "http://www.eurokosher.it/api/EUK_API_leggi_scheda_audit.asp"
+const queryviewaudit = "http://www.eurokosher.it/api/EUK_API_leggi_scheda_audit.asp";
+
 function popolaRegioni(select) {
   fetch(queryregioni).then(response => response.json()).then(json => {
     for (i = 0; i < json.length; i++) {
@@ -35,36 +36,40 @@ function popolaClienti(select, filtro) {
 }
 
 function popolaAudits(container, codCliente, codRegione, codAuditor, query) {
+  //FIXME: errore mio con il server
   fetch("riservata/rowaudit").then(response => response.text()).then(scheletro_row => {
     container.getElementsByClassName("no-audits")[0].classList.add("d-none");
-    container.querySelectorAll("tbody").forEach(b => b.remove())
-    
+    // TODO:
+    container.querySelectorAll("tbody").forEach(b => b.remove());
+    // FIXME: server
     // let query = generaQueryAudits(codCliente, codRegione, codAuditor);
     fetch(query).then(response => response.json()).then(json => {
       container.getElementsByClassName("tot_audits")[0].innerHTML = "TOT: " + json.length;
       for (i = 0; i < json.length; i++) {
+        // TODO: tabella
         let row_audit = document.createElement("tbody");
         row_audit.id = json[i].ID_audit;
         row_audit.className = "row_audit border-top";
         row_audit.innerHTML = scheletro_row;
         row_audit.addEventListener("click", showAuditView);
         row_audit.getElementsByClassName("localita_audit")[0].innerHTML = json[i].Localita + " (" + json[i].Provincia + ")";
-        row_audit.getElementsByClassName("localita_audit")[1].innerHTML = json[i].Localita + " (" + json[i].Provincia + ")";
         row_audit.getElementsByClassName("data_audit")[0].innerHTML = json[i].Data_audit;
-        row_audit.getElementsByClassName("data_audit")[1].innerHTML = json[i].Data_audit;
         row_audit.getElementsByClassName("auditor_audit")[0].innerHTML = json[i].Audit_Auditor;
-        row_audit.getElementsByClassName("auditor_audit")[1].innerHTML = json[i].Audit_Auditor;
         row_audit.getElementsByClassName("naudit")[0].innerHTML = i + 1;
-        row_audit.getElementsByClassName("naudit")[1].innerHTML = i + 1;
         row_audit.getElementsByClassName("azienda_audit")[0].innerHTML = json[i].Azienda;
-        row_audit.getElementsByClassName("azienda_audit")[1].innerHTML = json[i].Azienda;
         row_audit.getElementsByClassName("status_audit")[0].setAttribute("src", "resources/img/riservata/status" + json[i].Cod_esito + ".svg");
-        row_audit.getElementsByClassName("status_audit")[1].setAttribute("src", "resources/img/riservata/status" + json[i].Cod_esito + ".svg");
+        // row_audit.getElementsByClassName("localita_audit")[1].innerHTML = json[i].Localita + " (" + json[i].Provincia + ")";
+        // row_audit.getElementsByClassName("data_audit")[1].innerHTML = json[i].Data_audit;
+        // row_audit.getElementsByClassName("auditor_audit")[1].innerHTML = json[i].Audit_Auditor;
+        // row_audit.getElementsByClassName("naudit")[1].innerHTML = i + 1;
+        // row_audit.getElementsByClassName("azienda_audit")[1].innerHTML = json[i].Azienda;
+        // row_audit.getElementsByClassName("status_audit")[1].setAttribute("src", "resources/img/riservata/status" + json[i].Cod_esito + ".svg");
+        
+        // TODO: potrebbe essere la tabella stessa il container?
         container.getElementsByTagName("table")[0].appendChild(row_audit);
       }
     }).catch(err => {
-      console.log("ERR", err)
-      console.log(container.getElementsByClassName("no-audits"))
+      console.log(err)
       container.getElementsByClassName("no-audits")[0].classList.remove("d-none");
       container.getElementsByClassName("tot_audits")[0].innerHTML = "";
     });
@@ -151,6 +156,7 @@ function showAuditView() {
 
 function closeView() {
   let view_container = document.getElementById("audit_view_container");
+  // TODO
   // document.getElementsByTagName("body")[0].style.background = "white";
   document.getElementById("audit_view_container").classList.add("d-none");
   view_container.getElementsByClassName("oggetto_audit")[0].classList.remove("d-none");

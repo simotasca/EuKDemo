@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   background: #f1f1f1;
+  height: 100vh;
 }
 
 h1,
@@ -35,8 +36,8 @@ h3 {
  ****************/
 
 #layout-wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
 }
 
@@ -263,6 +264,9 @@ td {
   &:hover,
   &:focus {
     background: #f0f0f0;
+    .status_audit {
+      background: #f0f0f0;
+    }
   }
 }
 
@@ -271,14 +275,12 @@ td {
   height: 20px;
 }
 
-.info_audit div {
-  height: 0px;
-  overflow-y: hidden;
-  padding-left: 3rem;
+.info_audit {
+  display: none;
 }
 
-.info_audit--open div {
-  height: fit-content;
+.info_audit--open {
+  display: table-row;
 }
 
 .tot_audits {
@@ -290,14 +292,17 @@ td {
   text-align: right;
   color: black;
   font-weight: bold;
+  z-index: 2;
 }
 
+// FIXME: Cos'è??
 #audit_view_container {
   left: 10%;
   top: 10%;
   height: 500px;
 }
 
+/*
 .mobile-row {
   width: 100%;
   display: flex;
@@ -310,6 +315,93 @@ td {
 }
 .mobile-row__content {
   width: calc(100% - 3rem);
+}
+*/
+
+.only-flex {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .info_audit--open {
+    display: flex;
+  }
+
+  .responsive-tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    padding: 0.3rem 0;
+  }
+
+  .only-flex {
+    display: inline-block;
+  }
+
+  td,
+  th {
+    display: inline-block;
+    padding: 0 0.4rem;
+  }
+
+  .naudit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    vertical-align: center;
+    width: 3rem;
+    padding-top: 0.3rem;
+    font-weight: bold;
+  }
+
+  .azienda_audit {
+    width: 100%;
+    order: 0;
+    color: $blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-left: 3rem;
+
+    /*per i ... */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .status_audit {
+    position: absolute;
+    // bottom: 0.6rem;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 0;
+    background: white;
+    height: 50%;
+  }
+
+  .auditor-wrapper {
+    margin-bottom: 0;
+    order: 2;
+    padding-right: 50%;
+  }
+
+  .auditor_audit {
+    // padding-right: 24px;
+    /*mid-text*/
+  }
+
+  .localita_audit,
+  .data_audit {
+    order: 1;
+    color: grey;
+    padding-right: 1rem;
+  }
+
+  .flex-100 {
+    width: 100%;
+  }
 }
 /*
 

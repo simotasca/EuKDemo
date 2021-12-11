@@ -1,6 +1,7 @@
 const codice_cliente = "MRC";
 
 function myauditsReady() {
+  // TODO: vedi situa_audits.js auditSitReady()
   setToggle();
   popolaSelectsMyAudits();
   popolaAuditsMyAudits();
@@ -9,6 +10,7 @@ function myauditsReady() {
 function popolaSelectsMyAudits() {
   let select_region = document.getElementById("select_region_myaudits");
   let select_client = document.getElementById("select_client_myaudits");
+  // TODO: meglio lasciare ste cose al css
   // document.getElementById("audits_container").style.height = window.innerHeight  + "px";
   popolaClienti(select_client);
   popolaRegioni(select_region);
