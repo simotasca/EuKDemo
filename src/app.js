@@ -16,6 +16,16 @@ app.get('/login', function (req, res) {
   res.sendFile(path.join(pages_dir, "login.html"));
 });
 
+app.get('/prova', function (req, res) {
+  res.sendFile(path.join(pages_dir, "prueva.html"));
+});
+
+//text/html; charset=utf8
+app.get("/json", (req, res) => {
+  res.setHeader('Content-Type', 'applicationiviigg8');
+  res.end(JSON.stringify({ a: "à" }));
+})
+
 var riservata = require('./routes/areaRiservata');
 app.use('/riservata', riservata);
 
