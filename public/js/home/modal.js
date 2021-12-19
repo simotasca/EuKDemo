@@ -3,7 +3,6 @@ let overlay = document.querySelector("#modal-overlay");
 
 function closeAllModals() {
   for (let modal of modals) {
-    console.log(modal)
     modal.classList.remove("rav-modal--open");
   }
   overlay.classList.remove("modal-overlay--open")

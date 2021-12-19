@@ -1,112 +1,73 @@
-<div id="audit_view_container" class="container position-fixed overflow-auto d-none" style="background-color:#ffe">
-  <div class="row justify-content-center align-items-center p-2">
-    <div class="col-10 fs-3">
-      <div>
-        Audit <span class = "id_audit"></span>
-      </div>
-      <div class="azienda_audit">
-        Ferrero Spa
-      </div>
-    </div>
-    <div class="col-2" style="text-align:right">
-      <button class ="btn-close" aria-label="Close" name="button" onclick="closeView()"></button>
-    </div>
-  </div>
-  <hr>
-  <div class="row p-2">
-    <div class="col-12 col-md-6">
-        <span style="font-weight:bold">Auditor:</span><span class="nome_auditor"></span>
-    </div>
-  </div>
-  <div class="row justify-content-center p-2">
-    <div class="col-12 mb-3 mb-md-0 col-md-6">
-      <span style="font-weight:bold">Indirizzo:</span>   <span class="indirizzo_audit"></span>
-    </div>
-    <div class="col-12 col-md-6">
-      <span style="font-weight:bold">CAP:</span>  <span class="cap_audit">  </span>
-    </div>
-  </div>
-  <div class="row justify-content-center p-2">
-    <div class="col-12 mb-3 mb-md-0 col-md-6">
-    <span style="font-weight:bold">Località:</span>  <span class="localita_audit"> </span>
-    </div>
-    <div class="col-12 col-md-6">
-      <span style="font-weight:bold">Telefoni:</span>   <span class="telefoni_audit"> </span>
-    </div>
-  </div>
-  <div class="row justify-content-center p-2">
-    <div class="col-12 mb-3 mb-md-0 col-md-6">
-      <span style="font-weight:bold">Mail:</span>  <span class="mail_audit"> </span>
-    </div>
-    <div class="col-12 col-md-6">
-      <span style="font-weight:bold">Contatti:</span> <span class="contatti_audit"> </span>
-    </div>
-  </div>
-  <div class="row justify-content-center p-2">
-    <div class="col-12 mb-3 mb-md-0 col-md-6">
-      <span style="font-weight:bold">Data:</span> <span class="data_audit"> </span>
-    </div>
-    <div class="col-12 col-md-6">
-       <span style="font-weight:bold">Ora:</span> <span class="ora_audit"> </span>
-    </div>
-  </div>
-  <hr>
-  <div class="row mb-3" style="font-size:16px;">
-    <div class="col-md-2 col-12" style="text-align:center;font-style:oblique;font-family:Arial;color:chocolate">
-      Oggetto Audit
-    </div>
-    <div class="col-md-7 col-12 oggetto_audit">
-    </div>
-    <div class="oggetto_audit_edit col-md-7 col-12  d-none">
-      <textarea class ="textarea_audit textarea_oggetto_audit" name="" rows="4" cols="50">
+<div id="audit_view_container" class="modal__outer d-none">
+  <span class="modal__id-audit">
+    Audit <span class="id_audit"></span> | Foto | Info Azienda
+  </span>
+  <span class="modal__closer" onclick="closeView()">X</span>
 
-      </textarea>
+  <div class="modal__inner">
+    <h1 class="modal__azienda_audit"></h1>
+    <b class="text-grey">
+      <span class="modal__data_audit">20/12/2020</span>
+      - <span class="modal__ora_audit">12:00</span>
+    </b>
+    <div class="modal__dati">
+      <div class="modal__element">
+        Auditor: <span class="modal__nome_auditor text-grey"></span>
+      </div>
+      <div class="modal__element">
+        Indirizzo: <span class="modal__indirizzo_audit text-grey"></span>
+      </div>
+      <div class="modal__element">
+        CAP: <span class="modal__cap_audit text-grey"></span>
+      </div>
+      <div class="modal__element">
+        Località: <span class="modal__localita_audit text-grey"></span>
+      </div>
+      <div class="modal__element">
+        Nome: <span class="modal__contatti_audit text-grey">Dr. Marco Costantino</span>
+      </div>
+      <div class="modal__element">
+        Mail: <span class="modal__mail_audit text-grey">mcostantino@boltonalimentari.it</span>
+      </div>
+      <div class="modal__element">
+        Telefoni: <span class="modal__telefoni_audit text-grey">031779383 - 3387291382</span>
+      </div>
     </div>
-  </div>
-  <!--<div class="row mb-3" style="justify-content-center;font-size:16px;">
-    <div class="col-md-2 col-12" style="text-align:center;font-style:oblique;font-family:Arial;color:chocolate">
-      Profilo azienda
+
+
+    <!-- <% if Request.QueryString("cod_auditor") = Session("codice") then %> -->
+    <div class="row justify-content-end">
+      <div class="col-auto mb-3 modal__modifica_col" style="text-align:center">
+        <button type="button" class="my-btn btn-blue modal__modifica_btn" onclick="">Modifica</button>
+      </div>
+      <div class="col-auto d-none mb-3 modal__salva_col" style="text-align:center">
+        <button type="button" class="my-btn btn-blue modal__salva_btn" onclick="">Salva</button>
+      </div>
     </div>
-    <div class="col-md-10 col-12 profilo_azienda">
-      La Ferrero è una delle più grandi realtà industriali italiane che è sempre rimasta un'azienda famigliare. La OU certifica per questa azienda alcuni snack, la crema Nutella e alcune praline, tutte non chalav israel. Durante l'anno viene effettuata una produzione kasher lepesach chalav akum leochlei kitnyot. Eurokosher segue solamente l'impianto di Alba (CN). La Ferrero ha altri impianti di produzione seguiti da altri Rabbanim.
+    <!-- <% End If %> -->
+
+    <div class="row mb-3">
+      <div class="modal__textarea-title col-md-2 col-12">Oggetto Audit</div>
+      <div class="modal__oggetto_audit modal__textarea-preview col-md-10 col-12 "></div>
+      <div class="modal__oggetto_audit_edit col-md-10 col-12 d-none">
+        <textarea class="modal__textarea modal__textarea_oggetto_audit" rows="4" cols="50"></textarea>
+      </div>
     </div>
-  </div>
-  <div class="row mb-3" style="justify-content-center;font-size:16px;">
-    <div class="col-md-2 col-12" style="text-align:center;font-style:oblique;font-family:Arial;color:chocolate">
-      ATTENZIONE A:
+
+    <div class="row mb-3">
+      <div class="modal__textarea-title col-md-2 col-12">Descrizione/esito audit</div>
+      <div class="modal__descrizione_audit modal__textarea-preview col-md-10 col-12"></div>
+      <div class="modal__descrizione_audit_edit col-md-10 col-12 d-none">
+        <textarea class="modal__textarea modal__textarea_descrizione_audit"></textarea>
+      </div>
     </div>
-    <div class="col-md-10 col-12 warning_audit">
-      L'auditor durante la visita dovrà effettuare il giro nell'impianto di produzione. Molto importante durante la visita è passare in rassegna il documento Schedule A (le materie prime presenti a magazzino) confrontandolo con quanto presente nel magazzino della Ferrero, la visita ai magazzini del latte in polvere e visitare ogni volta una linea di produzione differente.
-    </div>
-  </div>-->
-  <div class="row mb-3" style="font-size:16px;">
-    <div class="col-md-2 col-12" style="text-align:center;font-style:oblique;font-family:Arial;color:chocolate">
-      Descrizione/esito audit
-    </div>
-    <div class="col-md-10 col-12 descrizione_audit">
-    </div>
-    <div class="descrizione_audit_edit col-md-7 col-12  d-none">
-      <textarea class ="textarea_audit textarea_descrizione_audit" name="" rows="8" cols="50">
-      </textarea>
-    </div>
-  </div>
-  <div class="row mb-3" style="font-size:16px;">
-    <div class="col-md-2 col-12" style="text-align:center;font-style:oblique;font-family:Arial;color:chocolate">
-      Documenti visionati/segnalazioni
-    </div>
-    <div class="col-md-10 col-12 documenti_audit">
-    </div>
-    <div class="documenti_audit_edit col-md-7 col-12  d-none">
-      <textarea class ="textarea_audit textarea_documenti_audit" name="" rows="4" cols="50">
-      </textarea>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col mb-3 modifica_col" style="text-align:center">
-      <button type="button" class="btn btn-primary modifica_btn" onclick="">Modifica audit</button>
-    </div>
-    <div class="col d-none mb-3 salva_col" style="text-align:center">
-      <button type="button" class="btn btn-primary salva_btn" onclick="">Salva audit</button>
+
+    <div class="row mb-3">
+      <div class="modal__textarea-title col-md-2 col-12">Documenti e segnalazioni</div>
+      <div class="modal__documenti_audit modal__textarea-preview col-md-10 col-12"></div>
+      <div class="modal__documenti_audit_edit col-md-10 col-12 d-none">
+        <textarea class="modal__textarea modal__textarea_documenti_audit" name=""></textarea>
+      </div>
     </div>
   </div>
 </div>

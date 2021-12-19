@@ -11,7 +11,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #f1f1f1;
+  background: #f1f1f1 !important;
   height: 100vh;
 }
 
@@ -201,15 +201,7 @@ $my-grey: #65727e;
  * AUDITS LIST *
  ***************/
 
-#audits_container,
-#all_audits_container,
-#situa_audits_container {
-  flex: 1;
-  overflow-y: auto;
-  overflow-x: auto;
-  position: relative;
-
-  $scrollbar-width: 3px;
+@mixin scrollbar-bella($scrollbar-width: 3px, $thumb-color: #00000071) {
   &::-webkit-scrollbar {
     width: $scrollbar-width;
     height: $scrollbar-width;
@@ -218,8 +210,18 @@ $my-grey: #65727e;
     background: transparent;
   }
   &::-webkit-scrollbar-thumb {
-    background: #00000071;
+    background: $thumb-color;
   }
+}
+
+#audits_container,
+#all_audits_container,
+#situa_audits_container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  position: relative;
+  @include scrollbar-bella;
 }
 
 .audits_table {
@@ -293,13 +295,6 @@ td {
   color: black;
   font-weight: bold;
   z-index: 2;
-}
-
-// FIXME: Cos'è??
-#audit_view_container {
-  left: 10%;
-  top: 10%;
-  height: 500px;
 }
 
 /*
@@ -401,17 +396,5 @@ td {
     width: 100%;
   }
 }
-/*
 
-<div id="audits_container" class="container-fluid mt-md-2">
-    <div class="row mt-2">
-      <div class="col tot_audits">
-        <!-- AUDITS HERE -->
-      </div>
-    </div>
-    <div class="row border-top d-none no-audits">
-      Nessun audit trovato
-    </div>
-  </div>
-
-*/
+@import "audit-view.scss"

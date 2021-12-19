@@ -4,16 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/area-riservata.min.css">
   <title>EuK - Area Riservata</title>
+  <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico" />
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/area-riservata.min.css">
+
 </head>
 
 <body>
   <div id="layout-wrapper">
     <div id="menu-container">
-      <img src="resources/img/riservata/euk-logo.webp">
+      <img src="resources/img/euro-koshe.webp">
       <nav class="pc-nav">
         <div class="menu-item-pc selected-menu"
           onclick="showTemplate('riservata/myaudits')//showTemplate('myaudits.html')">
@@ -94,7 +97,7 @@
           <span class="d-none d-sm-block">
             logout
           </span>
-          <img class="d-sm-none" src="resources/img/riservata/logout.svg" style=" width: 20px; margin: 0;" />
+          <img class="d-sm-none m-0" src="resources/img/riservata/logout.svg" style="width: 20px;" />
         </a>
         <p class="text-center d-sm-none p-0 mb-0" style="font-size: .8rem;">Logout</p>
       </div>
@@ -111,6 +114,8 @@
   <div id="audit_view">
     <!--POPUP AUDIT-->
   </div>
+
+  <div id="modal__overlay" class="d-none" onclick="closeView()"></div>
 
   <script type="text/javascript">
     var codice_utente;
@@ -141,7 +146,6 @@
         menushow = true;
       }
     }
-    // document.getElementById('menu-container').style.height = window.innerHeight + "px";
     fetch('riservata/myaudits').then(result => result.text()).then(html => {
       document.getElementById('template').innerHTML = html;
       myauditsReady();
@@ -155,15 +159,12 @@
       fetch(url).then(result => result.text()).then(html => {
         document.getElementById('template').innerHTML = html;
         switch (url) {
-          // case "myaudits.html":
           case "riservata/myaudits":
             myauditsReady();
             break;
-          // case "allaudits.html":
           case "riservata/allaudits":
             allAuditsReady();
             break;
-          // case "situazione_audit.html":
           case "riservata/situazioneaudits":
             auditSitReady();
             break;
@@ -184,6 +185,7 @@
   <script type="text/javascript" src="js/area_riservata/allaudits.js"></script>
   <script type="text/javascript" src="js/area_riservata/functions.js"></script>
   <script type="text/javascript" src="js/area_riservata/situa_audits.js"></script>
+  <script type="text/javascript" src="js/textarea.js"></script>
 
 
 </html>

@@ -1,0 +1,166 @@
+.text-grey {
+  color: $my-grey;
+}
+
+.modal__outer {
+  * {
+    font-family: unset;
+    font-size: unset;
+  }
+
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  width: 1000px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 0;
+  background: $blue;
+  border-radius: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 999;
+}
+
+#modal__overlay {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  
+  background: #4949497e;
+  cursor: pointer;
+
+  z-index: 998;
+}
+
+.modal__inner {
+  position: relative;
+  box-shadow: 5px 5px 10px #494949;
+  // border-top: 0.3rem solid rgb(85, 159, 175);
+  // border-right: 0.3rem solid rgb(85, 159, 175);
+
+  background: white;
+
+  width: 100%;
+  border-radius: 1.5rem;
+  border-top-right-radius: 7rem;
+  border-top-left-radius: 0.5rem;
+  padding: 1rem;
+
+  flex: 1 0;
+  overflow: auto;
+
+  @include scrollbar-bella;
+}
+
+.modal__id-audit {
+  /*background: #c5532e;*/
+  color: white;
+  padding: 0.5rem 1rem 0 1rem;
+  font-size: 0.8rem;
+  * {
+    font-size: 0.8rem;
+  }
+}
+
+.modal__closer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+}
+
+.modal__azienda_audit {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 2.5rem;
+  color: $blue;
+  font-family: 'spartan-regular';
+  font-weight: bold;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+}
+
+.modal__dati {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.1rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.modal__element {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  // è una cafonata ma dipende dall'errore fatto in *{} n area-riservata.scss
+  font-weight: bold;
+  font-family: 'spartan';
+  * {
+    font-family: 'spartan';
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 764px) {
+  .modal__element {
+    width: 100%;
+  }
+}
+
+.modal__textarea {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  resize: none; // TODO: ???
+  // font-family: 'spartan-regular';
+  padding: 1rem;
+
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.2rem 0.4rem;
+
+  /*&::placeholder {
+    // Chrome, Firefox, Opera, Safari 10.1+
+    // color: grey;
+    // opacity: 0.5; // Firefox
+  }*/
+
+  &:focus,
+  &:active {
+    outline: none !important;
+    border: 1px solid $blue;
+  }
+
+  // @include scrollbar-bella(0.5rem, rgb(196, 196, 196));
+}
+
+.modal__textarea-preview {
+  font-family: 'spartan-regular';
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal__textarea-title {
+  margin-bottom: 0.5rem;
+  color: $orange;
+  font-style: oblique;
+  font-family: Arial;
+  font-size: 1.2rem;
+}
