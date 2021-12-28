@@ -21,6 +21,10 @@ router.get('/situazioneaudits', function (req, res) {
   res.sendFile(path.join(part_ris, "situazione_audit.html"));
 });
 
+router.get('/certificati', function (req, res) {
+  res.sendFile(path.join(part_ris, "certificati.html"));
+});
+
 router.get('/auditview', function (req, res) {
   res.sendFile(path.join(part_ris, "audit_view.html"));
 });

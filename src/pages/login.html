@@ -7,12 +7,14 @@
   <title>EuK - Login</title>
   <link rel="shortcut icon" type="image/x-icon" href="resources/img/favicon.ico" />
   
+  <link rel="preload" as="font" href="resources/fonts/Spartan-Regular.ttf" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" as="font" href="resources/fonts/spartan.ttf" type="font/ttf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/login.min.css">
   <script type="text/javascript" src="js/login.js"></script>
 </head>
 
 <body>
-  <div id="login-container">
+  <div id="login-container" onkeydown="accediOnEnter()">
     <img class="logo" src="resources/img/euro-koshe.webp" alt="">
     <div id="inputs">
       <p class="login-label big-text text-orange"><b>email</b></p>
@@ -35,32 +37,14 @@
 </body>
 
 <script>
-  fetch("login.asp?codice=true").then(response => response.text()).then(codice => {
-    if (codice != null) {
-      // FIXME è una demo quindi il login è fake
-      // window.location.href = "area_riservata.html";
-      // window.location.href = "riservata";
-    }
-  });
+  function accediOnEnter() {
+    var isEnter = event.code === 'Enter';
+    isEnter && accedi();
+  }
   
   function accedi() {
-    // FIXME fake login
+    // fake login
     window.location.href = "riservata";
-    return;
-
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let utente = login(email, password, function (utente) {
-      if (utente == null) {
-        document.getElementById("login_error").classList.remove("d-none");
-      } else {
-        document.getElementById("codice").value = utente.Codice;
-        document.getElementById("denominazione").value = utente.Denominazione;
-        document.getElementById("email").value = utente.email;
-        document.getElementById("nome").value = utente.parola;
-        document.getElementById("form_login").submit();
-      }
-    });
   }
 </script>
 

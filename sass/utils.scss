@@ -37,30 +37,36 @@
 }
 
 .big-title {
-  font-size: calc(1.6rem + 2vw);
-  line-height: 1.2;
+  font-size: calc(1.6rem + 2vw) !important;
+  line-height: 1.2 !important;
 }
 
 .big-subtitle {
-  font-size: calc(1.4rem + 1vw);
-  line-height: 1.2;
+  font-size: calc(1.4rem + 1vw) !important;
+  line-height: 1.2 !important;
 }
 
 .big-text {
-  font-size: calc(1.2rem + 0.5vw);
+  font-size: calc(1.2rem + 0.5vw) !important;
 }
 
 .mid-title {
-  font-size: calc(1.4rem + 1.5vw);
-  line-height: 1.2;
+  font-size: calc(1.4rem + 1.5vw) !important;
+  line-height: 1.2 !important;
 }
 
 .mid-text {
-  font-size: calc(1rem + 0.2vw);
+  font-size: calc(1rem + 0.2vw) !important;
 }
 
 .sml-text {
-  font-size: calc(.5rem + 0.2vw);
+  font-size: calc(.5rem + 0.2vw) !important;
+}
+
+.lh-1 {
+  // è un po una cafonata
+  // lo uso solo in row-audit
+  line-height: 1rem;
 }
 
 .bg-glass {

@@ -1,0 +1,110 @@
+<!--
+  FIXME:
+  I METODI PROVVISORI PER APRIRE LA POPUP LI HO MESSI IN FONDO AD area_riservata.asp
+-->
+
+<div class="container-fluid h-100 d-flex flex-column">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h1 class="mid-text m-0">Certificati e schede tecniche</h1>
+    <!-- <img src="../resources/img/riservata/filtro.svg" alt="" class="toggle me-0" data-target="filtri-allaudits" width="15"> -->
+  </div>
+
+  <!--FIXME: I filtri prima non c'erano, però ci starebbe una ricerca %LIKE% -->
+
+  <div id="certificati_container">
+    <table class="table-certificati w-100">
+      <thead class="table-columns">
+        <tr>
+          <td>Azienda</td>
+        </tr>
+      </thead>
+
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 1</td>
+      </tr>
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 2</td>
+      </tr>
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 3</td>
+      </tr>
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 4</td>
+      </tr>
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 5</td>
+      </tr>
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 6</td>
+      </tr>
+      <tr class="row_audit" onclick="openModal()">
+        <td>Azienda 7</td>
+      </tr>
+
+    </table>
+    <style>
+      .table-certificati td {
+        padding: .5rem .2rem;
+      }
+    </style>
+  </div>
+
+</div>
+
+<div id="documenti_view" class="modal__outer d-none">
+  <div class="modal__menu mt-3">
+    <!-- fa da spazio -->
+  </div>
+
+  <span class="modal__closer" onclick="closeModal()">X</span>
+
+  <div class="modal__inner">
+    <h1 class="modal__title">
+      Isema Sviluppo Software
+    </h1>
+    <!-- 
+      FIXME: 
+      Questo è per navigare tra le cartelle
+      Devi fare in modo che quando si clicca su una cartella si visualizzi il perccorso esatto
+      e va aggiunta la possibilità di cliccare su una tabella per navigarci direttamente
+    -->
+    <p class="f-nav text-grey fw-bold">
+      <span class="f-nav__folder">Folder</span>
+      <span class="f-nav__divider">&gt;</span>
+      <span class="f-nav__folder">Sub Folder</span>
+      <span class="f-nav__divider">&gt;</span>
+      <span class="f-nav__folder">Curr Folder</span>
+    </p>
+    <div class="modal__scroll-content">
+      <!-- Questa tabella non l'ho finita
+      devo fargli lo stile simile alle altre -->
+      <div>
+        <table class="">
+          <thead>
+            <th>Nome</th>
+            <!-- FIXME: se riusciamo a sapere in linea di massima i formati possibili utilizzerei delle icone al posto del tipo -->
+            <th>Tipo</th>
+            <th>Dimensione</th>
+            <th>Creazione</th>
+            <th>Ultimo accesso</th>
+            <th>Ultima modifica</th>
+          </thead>
+          <tbody>
+            <tr class="f-table__file">
+              <td>prime visite.ods</td>
+              <td>Folder</td>
+              <td>27,5 MB</td>
+              <!-- FIXME: Servono i secondi?? -->
+              <!-- FIXME: Date italiane -->
+              <td>15/10/2021 08:56</td>
+              <td>4/28/2021 18:10</td>
+              <td>4/28/2021 18:10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

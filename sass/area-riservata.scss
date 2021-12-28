@@ -216,7 +216,8 @@ $my-grey: #65727e;
 
 #audits_container,
 #all_audits_container,
-#situa_audits_container {
+#situa_audits_container,
+#certificati_container {
   flex: 1;
   overflow-y: auto;
   overflow-x: auto;
@@ -235,7 +236,8 @@ $my-grey: #65727e;
 @media (max-width: ($break-sm - 1)) {
   #audits_container,
   #all_audits_container,
-  #situa_audits_container {
+  #situa_audits_container,
+  #certificati_container {
     overflow-x: hidden;
   }
 
@@ -285,17 +287,7 @@ td {
   display: table-row;
 }
 
-.tot_audits {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  background: white;
-  padding: 0.7rem 1rem 0 0;
-  text-align: right;
-  color: black;
-  font-weight: bold;
-  z-index: 2;
-}
+
 
 /*
 .mobile-row {
@@ -397,4 +389,43 @@ td {
   }
 }
 
-@import "audit-view.scss"
+.page-link {
+  color: $blue;
+  text-align: center;
+}
+
+.page-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  max-height: 500%;
+  overflow-y: auto;
+  @include scrollbar-bella;
+}
+
+@import 'audit-view.scss';
+
+.f-nav {
+  padding-left: .5rem;
+  margin-top: .5rem;
+}
+
+.f-nav__divider {
+  margin: 0 .5rem;
+}
+
+.f-nav__folder {
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid currentColor;
+  }
+}
+
+.f-table {
+  width:  100%;
+  border-collapse: collapse;
+  max-height: 100%;
+}

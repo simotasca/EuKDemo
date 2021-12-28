@@ -2,6 +2,20 @@
   color: $my-grey;
 }
 
+#modal__overlay {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: #4949497e;
+  cursor: pointer;
+
+  z-index: 998;
+}
+
 .modal__outer {
   * {
     font-family: unset;
@@ -27,48 +41,70 @@
   z-index: 999;
 }
 
-#modal__overlay {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  
-  background: #4949497e;
-  cursor: pointer;
-
-  z-index: 998;
-}
-
 .modal__inner {
   position: relative;
+  width: 100%;
+  padding: 1rem;
+
   box-shadow: 5px 5px 10px #494949;
   // border-top: 0.3rem solid rgb(85, 159, 175);
   // border-right: 0.3rem solid rgb(85, 159, 175);
-
   background: white;
-
-  width: 100%;
   border-radius: 1.5rem;
   border-top-right-radius: 7rem;
   border-top-left-radius: 0.5rem;
-  padding: 1rem;
 
   flex: 1 0;
-  overflow: auto;
+  overflow: hidden;
 
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__scroll-content {
+  width: 100%;
+  flex: 1;
+  overflow: auto;
   @include scrollbar-bella;
 }
 
-.modal__id-audit {
-  /*background: #c5532e;*/
+.modal__menu {
   color: white;
-  padding: 0.5rem 1rem 0 1rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 0 0.3rem 1.2rem;
+  display: flex;
+}
+
+.modal__tab-toggler {
+  position: relative;
+  background: $dark-blue;
+  padding: 0.3rem 2rem 0.1rem 2rem;
+  margin: 0 -0.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+
   * {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
+
+  /*&:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: calc(100% - 16px);
+    width: 100%;
+    border-left: 1px solid $blue;
+    border-right: 1px solid $blue;
+  }*/
+}
+
+.modal__tab-toggler--selected {
+  background: $blue !important;
+  box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.268);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 9;
 }
 
 .modal__closer {
@@ -83,15 +119,33 @@
   cursor: pointer;
 }
 
-.modal__azienda_audit {
+.modal__title {
+  color: $blue;
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 2.5rem;
-  color: $blue;
+  word-wrap: break-word;
   font-family: 'spartan-regular';
   font-weight: bold;
   font-size: 1.2rem;
-  word-wrap: break-word;
+}
+
+.modal__id-audit-container {
+  padding-top: 1rem;
+  background: white;
+  font-weight: bold;
+  position: fixed;
+  bottom: 2px;
+  left: 1rem;
+  text-align: center;
+  width: calc(100% - 2rem);
+}
+
+.modal__modifica_col,
+.modal__salva_col {
+  position: fixed;
+  bottom: 2px;
+  right: 1rem;
 }
 
 .modal__dati {
@@ -163,4 +217,49 @@
   font-style: oblique;
   font-family: Arial;
   font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.modal__photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.2rem;
+  padding-bottom: 3rem;
+}
+
+.modal__photo {
+  aspect-ratio: 1;
+  border-radius: 0.3rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: ($break-xs - 1)) {
+  .modal__photo-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: ($break-sm - 1)) {
+  .modal__photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: ($break-md - 1)) {
+  .modal__photo-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.modal__add-photo {
+  padding: 0.3rem;
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.3rem;
 }
