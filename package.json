@@ -4,8 +4,7 @@
     "sass": "sass sass:css -w --style compressed"
   },
   "dependencies": {
-    "connect": "^3.7.0",
-    "serve-static": "^1.15.0"
+    "express": "^4.13.4"
   },
   "name": "euk-demo",
   "version": "1.0.0",

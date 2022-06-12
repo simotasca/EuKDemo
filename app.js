@@ -1,5 +1,7 @@
-var connect = require('connect')
-var serve = require('serve-static')
+const express = require("express");
 
-const PORT = process.env.PORT || 3000 
-connect().use(serve(__dirname)).listen(3000, () => console.log(`localhost:${PORT}`))
+const app = express();
+app.use(express.static(__dirname));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`LISTGENING ON PORT: ${PORT}`));
