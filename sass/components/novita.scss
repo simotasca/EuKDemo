@@ -1,0 +1,34 @@
+@import '../base/typography';
+@import '../base/breakpoints';
+
+#container {
+  width: 200px;
+  max-width: 200px;
+  flex-shrink: 0;
+
+  @include not-device(desktop) {
+    width: 30vw;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+
+    background-color: cornsilk;
+  }
+
+  p {
+    text-transform: uppercase;
+    padding-left: 0.7rem;
+  }
+}
+
+#azienda {
+  font-size: $step-1;
+  font-weight: 600;
+}
+
+#prodotto {
+  margin-top: 0;
+}

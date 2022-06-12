@@ -1,0 +1,63 @@
+@use "sass:color";
+@import '../base/colors';
+
+:host {
+  display: block;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+}
+
+#dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 500px;
+  overflow: auto;
+  background: white;
+
+  z-index: 999;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.301);
+
+  transition: visibility 0s 0.2s;
+
+  $scrollbar-width: 2px;
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #4e4e4e71;
+  }
+}
+
+input.text-input {
+  width: 100%;
+  padding: {
+    top: 0.5rem;
+    bottom: 0.3rem;
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+input:not(:focus) + #dropdown {
+  visibility: hidden;
+}
+
+p {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0.2rem;
+  cursor: pointer;
+
+  &:hover {
+    background: color.scale($blue, $lightness: 80%);
+  }
+}

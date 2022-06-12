@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="css/pages/index.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./libs/three/three.module.js",
+        "OBJLoader": "./libs/three/OBJLoader.js",
+        "GLTFLoader": "./libs/three/GLTFLoader.js",
+        "RGBELoader": "./libs/three/RGBELoader.js",
+        "Stats": "./libs/Stats.js"
+      }
+    }
+  </script>
+  <script src="./libs/gsap/gsap.min.js"></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <main-menu dark></main-menu>
+
+  <div id="main-bg">
+    <div id="main-bg-ellipse"></div>
+  </div>
+
+  <!-- firma -->
+  <div class="main-canvas-container max-width-container">
+    <div class="main-canvas-inner-container">
+
+      <img id="firma-rav-1" class="firma-rav" src="./resources/img/firma.svg" alt="">
+      <img id="firma-rav-2" class="firma-rav" src="./resources/img/firma.svg" alt="">
+
+    </div>
+  </div>
+
+  <!-- canvas prodotti -->
+  <div class="main-canvas-container">
+    <div class="main-canvas-inner-container">
+
+      <canvas id="main-canvas"></canvas>
+
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div class="main-canvas-container max-width-container">
+    <div class="main-canvas-inner-container">
+
+      <div id="hero1" class="hero">
+        <h1 class="mb-1">
+          Garantiamo la qualità della certificazione <span class="red">Kosher</span>, in Italia e in <span class="blue">Euro</span>pa.
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Come certificarsi</button>
+          <button class="btn btn-red">Cos'è il kosher</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div class="main-canvas-container max-width-container">
+    <div class="main-canvas-inner-container">
+
+      <div id="hero2" class="hero">
+        <h1 class="mb-1">
+          Tante cose <span class="red">Kosher</span>, costano troppi <span class="blue">Euro</span>.
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Come certificarsi</button>
+          <button class="btn btn-red">Cos'è il kosher</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- contatti -->
+  <div id="contatti-container">
+    <div class="max-width-container">
+      <div id="social-icons">
+        <a href="/">
+          <img class="mb-05" src="./resources/social/fb.svg" alt="">
+        </a>
+        <a href="/">
+          <img src="./resources/social/ig.svg" alt="">
+        </a>
+      </div>
+
+      <div id="btn-contatti" onclick="nextProduct()">
+        <h5 class="">CONTATTACI</h5>
+      </div>
+    </div>
+  </div>
+
+  <div id="diagonals-container" class="bg-dark light">
+
+    <!-- infografica -->
+    <section id="infografica" class="max-width-container">
+
+      <div class="spacer"></div>
+
+      <div class="only-on-desktop max-width-container">
+        <h1 class="titolone-new mb-2">
+          <span class="blue">Badatz</span>
+          <br> Mehadrin
+        </h1>
+        <p class="h3 mb-1">Dagli anni '90 i migliori certificatori in Italia.</p>
+        <div class="buttons">
+          <button id="infog-over-bottle" class="btn btn-blue">Richiedi una consulenza</button>
+        </div>
+      </div>
+
+      <div class="hide-on-desktop">
+        <div class="row">
+          <div class="col align-left">
+            <p class="infog-text h4 mb-1">
+              Dagli anni '90 <span calss="nowrap">i migliori</span> certificatori in Italia.
+            </p>
+            <div class="buttons">
+              <button id="infog-over-bottle" class="btn btn-blue">Richiedi una consulenza</button>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+        <div class="spacer"></div>
+        <h1 class="titolone-new ml-1">
+          <span class="blue">Badatz</span>
+          <br> Mehadrin
+        </h1>
+      </div>
+
+      <div class="spacer"></div>
+      <div class="spacer only-on-desktop"></div>
+
+
+      <div class="row">
+        <div class="col">
+          <img class="infog-img mb-1" src="./resources/img/logo-light.svg" alt="">
+          <h4 class="infog-text hide-on-mobile">
+            Le <b class="blue">migliori aziende</b> italiane scelgono il marchio Eurokosher, perchè garantisce affidabilità e riconoscimento.
+          </h4>
+          <p class="infog-text h5 only-on-mobile">
+            Le <b class="blue">migliori aziende</b> italiane scelgono il marchio Eurokosher, perchè garantisce affidabilità e riconoscimento.
+          </p>
+        </div>
+        <div class="col hide-on-mobile"></div>
+      </div>
+
+      <div class="spacer only-on-desktop"></div>
+      <div class="spacer"></div>
+
+      <div class="row">
+        <div class="col col-3-4-mobile">
+          <div id="tonno">
+            <div class="light-effect"></div>
+            <img src="./resources/img/tonno.png" alt="">
+          </div>
+        </div>
+        <div class="col col-1-4-mobile only-on-mobile"></div>
+        <div id="aside-tonno" class="col hide-on-mobile">
+          <div>
+            <img class="infog-img mb-1" src="./resources/img/chart.svg" alt="">
+            <p class="h5 infog-text">
+              I prodotti certificati kosher raggiungono un vasto numero di utenti all'interno di un <b class="blue">mercato in costante crescita</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer hide-on-tablet"></div>
+
+      <div class="row only-on-mobile">
+        <div class="col col-1-4-mobile"></div>
+        <div class="col col-3-4-mobile">
+          <div>
+            <img class="infog-img mb-1" src="./resources/img/chart.svg" alt="">
+            <p class="h5 infog-text">
+              I prodotti certificati kosher raggiungono un vasto numero di utenti all'interno di un <b class="blue">mercato in costante crescita</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="row">
+        <div class="col col-3-4-mobile">
+          <img id="infog-mela" class="infog-img mb-1" src="./resources/img/fruit.svg" alt="">
+          <p class="h5 infog-text mb-1">
+            La nostra mission è permettere agli ebrei di tutto il mondo di mangiare i loro <b class="blue">alimenti preferiti</b> senza perdere la propria identità religiosa.
+          </p>
+          <div class="buttons">
+            <button class="btn btn-blue">Lista prodotti</button>
+          </div>
+        </div>
+        <div class="col col-1-4-mobile"></div>
+      </div>
+
+      <div class="spacer"></div>
+
+    </section>
+
+    <h1 id="skew-title-1" class="skew-title hide-on-mobile">Kosher</h1>
+    <h1 id="skew-title-2" class="skew-title hide-on-mobile">Euro</h1>
+
+    <div id="skew-panel-1" class="skew-panel"></div>
+    <div id="skew-panel-2" class="skew-panel">
+      <div class="skew-line"></div>
+      <div class="skew-line"></div>
+      <div class="skew-line"></div>
+      <div class="skew-line"></div>
+      <div class="skew-line"></div>
+      <div class="skew-line"></div>
+      <div class="skew-line"></div>
+      <div class="skew-line hide-on-mobile"></div>
+      <div class="skew-line hide-on-mobile"></div>
+    </div>
+
+    <!-- mappa 3d -->
+    <section id="map-3d">
+      <div id="fade-in">
+        <div id="sfondo"></div>
+
+        <div id="logoi">
+          <div class="logoi-col">
+            <img src="./resources/design-aziende/branca.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/cirio.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/clemente.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/de_cecco.svg" alt="logo" class="logo">
+          </div>
+
+          <div class="logoi-col">
+            <img src="./resources/design-aziende/de_cecco.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/illy.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/kimbo.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/lavazza.svg" alt="logo" class="logo">
+          </div>
+
+          <div class="logoi-col">
+            <img src="./resources/design-aziende/levante.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/san_pellegrino.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/segafredo.svg" alt="logo" class="logo">
+            <img src="./resources/design-aziende/valfrutta.svg" alt="logo" class="logo">
+          </div>
+        </div>
+      </div>
+
+      <canvas id="map-canvas"></canvas>
+
+      <div id="map-not-overflow">
+
+        <div class="map-titles light">
+          <h1 id="scroll-title-1" class="slide-appear map-title">
+            I marchi certificati eurokosher sono riconosciuti in tutto il mondo
+          </h1>
+          <div class="map-titles--spacer"></div>
+          <h1 id="scroll-title-2" class="slide-appear map-title">
+            Certifichiamo il meglio del kosher made in Italy che viene esportato all'estero
+          </h1>
+        </div>
+
+        <div class="map-titles light">
+          <h1 id="scroll-title-3" class="slide-appear map-title">
+            I migliori enti di certificazione al mondo si appoggiano a Eurokosher per le loro certificazioni in italia
+            <div id="logoi-enti">
+              <img id="logo-ok" src="./resources/ok-kosher.svg" alt="">
+              <img id="logo-ou" src="./resources/orthodox-union.svg" alt="">
+            </div>
+          </h1>
+        </div>
+
+        <div class="map-titles light">
+          <div id="scroll-title-4" class="slide-appear map-titles--row">
+            <span class="map-title map-title--num" data-number=231></span>
+            <h1 class="map-title">
+              Aziende certificate in Italia
+            </h1>
+          </div>
+          <div class="map-titles--spacer"></div>
+          <div id="scroll-title-5" class="slide-appear map-titles--row">
+            <span class="map-title map-title--num" data-number=77></span>
+            <h1 class="map-title">
+              Aziende certificate per Orthodox Union e OK Kosher
+            </h1>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="aziende-container">
+        <div class="label-azienda">
+          <p class="nome-azienda h3">Frero</p>
+          <p><u>Lista prodotti</u></p>
+        </div>
+      </div>
+
+    </section> <!-- map-3d -->
+
+  </div>
+
+</body>
+
+<script src="./js/pages/index/three/rendering.js" type="module"></script>
+<!-- <script src="./js/pages/index/index.js" type="module"></script> -->
+<script src="./js/pages/index/panels.js" type="module"></script>
+
+<script src="./js/components/BaseComponent.js"></script>
+<script src="./js/components/main-menu.js"></script>
+
+</html>

@@ -1,0 +1,23 @@
+$red: #9e2121;
+$blue: #3b8599;
+$dark-blue: #3e5f67;
+$dark: #272727;
+$light: #d5d5d5;
+
+$colors: (
+  'red': $red,
+  'blue': $blue,
+  'dark-blue': $dark-blue,
+  'dark': $dark,
+  'light': $light
+);
+
+@each $key, $val in $colors {
+  .#{$key} {
+    color: $val;
+  }
+
+  .bg-#{$key} {
+    background-color: $val;
+  }
+}

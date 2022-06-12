@@ -1,0 +1,166 @@
+@import './z-index';
+@import '../base/breakpoints';
+
+#diagonals-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100vh;
+}
+
+#infografica {
+  min-height: 100%;
+  padding: 2rem;
+  padding-bottom: 0;
+  position: relative;
+
+  z-index: $infog-z;
+
+  @include device(mobile) {
+    padding: 1rem;
+
+    .row {
+      padding: 1rem;
+    }
+
+    .col-3-4-mobile {
+      flex: 3;
+    }
+
+    .col-1-4-mobile {
+      flex: 1;
+    }
+  }
+
+  @include not-device(desktop) {
+    .col {
+      padding: 0;
+    }
+  }
+
+  @include device(tablet) {
+    padding: 2rem;
+  }
+}
+
+#infog-over-bottle {
+  z-index: $hero-z;
+}
+
+.skew-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 400vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  visibility: hidden;
+}
+
+$panel-light: lighten($dark, 10%);
+
+#skew-panel-1 {
+  background: linear-gradient(to bottom left, $panel-light -25%, $dark 25%);
+  transform: translate(-50vw, -50vw) skewX(45deg);
+  box-shadow: 1.5rem 0 1.5rem rgba(0, 0, 0, 0.5);
+
+  z-index: $panel-1-z;
+}
+
+#skew-panel-2 {
+  background: linear-gradient(to bottom right, $panel-light -25%, $dark 25%);
+  transform: translate(-50vw, -50vw) skewX(-45deg);
+  box-shadow: -1.5rem 0 1.5rem rgba(0, 0, 0, 0.5);
+
+  z-index: $panel-2-z;
+}
+
+.skew-line {
+  width: 1fr;
+  height: 50%;
+  border-right: 2px solid $light;
+  opacity: 0.2;
+  transform-origin: 0 0;
+
+  &:last-of-type,
+  &:first-of-type {
+    border-color: transparent;
+  }
+}
+
+.skew-title {
+  position: absolute;
+  transform-origin: left;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: min(13vw, 15rem);
+  font-weight: 600;
+
+  visibility: hidden;
+}
+
+#skew-title-1 {
+  $move: min(26vw, 390px); // il min() è per max width containr
+  transform: translate($move, calc($move - 80%)) rotate(45deg);
+
+  color: $red;
+  z-index: $panel-title-1-z;
+}
+
+#skew-title-2 {
+  $move: calc(min(100vw, 1500px) * 1 / 8); // il min è per max width containr
+  transform: translate(calc(100vw - $move), calc($move - 80%)) rotate(-45deg);
+
+  color: white;
+  z-index: $panel-title-2-z;
+}
+
+.infog-text {
+  max-width: 33rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infog-img {
+  width: 20%;
+  min-width: 100px;
+}
+
+#tonno {
+  position: relative;
+
+  img {
+    width: min(450px, 100%);
+    filter: drop-shadow(-1.5rem 1.62rem 2.5rem rgb(0 0 0 / 0.7));
+  }
+
+  .light-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150%;
+    aspect-ratio: 1;
+
+    // background: #d5d5d51c;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 50%;
+    filter: blur(5vw);
+  }
+}
+
+#aside-tonno {
+  display: flex;
+  align-items: flex-end;
+
+  @include device(tablet) {
+    align-items: center;
+  }
+
+  & > div {
+    flex: 1;
+  }
+}

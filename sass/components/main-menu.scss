@@ -1,0 +1,120 @@
+@import '../base/colors';
+@import '../base/breakpoints';
+
+#main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: transparent;
+
+  transition: transform 0.2s;
+
+  z-index: 999;
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar,
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  img {
+    height: 3.4rem;
+    padding: 0.2rem 0;
+    filter: drop-shadow(0.05rem 0.2rem 0.1rem rgb(0 0 0 / 0.2));
+  }
+
+  &.main-menu--dark {
+    a {
+      color: $light;
+      font-weight: 500;
+
+      &#menu-editoriale {
+        // color: lighten($blue, 20);
+        color: $blue;
+      }
+    }
+  }
+
+  a {
+    color: $dark-blue;
+    font-weight: 550;
+    $shadow-size: 0.1rem 0.1rem 0.2rem;
+    text-shadow: $shadow-size #00000028;
+
+
+    &#menu-editoriale {
+      color: $red;
+    }
+  }
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #f5f5f5;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transition: opacity 0.1s;
+
+  z-index: -1;
+}
+
+#main-menu.main-menu--dark {
+  #background {
+    background-color: $dark;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.7);
+  }
+}
+
+#main-menu.scrolled {
+  #background {
+    opacity: 1;
+  }
+}
+
+#menu-hamb {
+  padding: 0.3rem;
+  padding-right: 0;
+}
+
+@include device(mobile) {
+  #main-menu {
+    padding: 1rem 1.2rem;
+    img {
+      height: 3rem;
+    }
+  }
+}
+
+#menu-underline {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100px;
+  height: 0.2rem;
+  background: $dark-blue;
+
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+
+  visibility: hidden;
+
+  &.light {
+    background: $light;
+  }
+}

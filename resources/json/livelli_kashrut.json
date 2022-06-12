@@ -1,0 +1,15 @@
+[
+  { "Cod_livello_kashrut": "7", "Livello_kashrut": "Dairy for Passover", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "HI", "Livello_kashrut": "HALAV ISRAEL", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "6", "Livello_kashrut": "Kosher Chalavi Stam ", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "4", "Livello_kashrut": "Kosher Dairy (Chalav Israel)", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "3", "Livello_kashrut": "Kosher Dairy (Chalav Stam)", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "P", "Livello_kashrut": "Kosher Parve", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "PASSP", "Livello_kashrut": "Kosher Parve for Passover", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "1", "Livello_kashrut": "Kosher parve laMehadrin", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "5", "Livello_kashrut": "Kosher Parve lePesach", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "2", "Livello_kashrut": "Kosher Parve lePesach laMehadrin", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "8", "Livello_kashrut": "Kosher Parve lePesach laMehadrin Mevushal", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "MH", "Livello_kashrut": "MEHADRIN", "array": [1, 2, 3, 4] },
+  { "Cod_livello_kashrut": "PES", "Livello_kashrut": "PASSOVER", "array": [1, 2, 3, 4] }
+]

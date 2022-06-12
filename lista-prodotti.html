@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/pages/lista-prodotti.css">
+</head>
+
+<body>
+  <main-menu>
+    <div id="menu-search-container" class="pt-1">
+      <button class="btn2 btn-blue only-on-mobile" onclick="openPanelFiltri()">FILTRI</button>
+      <div class="hide-on-mobile"></div>
+      <div class="search-bar">
+        <img src="./resources/lente.svg" alt="" class="pointer" />
+        <input class="input--outline" type="text" name="cerca">
+      </div>
+    </div>
+  </main-menu>
+
+  <div id="panel-filtri" class="only-on-mobile">
+    <img src="./resources/close.svg" alt="" onclick="openPanelFiltri()">
+    <h1 class="blue">Filtri ricerca</h1>
+    <p class="mb-05"><b>Brand</b></p>
+    <search-dropdown></search-dropdown>
+    <p class="mb-05"><b>Categoria</b></p>
+    <search-dropdown id="filtro-categoria-mobile"></search-dropdown>
+    <p class="mb-05"><b>Livello kasherut</b></p>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Chalav Israel </label>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Chalav Stam </label>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Diary </label>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Mehadrin </label>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Mevushal </label>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Parve </label>
+    <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Passover </label>
+    <br>
+    <br>
+    <button class="btn2 btn-blue" onclick="filtra()">Applica Filtri</button>
+  </div>
+
+  <main id="main-section">
+
+    <div id="hero" class="max-width-container">
+      <h1><span class="blue">Cerca</span> un prodotto</h1>
+      <p class="red">
+        <b>Novità</b>
+      </p>
+      <div id="main-search-bar" class="search-bar">
+        <img src="./resources/lente.svg" alt="" class="pointer">
+        <input type="text" name="cerca">
+      </div>
+
+      <div id="main-categorie"></div>
+    </div>
+
+  </main>
+
+  <section id="lista-prodotti">
+
+    <div class="max-width-container">
+
+      <!-- <div class="only-on-desktop"></div> 10% -->
+
+      <main>
+
+        <article id="novita">
+
+          <h4>Novità</h4>
+
+          <img src="./resources/arrow-l.svg" id="novita__move-l" class="hidden"></img>
+          <img src="./resources/arrow-r.svg" id="novita__move-r"></img>
+
+          <div id="novita__list-container">
+            <div id="novita__list">
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 1"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 2"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 3"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 4"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 5"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 6"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 7"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 8"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 9"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 10"></novita-el>
+              <novita-el azienda="Rio Mare" prodotto="Insalatissime al tonno 11"></novita-el>
+            </div>
+          </div>
+
+        </article>
+
+        <article>
+
+          <h4>Risultati</h4>
+          <p id="nessun-risultato">Nessun risultato</p>
+          <div id="loading-spinner" class="visible">
+            <div class="lds-spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div id="table-risultati" class="table-risultati"></div>
+
+        </article>
+
+      </main>
+
+      <aside id="sidebar" class="hide-on-mobile">
+
+        <div id="newsletter">
+          <h3 class="red">Newsletter</h3>
+          <p>
+            Non perderti le novità certificate Eurokosher.
+            <br> Iscriviti alla nostra newsletter!
+          </p>
+          <div class="input-group">
+            <input type="text" class="text-input" placeholder="Inserisci la tua mail">
+            <button class="btn2 btn-sm btn-red">INVIA</button>
+          </div>
+        </div>
+
+        <h3 class="blue">Filtri ricerca</h3>
+        <p class="mb-05"><b>Brand</b></p>
+        <search-dropdown id="filtro-brand" placeholder="Qualsiasi"></search-dropdown>
+        <p class="mb-05 pt-1"><b>Categoria</b></p>
+        <search-dropdown id="filtro-categoria" placeholder="Qualsiasi"></search-dropdown>
+        <p class="mb-05"><b>Livello kasherut</b></p>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Chalav Israel </label>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Chalav Stam </label>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Diary </label>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Mehadrin </label>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Mevushal </label>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Parve </label>
+        <label class="filtro-livello-k" for="ostia"><input type="checkbox" id="ostia" value="Ski Trips">Passover </label>
+        <style>
+          .filtro-livello-k {
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+          }
+        </style>
+        <br>
+        <br>
+        <button class="btn2 btn-blue" onclick="filtra()">Applica filtri</button>
+      </aside>
+
+    </div>
+
+  </section>
+
+</body>
+<script src="./js/components/BaseComponent.js"></script>
+<script src="./js/components/main-menu.js"></script>
+<script src="./js/components/novita.js"></script>
+<script src="./js/components/row-risultato.js"></script>
+<script src="./js/components/search-dropdown.js"></script>
+
+<script src="./js/pages/lista-prodotti/novita-carousel.js"></script>
+<script src="./js/pages/lista-prodotti/Prodotto.js"></script>
+<script src="./js/pages/lista-prodotti/query-prodotti.js"></script>
+<script src="./js/pages/lista-prodotti/menu-search-bar.js"></script>
+
+</html>

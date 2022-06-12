@@ -1,0 +1,194 @@
+@import './z-index';
+
+// body::after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 1rem;
+//   height: 1rem;
+//   transform: translate(-50%, -50%) rotate(45deg);
+//   background-color: red;
+//   z-index: 999999999999;
+// }
+
+.main-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 200%;
+  transform: translateX(-50%);
+  z-index: $bottle-z;
+
+  pointer-events: none;
+}
+
+.main-canvas-inner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  perspective: 6000px;
+}
+
+#main-canvas {
+  display: block;
+  position: absolute;
+  width: 150%;
+  height: calc(100% - 5.5rem);
+  top: 5.5rem;
+  left: 50%;
+  transform-origin: center center;
+  // aspect-ratio: 9/40;
+  // border: 1px solid red;
+  transform: translateX(-50%);
+  // filter: drop-shadow(-0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4));
+  border-radius: 100%;
+  pointer-events: none;
+}
+
+#main-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background: radial-gradient(circle at 70% 20%, lighten($light, 10%) 10%, $dark 200%);
+  background: $dark;
+  overflow: hidden;
+}
+
+#main-bg-ellipse {
+  position: absolute;
+  top: 5.5rem;
+  left: 50%;
+  width: 150%;
+  height: calc(200% - 5.5rem);
+  transform: translateX(-50%);
+
+  background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, black 150%);
+  box-shadow: inset 0 0 1rem $dark;
+
+  border-radius: 100% / 100%;
+  @media (orientation: portrait) {
+    width: 230%;
+  }
+
+  transition: border-radius 0.4s ease-in-out 0s;
+
+  &.straight {
+    border-radius: 100% / 0%;
+  }
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include device(desktop) {
+    & > * {
+      flex: 1;
+    }
+  }
+}
+
+.hero {
+  position: absolute;
+  top: 18%;
+  left: 60%;
+  width: 40%;
+  text-align: right;
+  padding-right: 2rem;
+
+  h1 {
+    font-weight: 600;
+    text-shadow: 0.2rem 0.2rem 0.2rem #8c8c8c6e;
+    font-size: $step-4;
+
+    @include device(mobile) {
+      font-size: $step-3;
+    }
+  }
+
+  .buttons {
+    justify-content: end;
+  }
+
+  transform-origin: -25% bottom;
+}
+
+@keyframes rotazione {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-91.5deg);
+  }
+}
+
+.firma-rav {
+  position: absolute;
+  bottom: 53%;
+  right: 65%;
+  width: 30%;
+  @include device(tablet) {
+    top: unset;
+    bottom: 1rem;
+    left: 1rem;
+    width: 40%;
+  }
+  // z-index: 0;
+  transform-origin: 150% bottom;
+  filter: drop-shadow(0.05rem 0.2rem 0.1rem rgb(0 0 0 / 0.2));
+}
+
+#contatti-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  padding: 0 2rem;
+
+  z-index: 999;
+
+  .max-width-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+#btn-contatti {
+  height: fit-content;
+  padding: 0.3rem 0.6rem 0.2rem 0.6rem;
+  border: 0.2rem solid $dark-blue;
+  border-radius: 0.4rem;
+
+  letter-spacing: 0.1rem;
+
+  color: white;
+  background-color: $dark-blue;
+
+  h5 {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  cursor: pointer;
+  z-index: 999;
+}
+
+#social-icons {
+  img {
+    width: 2rem;
+    display: block;
+    filter: drop-shadow(0.05rem 0.2rem 0.1rem rgb(0 0 0 / 0.2));
+  }
+}

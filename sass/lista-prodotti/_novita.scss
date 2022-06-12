@@ -1,0 +1,51 @@
+
+#novita {
+  position: relative;
+}
+
+#novita__list-container {
+  position: relative;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  clip-path: inset(-100vw 0 -100vw -100vw);
+}
+
+#novita__list {
+  width: fit-content;
+  display: flex;
+  gap: 2rem;
+  padding-right: 0.5rem;
+  transition: transform 0.3s;
+}
+
+#novita__move-r,
+#novita__move-l {
+  position: absolute;
+  top: calc(100px + 2.8rem);
+  width: 2rem;
+  height: 2rem;
+
+  filter: drop-shadow(0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2));
+
+  z-index: 9;
+}
+
+#novita__move-r {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+#novita__move-l {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@include not-device(desktop) {
+  #novita__list {
+    gap: 3vw;
+  }
+}

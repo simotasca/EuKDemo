@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  // scroll-behavior: smooth;
+  // overflow-x: hidden; // FOR PRODUCTION
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+button {
+  display: inline-block;
+  margin: 0;
+  /*padding: 0.375rem 0.75rem;*/
+  
+  text-align: center;
+  vertical-align: middle;
+  
+  cursor: pointer;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  text-transform: none;
+}
+
+input {
+  font-family: inherit;
+}

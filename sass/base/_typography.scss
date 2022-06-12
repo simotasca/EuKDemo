@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+
+// breakpoints
+$fs-break-sm: 480;
+$fs-break-lg: 1120;
+
+// base font size per breakpoint
+$fs-min: 13;
+$fs-max: 14;
+
+// font sizes
+$scale: 1.25;
+$step-0: 1rem;
+$step--1: math.div($step-0, $scale);
+$step-1: $step-0 * $scale;
+$step-2: $step-1 * $scale;
+$step-3: $step-2 * $scale;
+$step-4: $step-3 * $scale;
+$step-5: $step-4 * $scale;
+
+$sizes: (
+  'h1': $step-5,
+  'h2': $step-4,
+  'h3': $step-3,
+  'h4': $step-2,
+  'h5': $step-1,
+  'h6': $step-0,
+  'p': $step-0,
+  'small': $step--1
+);
+
+@each $key, $val in $sizes {
+  #{$key} {
+    font-size: $val;
+    margin-bottom: 0;
+
+    @if $key == 'h1' {
+      margin-top: 0;
+    } @else if ($key == 'p') {
+      margin-top: 0.8rem;
+    } @else {
+      margin-top: calc($val * 1.5);
+    }
+  }
+
+  .#{$key} {
+    font-size: $val;
+  }
+}
+
+:root {
+  font-size: #{$fs-min}px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+@media (min-width: #{$fs-break-sm}px) and (max-width: #{$fs-break-lg}px) {
+  :root {
+    font-size: calc(#{$fs-min}px + (#{$fs-max} - #{$fs-min}) * ((100vw - #{$fs-break-sm}px) / (#{$fs-break-lg} - #{$fs-break-sm})));
+  }
+}
+
+@media (min-width: #{$fs-break-lg}px) {
+  :root {
+    font-size: #{$fs-max}px;
+  }
+}

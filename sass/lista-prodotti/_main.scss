@@ -1,0 +1,36 @@
+#main-section {
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+  background-color: #efefef;
+}
+
+#hero {
+  max-width: 45rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  p {
+    text-align: right;
+    margin-bottom: 0.2rem;
+    margin-right: 1rem;
+  }
+}
+
+#main-categorie {
+  width: 100%;
+  margin: {
+    top: 1rem;
+    left: auto;
+    right: auto;
+  }
+  white-space: wrap;
+}
+
+.categoria {
+  font-weight: 300;
+  margin: 0 0.5rem;
+  white-space: nowrap;
+}
+
