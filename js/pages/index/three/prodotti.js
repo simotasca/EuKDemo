@@ -140,7 +140,7 @@ function optimization(time) {
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
         opt.level--
-        console.log("reduce")
+        // console.log("reduce")
         if (opt.level == 0 || opt.lastLevel == opt.level) {
           opt.finished = true
         }
@@ -149,7 +149,7 @@ function optimization(time) {
           // se il precedente livello era maggiore è inutile reincrementare
           opt.finished = true
         } else {
-          console.log("incerease")
+          // console.log("incerease")
           levels[opt.level].increase()
           opt.lastLevel = opt.level
           opt.level++
@@ -194,11 +194,8 @@ function start(rManager) {
   // OPTIMIZATION
   addProduct(prodotti[0]).then(() => {
     let optProduct = importedProds[0]
-    console.log("PROD ADDED")
     optProduct.loadingManager.onLoad = () => {
-      console.log("ONLOAD")
       levels = optProduct.optimizationLevels
-      console.log(optProduct.optimizationLevels)
       rendManager.setOnRender(canvSelector, time => optimization(time))
       rendManager.startRendering(canvSelector)
     }
