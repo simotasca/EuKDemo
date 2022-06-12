@@ -12,5 +12,8 @@
   "description": "demo sito eurokosher per dimostrazioni",
   "main": "app.js",
   "repository": "https://github.com/simotasca/EuKDemo.git",
-  "author": "simotasca <simo.tasca@gmail.com>"
+  "author": "simotasca <simo.tasca@gmail.com>",
+  "engines": {
+    "node": "14.x"
+  }
 }
