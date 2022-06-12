@@ -34,8 +34,8 @@ function addEarthModel() {
       })
       scene.add(model)
     },
-    xhr => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
-    error => console.log('An error happened', error)
+    // xhr => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
+    // error => console.log('An error happened', error)
   )
 }
 

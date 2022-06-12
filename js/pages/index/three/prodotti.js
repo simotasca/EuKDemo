@@ -43,6 +43,7 @@ async function addProduct(name) {
     glassStartPos: imported.glass.position.x,
     glassStartRot: imported.glass.rotation.z
   })
+  await new Promise(resolve => setTimeout(resolve, 2000))
   scene.add(imported.model)
 }
 
@@ -189,15 +190,20 @@ function start(rManager) {
   rendManager.addRenderer(canvSelector, rendererOptions, manageRenderer)
   rendManager.setScene(canvSelector, scene)
   rendManager.setCamera(canvSelector, camera)
-  rendManager.setOnRender(canvSelector, time => optimization(time))
 
   // OPTIMIZATION
-  addProduct(prodotti[currentProd]).then(() => {
-    levels = importedProds[0].optimizationLevels
-    console.log(importedProds[0].optimizationLevels)
-    rendManager.startRendering(canvSelector)
+  addProduct(prodotti[0]).then(() => {
+    let optProduct = importedProds[0]
+    console.log("PROD ADDED")
+    optProduct.loadingManager.onLoad = () => {
+      console.log("ONLOAD")
+      levels = optProduct.optimizationLevels
+      console.log(optProduct.optimizationLevels)
+      rendManager.setOnRender(canvSelector, time => optimization(time))
+      rendManager.startRendering(canvSelector)
+    }
+    optProduct.init()
   })
-
 }
 
 window.nextProduct = nextProduct
