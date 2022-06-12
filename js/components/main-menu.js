@@ -38,7 +38,7 @@ class MainMenu extends BaseComponent {
         <div class="navbar max-width-container">
           <img src="./resources/logo.svg" alt="" ${this.hasAttribute('noLogo') && 'style="visibility: hidden;"'}>
           <nav class="only-on-desktop">
-            <a href="/home.html">Homepage</a>
+            <a href="/">Homepage</a>
             <a href="/lista-prodotti.html">Lista prodotti</a>
             <a href="/">Come Certificarsi</a>
             <a href="/">Dizionario kosher</a>

@@ -1,4 +1,5 @@
 var connect = require('connect')
 var serve = require('serve-static')
 
-connect().use(serve(__dirname)).listen(3000, () => console.log('localhost:3000'))
+const PORT = 3000 || process.env.PORT
+connect().use(serve(__dirname)).listen(3000, () => console.log(`localhost:${PORT}`))
