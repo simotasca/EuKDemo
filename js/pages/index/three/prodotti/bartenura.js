@@ -2,6 +2,9 @@ import * as THREE from 'three'
 import { OBJLoader } from 'OBJLoader'
 import { GLTFLoader } from 'GLTFLoader'
 import { RGBELoader } from 'RGBELoader';
+import { DRACOLoader } from 'DRACOLoader'
+
+const dracoUrl = 'https://www.gstatic.com/draco/v1/decoders/'
 
 const bottle = new THREE.Object3D()
 const glass = new THREE.Object3D()
@@ -122,7 +125,6 @@ function getGlassMaterialGood() {
 }
 
 //// POSITIONING //////////////////////////////////////////////////////////////////
-
 bottle.position.y -= 1.4
 glass.scale.set(0.12, .12, .12)
 glass.position.set(-0.85, 2.7, -1)
@@ -222,10 +224,10 @@ function init() {
     depthTest: true,
   })
 
-  new OBJLoader(loadingManager).load(
-    './resources/obj/bartenura.obj',
-    model => {
-      model.traverse(function (child) {
+  new GLTFLoader()
+    .setDRACOLoader(new DRACOLoader().setDecoderPath(dracoUrl))
+    .load('./resources/obj/bartenuraDraco.gltf', gltf => {
+      gltf.scene.traverse(child => {
         if (child instanceof THREE.Mesh) {
           if (child.name == "Label_fronte_outside") {
             child.material = labelFronteOutsideMaterial
@@ -248,13 +250,11 @@ function init() {
           }
         }
       })
-      bottle.add(model)
+      bottle.add(gltf.scene)
       group.add(bottle)
-    },
-    // xhr => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
-    // error => console.log('An error happened', error)
-  )
+    })
 
+  
   new GLTFLoader(loadingManager).load('./resources/obj/wine_glass.glb', gltf => {
     gltf.scene.traverse(child => {
       if (child instanceof THREE.Mesh) {

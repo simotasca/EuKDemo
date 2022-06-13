@@ -1,11 +1,14 @@
 import * as THREE from 'three'
-import { OBJLoader } from 'OBJLoader'
+import { DRACOLoader } from 'DRACOLoader'
+import { GLTFLoader } from 'GLTFLoader'
 
 import worldMap, { worldCenter } from './latiLongi.js'
 import addAziende from "./aziende.js";
 import * as auraShaders from './auraShaders.js'
 
-const objModelPath = '../resources/obj/model.obj'
+const dracoUrl = 'https://www.gstatic.com/draco/v1/decoders/'
+
+const objModelPath = '../resources/obj/worldDraco.gltf'
 const objTexturePath = '../resources/obj/model.jpeg'
 
 const auraRadius = 3.9
@@ -21,22 +24,19 @@ function addLights() {
 
 function addEarthModel() {
   const texture = new THREE.TextureLoader().load(objTexturePath)
+  texture.flipY=false
   const material = new THREE.MeshPhongMaterial({ map: texture, flatShading: false })
 
-  new OBJLoader().load(
-    objModelPath,
-    model => {
-      model.traverse(function (child) {
+  new GLTFLoader()
+    .setDRACOLoader(new DRACOLoader().setDecoderPath(dracoUrl))
+    .load(objModelPath, gltf => {
+      gltf.scene.traverse(child => {
         if (child instanceof THREE.Mesh) {
           child.material = material
-          child.receiveShadow = true
         }
       })
-      scene.add(model)
-    },
-    // xhr => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
-    // error => console.log('An error happened', error)
-  )
+      scene.add(gltf.scene)
+    })
 }
 
 function addWorldMap() {
