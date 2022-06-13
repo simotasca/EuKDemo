@@ -61,6 +61,7 @@
 #chiedilo-img {
   display: flex;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 
   img {
     width: 80px;
@@ -107,6 +108,7 @@ main {
 .main-column {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 2rem;
 
   @include simple-shadow;
 
@@ -115,17 +117,90 @@ main {
   }
 }
 
+h1 {
+  font-weight: 700;
+}
+
 .novita-container {
   display: grid;
-  grid-template-columns: auto 200px;
+  grid-template-columns: auto 260px;
   font-family: 'Lora', serif;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.3rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .novita__content {
+  padding: 1rem;
   img {
-    width: 100%;
+    margin: -1rem;
+    margin-bottom: 0;
+    width: calc(100% + 2rem);
     aspect-ratio: 7/2;
     object-fit: cover;
+  }
+}
+
+.novita__title {
+  margin-top: 0;
+}
+
+.novita__date,
+.novita__autore,
+.novita__categoria {
+  margin: 0;
+}
+
+.novita__autore {
+  color: #a7a7a7;
+  b {
+    color: $dark;
+  }
+}
+
+.novita__anteprima {
+  font-weight: 500;
+}
+
+.novita__categoria {
+  margin-top: 1rem;
+}
+
+.novita__side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: $dark;
+  color: white;
+  padding: 1.5rem;
+  h3 {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  hr {
+    background-color: $blue;
+  }
+}
+
+.novita__articolo {
+  $art-blue: lighten($blue, 10);
+
+  border-top: 2px solid $art-blue;
+
+  h6 {
+    color: $art-blue;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 0.5rem;
+  }
+  p {
+    color: #cccccc;
+    margin: 0;
   }
 }
 
