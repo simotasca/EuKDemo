@@ -43,7 +43,6 @@ async function addProduct(name) {
     glassStartPos: imported.glass.position.x,
     glassStartRot: imported.glass.rotation.z
   })
-  await new Promise(resolve => setTimeout(resolve, 2000))
   scene.add(imported.model)
 }
 
@@ -121,11 +120,11 @@ let opt = {
   lastLevel: null
 }
 
-let fps = new FPS(opt.checkDelta)
+let fps = new FPS(500)
 
 function optimization(time) {
   fps.calculate(time)
-
+  console.log("optimization FPS: ", fps.current)
   // dopo due secondi di assestamento fps iniziano dei check periodici
   if (!opt.finished && time > 2000) {
 
@@ -135,12 +134,12 @@ function optimization(time) {
 
       // uso un delta maggiore di quello degli fps per assicurarmi che sia avvenuto il ricalcolo degli fps
       opt.lastTime = time
-
+      console.log("optimization FPS: ", fps.current)
       if (fps.current < 45) {
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
         opt.level--
-        // console.log("reduce")
+        console.log("reduce")
         if (opt.level == 0 || opt.lastLevel == opt.level) {
           opt.finished = true
         }
@@ -149,7 +148,7 @@ function optimization(time) {
           // se il precedente livello era maggiore è inutile reincrementare
           opt.finished = true
         } else {
-          // console.log("incerease")
+          console.log("incerease")
           levels[opt.level].increase()
           opt.lastLevel = opt.level
           opt.level++
@@ -190,7 +189,6 @@ function start(rManager) {
   rendManager.addRenderer(canvSelector, rendererOptions, manageRenderer)
   rendManager.setScene(canvSelector, scene)
   rendManager.setCamera(canvSelector, camera)
-
   // OPTIMIZATION
   addProduct(prodotti[0]).then(() => {
     let optProduct = importedProds[0]

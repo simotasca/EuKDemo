@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-import { OBJLoader } from 'OBJLoader'
 import { GLTFLoader } from 'GLTFLoader'
 import { RGBELoader } from 'RGBELoader';
 import { DRACOLoader } from 'DRACOLoader'
@@ -21,7 +20,6 @@ function getHdrEqui() {
       .load('bismarckturm_hillside_1k.hdr', () => hdrEquirect.mapping = THREE.EquirectangularReflectionMapping)
   return hdrEquirect
 }
-
 
 let bottigliaMaterialLow = null
 function getBottigliaMaterialLow() {
@@ -179,7 +177,9 @@ function init() {
   const textureLoader = new THREE.TextureLoader(loadingManager)
   textureLoader.setPath('./resources/img/texture/bartenura/')
   const textureTappo = textureLoader.load('collo.png')
+  textureTappo.flipY=false
   const textureLabelFronte = textureLoader.load('labelFronte.png')
+  textureLabelFronte.flipY=false
 
   const vinoMaterial = new THREE.MeshPhysicalMaterial({
     color: 0x0001b0,
@@ -225,7 +225,7 @@ function init() {
   })
 
   new GLTFLoader()
-    .setDRACOLoader(new DRACOLoader().setDecoderPath(dracoUrl))
+    .setDRACOLoader(new DRACOLoader(loadingManager).setDecoderPath(dracoUrl))
     .load('./resources/obj/bartenuraDraco.gltf', gltf => {
       gltf.scene.traverse(child => {
         if (child instanceof THREE.Mesh) {
@@ -254,8 +254,8 @@ function init() {
       group.add(bottle)
     })
 
-  
-  new GLTFLoader(loadingManager).load('./resources/obj/wine_glass.glb', gltf => {
+
+  new GLTFLoader(loadingManager).setDRACOLoader(new DRACOLoader(loadingManager).setDecoderPath(dracoUrl)).load('./resources/obj/wine_glassDraco.glb', gltf => {
     gltf.scene.traverse(child => {
       if (child instanceof THREE.Mesh) {
         child.material = getGlassMaterialLow()
