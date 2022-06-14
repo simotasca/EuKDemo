@@ -136,7 +136,7 @@ function optimization(time) {
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
         opt.level--
-        console.log("reduce")
+        console.log("reduce: ", fps.current)
         if (opt.level == 0 || opt.lastLevel == opt.level) {
           opt.finished = true
         }
@@ -145,7 +145,7 @@ function optimization(time) {
           // se il precedente livello era maggiore è inutile reincrementare
           opt.finished = true
         } else {
-          console.log("incerease")
+          console.log("increase: ", fps.current)
           levels[opt.level].increase()
           opt.lastLevel = opt.level
           opt.level++
