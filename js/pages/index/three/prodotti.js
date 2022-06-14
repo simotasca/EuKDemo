@@ -190,6 +190,9 @@ function start(rManager) {
   addProduct(prodotti[0]).then(() => {
     let optProduct = importedProds[0]
     optProduct.loadingManager.onLoad = () => {
+      // await 2 seconds
+      await new Promise(resolve => setTimeout(resolve, 2000))
+
       levels = optProduct.optimizationLevels
       rendManager.setOnRender(canvSelector, time => optimization(time))
       rendManager.startRendering(canvSelector)
