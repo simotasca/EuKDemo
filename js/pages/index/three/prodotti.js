@@ -189,7 +189,7 @@ function start(rManager) {
   // OPTIMIZATION
   addProduct(prodotti[0]).then(() => {
     let optProduct = importedProds[0]
-    optProduct.loadingManager.onLoad = () => {
+    optProduct.loadingManager.onLoad = async () => {
       // await 2 seconds
       await new Promise(resolve => setTimeout(resolve, 2000))
 
