@@ -124,17 +124,14 @@ let fps = new FPS(500)
 
 function optimization(time) {
   fps.calculate(time)
-  console.log("optimization FPS: ", fps.current)
   // dopo due secondi di assestamento fps iniziano dei check periodici
   if (!opt.finished && time > 2000) {
-
 
     if (!opt.lastTime) opt.lastTime = time
     else if (time - opt.lastTime > opt.checkDelta * 1.2) {
 
       // uso un delta maggiore di quello degli fps per assicurarmi che sia avvenuto il ricalcolo degli fps
       opt.lastTime = time
-      console.log("optimization FPS: ", fps.current)
       if (fps.current < 45) {
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
@@ -175,7 +172,7 @@ function manageRenderer(renderer) {
   renderer.toneMapping = ACESFilmicToneMapping
   renderer.toneMappingExposure = 1
   renderer.outputEncoding = sRGBEncoding
-  renderer.setPixelRatio(1)
+  // renderer.setPixelRatio(1)
 }
 
 const rendererOptions = {
@@ -201,6 +198,6 @@ function start(rManager) {
   })
 }
 
-window.nextProduct = nextProduct
 //// EXPORTS /////////////////////////////////////////////
+window.nextProduct = nextProduct
 export { start }

@@ -12,12 +12,19 @@ const group = new THREE.Object3D()
 let bottigliaChild = null
 let bicchiereChild = null
 
+const loadingManager = new THREE.LoadingManager()
+
 let hdrEquirect = null
 function getHdrEqui() {
-  if (!hdrEquirect)
-    hdrEquirect = new RGBELoader(loadingManager)
-      .setPath('./resources/img/texture/bartenura/')
-      .load('bismarckturm_hillside_1k.hdr', () => hdrEquirect.mapping = THREE.EquirectangularReflectionMapping)
+  if (!hdrEquirect) {
+    hdrEquirect = new THREE.CubeTextureLoader(loadingManager)
+      .setPath('./resources/img/texture/bartenura/cubemap/')
+      .load(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']);
+    hdrEquirect.encoding = THREE.sRGBEncoding;
+    // hdrEquirect = new RGBELoader(loadingManager)
+    //   .setPath('./resources/img/texture/bartenura/')
+    //   .load('bismarckturm_hillside_1k.hdr', () => hdrEquirect.mapping = THREE.EquirectangularReflectionMapping)
+  }
   return hdrEquirect
 }
 
@@ -31,7 +38,7 @@ function getBottigliaMaterialLow() {
       // ior: 1.5,
       // transmission: 0.5,
       envMap: getHdrEqui(),
-      envMapIntensity: 1,
+      envMapIntensity: 2.5,
       specularColor: 0xc0c0c0,
       specularIntensity: 0.3,
       // clearcoat: 0.25,
@@ -56,7 +63,7 @@ function getBottigliaMaterialGood() {
       roughness: 0,
       ior: 1.5,
       envMap: getHdrEqui(),
-      envMapIntensity: 1,
+      envMapIntensity: 2.5,
       transmission: 0.5,
       specularColor: 0x000417,
       specularIntensity: 0.2,
@@ -101,6 +108,9 @@ function getGlassMaterialGood() {
     let equi = new RGBELoader()
       .setPath('./resources/img/texture/bartenura/')
       .load('brown_photostudio_01_1k.hdr', () => equi.mapping = THREE.EquirectangularReflectionMapping)
+    // let equi = new THREE.CubeTextureLoader(loadingManager)
+    //   .setPath('./resources/img/texture/bartenura/cubemap2/')
+    //   .load(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']);
 
     glassMaterialGood = new THREE.MeshPhysicalMaterial({
       color: 0xffffff,
@@ -110,7 +120,7 @@ function getGlassMaterialGood() {
       roughness: 0,
       ior: 0.6,
       envMap: equi,
-      envMapIntensity: 0.1,
+      envMapIntensity: 0.2,
       specularIntensity: 1,
       specularColor: 0xffffff,
       // transparent: true,
@@ -169,7 +179,7 @@ let optimizationLevels = [
   },
 ]
 
-const loadingManager = new THREE.LoadingManager()
+
 
 function init() {
 
@@ -177,9 +187,9 @@ function init() {
   const textureLoader = new THREE.TextureLoader(loadingManager)
   textureLoader.setPath('./resources/img/texture/bartenura/')
   const textureTappo = textureLoader.load('collo.png')
-  textureTappo.flipY=false
+  textureTappo.flipY = false
   const textureLabelFronte = textureLoader.load('labelFronte.png')
-  textureLabelFronte.flipY=false
+  textureLabelFronte.flipY = false
 
   const vinoMaterial = new THREE.MeshPhysicalMaterial({
     color: 0x0001b0,

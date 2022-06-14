@@ -36,7 +36,7 @@ class MainMenu extends BaseComponent {
       <header id="main-menu" class="${this.hasAttribute('dark') && 'main-menu--dark'}">
         <div id="background"></div>
         <div class="navbar max-width-container">
-          <img src="./resources/logo.svg" alt="" ${this.hasAttribute('noLogo') && 'style="visibility: hidden;"'}>
+          <img src="./resources/img/logo.svg" alt="" ${this.hasAttribute('noLogo') && 'style="visibility: hidden;"'}>
           <nav class="only-on-desktop">
             <a href="/">Homepage</a>
             <a href="/lista-prodotti.html">Lista prodotti</a>
@@ -45,7 +45,7 @@ class MainMenu extends BaseComponent {
             <a href="/blog.html" id="menu-editoriale">Editoriale</a>
             <div id="menu-underline"></div>
           </nav>
-          <img id="menu-hamb" class="hide-on-desktop" src="./resources/hamburger.svg" alt="">
+          <img id="menu-hamb" class="hide-on-desktop" src="./resources/img/icons/hamburger.svg" alt="">
         </div>
         <div id="extra" class="max-width-container"><slot/></div>
       </header>`)
