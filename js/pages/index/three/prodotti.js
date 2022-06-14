@@ -114,7 +114,7 @@ function animation(time) {
 let levels = null
 let opt = {
   lastTime: null,
-  checkDelta: 1000,
+  checkDelta: 2000,
   finished: false,
   level: 2,
   lastLevel: null
