@@ -46,18 +46,8 @@ async function addProduct(name) {
   scene.add(imported.model)
 }
 
-function transitionAnimation(last, curr) {
-  let currModel = importedProds[curr].model
-  let lastModel = importedProds[last].model
-  let lastGlass = importedProds[last].glass
-  let lastBottle = importedProds[last].bottle
-  let glassStartPos = importedProds[curr].glassStartPos
-  let glassStartRot = importedProds[curr].glassStartRot
 
-  currModel.position.y = 6
-  currModel.visible = true
-
-  // models[currentProd].position.y = 6
+// models[currentProd].position.y = 6
   // gsap.timeline()
   //   .to(models[lastProduct].position, {
   //     y: -4,
@@ -69,12 +59,24 @@ function transitionAnimation(last, curr) {
   //     }
   //   })
   //   .to(models[currentProd].position, { y: 0, duration: 0.4, ease: 'Power1.easeInOut' }, '>')
+function transitionAnimation(last, curr) {
+  let currModel = importedProds[curr].model
+  let lastModel = importedProds[last].model
+  let lastGlass = importedProds[last].glass
+  let lastBottle = importedProds[last].bottle
+  let glassStartPos = importedProds[curr].glassStartPos
+  let glassStartRot = importedProds[curr].glassStartRot
+
+  currModel.visible = true
+  currModel.position.y = 6
+  document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
 
   gsap.timeline({
     onComplete: () => {
       lastModel.visible = false
       lastGlass.position.x = glassStartPos
       lastGlass.rotation.z = glassStartRot
+      document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
     }
   })
     .fromTo(lastBottle.rotation, { y: 0 }, { y: -Math.PI * 40, duration: 2, ease: 'Power3.easeIn' }, 0)
@@ -82,9 +84,9 @@ function transitionAnimation(last, curr) {
     .fromTo(lastGlass.rotation, { z: glassStartRot }, { z: -Math.PI * 0.5, duration: 1.5, ease: 'Power3.easeIn' }, 0)
     .to(lastModel.position, { y: -6, duration: 1 }, 1)
     .to(currModel.position, { y: 0, duration: 1 }, 1)
-    .fromTo('#hero1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
     .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo('#hero2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+    .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
     .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
 }
 
