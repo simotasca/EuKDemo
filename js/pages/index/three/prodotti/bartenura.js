@@ -141,48 +141,61 @@ glass.rotateZ(Math.PI * 1 / 20)
 //// OPTIMIZATION /////////////////////////////////////////////////////////////////
 
 const baseOptimizationLevel = 0
+// let optimizationLevels = [
+//   { name: 'no rendering' },
+//   {
+//     name: 'bottiglia low bicchiere img',
+//     reduce: () => {
+//       // // rimuovere direttamente il rendering
+//       // let img = document.createElement('img')
+//       // img.src = './bottle.png'
+//       // img.id = "bottle-img"
+//       // document.querySelector('#img-container').appendChild(img)
+//       bottle.visible = false
+//     }
+//   },
+//   {
+//     // BASE LEVEL
+//     name: 'bottiglia low bicchiere low',
+//     increase: () => bicchiereChild.material = getGlassMaterialGood(),
+//     reduce: () => {
+//       // let img = document.createElement('img')
+//       // img.src = './glass.png'
+//       // img.id = "glass-img"
+//       // document.querySelector('#img-container').appendChild(img)
+//       glass.visible = false
+//     }
+//   },
+//   {
+//     name: 'bottiglia low bicchiere high',
+//     increase: () => {
+//       bottigliaChild.material = getBottigliaMaterialGood()
+//     },
+//     reduce: () => bicchiereChild.material = getGlassMaterialLow()
+//   },
+//   {
+//     name: 'bottiglia high bicchiere high',
+//     reduce: () => bottigliaChild.material = getBottigliaMaterialLow()
+//   },
+// ]
+
 let optimizationLevels = [
   { name: 'no rendering' },
   {
-    name: 'bottiglia low bicchiere img',
-    reduce: () => {
-      // // rimuovere direttamente il rendering
-      // let img = document.createElement('img')
-      // img.src = './bottle.png'
-      // img.id = "bottle-img"
-      // document.querySelector('#img-container').appendChild(img)
-      bottle.visible = false
-    }
-  },
-  {
-    // BASE LEVEL
-    name: 'bottiglia low bicchiere low',
-    increase: () => bicchiereChild.material = getGlassMaterialGood(),
-    reduce: () => {
-      // let img = document.createElement('img')
-      // img.src = './glass.png'
-      // img.id = "glass-img"
-      // document.querySelector('#img-container').appendChild(img)
-      glass.visible = false
-    }
-  },
-  {
-    name: 'bottiglia low bicchiere high',
+    name: 'bottiglia low',
     increase: () => {
       bottigliaChild.material = getBottigliaMaterialGood()
     },
-    reduce: () => bicchiereChild.material = getGlassMaterialLow()
+    reduce: () => bottigliaChild.visible = false
   },
   {
-    name: 'bottiglia high bicchiere high',
+    name: 'bottiglia high',
     reduce: () => bottigliaChild.material = getBottigliaMaterialLow()
   },
 ]
 
 
-
 function init() {
-
 
   const textureLoader = new THREE.TextureLoader(loadingManager)
   textureLoader.setPath('./resources/img/texture/bartenura/')
@@ -265,21 +278,23 @@ function init() {
     })
 
 
-  new GLTFLoader(loadingManager).setDRACOLoader(new DRACOLoader(loadingManager).setDecoderPath(dracoUrl)).load('./resources/obj/wine_glassDraco.glb', gltf => {
-    gltf.scene.traverse(child => {
-      if (child instanceof THREE.Mesh) {
-        child.material = getGlassMaterialLow()
-        bicchiereChild = child
-      }
-    })
-    glass.add(bicchiereChild)
-    group.add(glass)
-  })
+  // new GLTFLoader(loadingManager).setDRACOLoader(new DRACOLoader(loadingManager).setDecoderPath(dracoUrl)).load('./resources/obj/wine_glassDraco.glb', gltf => {
+  //   gltf.scene.traverse(child => {
+  //     if (child instanceof THREE.Mesh) {
+  //       child.material = getGlassMaterialLow()
+  //       bicchiereChild = child
+  //     }
+  //   })
+  //   glass.add(bicchiereChild)
+  //   group.add(glass)
+  // })
 }
 
 //// EXPORTS //////////////////////////////////////////////////////////////////////
 
-let renderAnimation = time => glass && (glass.position.y = 2.7 + Math.sin(time * 0.001) * 0.05)
+function renderAnimation(time) {
+  // glass && (glass.position.y = 2.7 + Math.sin(time * 0.001) * 0.05)
+}
 
 export {
   init,

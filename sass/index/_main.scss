@@ -51,6 +51,19 @@
   pointer-events: none;
 }
 
+#product-image {
+  display: block;
+  position: absolute;
+  top: 5.5rem;
+  left: 50%;
+  height: calc(100% - 5.5rem);
+  img {
+    height: 100%;
+    width: auto;
+    transform: translateX(-50%);
+  }
+}
+
 #main-bg {
   position: absolute;
   top: 0;

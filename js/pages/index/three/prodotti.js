@@ -30,7 +30,7 @@ const light = new PointLight('white', 0.7, 100)
 light.position.set(7, 5, 5)
 scene.add(light)
 
-scene.add(new AmbientLight('white', 0.2))
+scene.add(new AmbientLight('white', 0.4)) // 0.2
 
 //// MODELS //////////////////////////////////////////////
 let currentProd = 0
@@ -44,21 +44,27 @@ async function addProduct(name) {
     glassStartRot: imported.glass.rotation.z
   })
   scene.add(imported.model)
+  await new Promise(resolve => {
+    imported.loadingManager.onLoad = () => {
+      resolve()
+    }
+    imported.init()
+  })
 }
 
 
 // models[currentProd].position.y = 6
-  // gsap.timeline()
-  //   .to(models[lastProduct].position, {
-  //     y: -4,
-  //     duration: 0.4,
-  //     ease: 'Power1.easeIn',
-  //     onComplete: () => {
-  //       models[lastProduct].visible = false
-  //       models[currentProd].visible = true
-  //     }
-  //   })
-  //   .to(models[currentProd].position, { y: 0, duration: 0.4, ease: 'Power1.easeInOut' }, '>')
+// gsap.timeline()
+//   .to(models[lastProduct].position, {
+//     y: -4,
+//     duration: 0.4,
+//     ease: 'Power1.easeIn',
+//     onComplete: () => {
+//       models[lastProduct].visible = false
+//       models[currentProd].visible = true
+//     }
+//   })
+//   .to(models[currentProd].position, { y: 0, duration: 0.4, ease: 'Power1.easeInOut' }, '>')
 function transitionAnimation(last, curr) {
   let currModel = importedProds[curr].model
   let lastModel = importedProds[last].model
@@ -69,14 +75,14 @@ function transitionAnimation(last, curr) {
 
   currModel.visible = true
   currModel.position.y = 6
-  document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
+  // document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
 
   gsap.timeline({
     onComplete: () => {
       lastModel.visible = false
       lastGlass.position.x = glassStartPos
       lastGlass.rotation.z = glassStartRot
-      document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
+      // document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
     }
   })
     .fromTo(lastBottle.rotation, { y: 0 }, { y: -Math.PI * 40, duration: 2, ease: 'Power3.easeIn' }, 0)
@@ -84,10 +90,10 @@ function transitionAnimation(last, curr) {
     .fromTo(lastGlass.rotation, { z: glassStartRot }, { z: -Math.PI * 0.5, duration: 1.5, ease: 'Power3.easeIn' }, 0)
     .to(lastModel.position, { y: -6, duration: 1 }, 1)
     .to(currModel.position, { y: 0, duration: 1 }, 1)
-    .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
-    .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+  // .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+  // .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+  // .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+  // .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
 }
 
 async function nextProduct() {
@@ -118,7 +124,7 @@ let opt = {
   lastTime: null,
   checkDelta: 2000,
   finished: false,
-  level: 2,
+  level: 1,
   lastLevel: null
 }
 
@@ -166,14 +172,17 @@ function optimization(time) {
     // A COMPLETAMENTO OTTIMIZZAZIONE
     // controllo sui livelli e setting impostazioni di rendering e animazione
     rendManager.setOnRender(canvSelector, animation)
+    nextProduct()
   }
 }
 
 //// MAIN ////////////////////////////////////////////////
+let rendex = null
 function manageRenderer(renderer) {
   renderer.toneMapping = ACESFilmicToneMapping
   renderer.toneMappingExposure = 1
   renderer.outputEncoding = sRGBEncoding
+  rendex = renderer
   // renderer.setPixelRatio(1)
 }
 
@@ -200,6 +209,19 @@ function start(rManager) {
       rendManager.startRendering(canvSelector)
     }
     optProduct.init()
+  })
+}
+
+function start_(rManager) {
+  rendManager = rManager
+  rendManager.addRenderer(canvSelector, rendererOptions, manageRenderer)
+  rendManager.setScene(canvSelector, scene)
+  rendManager.setCamera(canvSelector, camera)
+  addProduct(prodotti[1]).then(() => {
+    importedProds[0].model.visible = true
+    setTimeout(() => rendManager.startRendering(canvSelector), 5)
+    rendManager.setOnRender(canvSelector, time => importedProds[0].animation(time))
+
   })
 }
 

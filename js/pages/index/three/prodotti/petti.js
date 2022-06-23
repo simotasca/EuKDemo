@@ -1,151 +1,113 @@
 import * as THREE from 'three'
-import { OBJLoader } from 'OBJLoader'
 import { GLTFLoader } from 'GLTFLoader'
-import { RGBELoader } from 'RGBELoader';
+import { DRACOLoader } from 'DRACOLoader'
 
-const hdrEquirect = new RGBELoader()
-  .setPath('./resources/img/texture/bartenura/')
-  .load('bismarckturm_hillside_1k.hdr', () => hdrEquirect.mapping = THREE.EquirectangularReflectionMapping)
+const dracoUrl = 'https://www.gstatic.com/draco/v1/decoders/'
 
-const textureLoader = new THREE.TextureLoader()
-textureLoader.setPath('./resources/img/texture/bartenura/')
-const textureTappo = textureLoader.load('collo.png')
-textureLoader.setPath('./resources/img/texture/petti/')
-const textureLabelFronte = textureLoader.load('labelFronte.png')
-
-const bottigliaMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0x100000,
-  metalness: 0,
-  roughness: 0,
-  ior: 1.5,
-  envMap: hdrEquirect,
-  envMapIntensity: 1,
-  transmission: 0.5,
-  specularColor: 0x100000,
-  specularIntensity: 0.2,
-  clearcoat: 0.25,
-  opacity: 1,
-  side: THREE.DoubleSide,
-  transparent: true,
-  depthWrite: false,
-  depthTest: true,
-  flatShading: false
-})
-
-const vinoMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0xb00100,
-  opacity: 0.1,
-  transparent: true,
-  depthTest: true,
-  depthWrite: false,
-})
-
-const tappoMaterial = new THREE.MeshPhysicalMaterial({
-  color: 0x100000,
-  roughness: 0.7,
-  // specularIntensity: 0.5,
-  // specularColor: 0xffffff,
-  side: THREE.FrontSide,
-  depthWrite: false,
-  depthTest: true,
-  transparent: true,
-  flatShading: false
-})
-
-const labelTappoMaterial = new THREE.MeshStandardMaterial({
-  map: textureTappo,
-  transparent: true,
-  side: THREE.FrontSide,
-  flatShading: false
-})
-
-const labelFronteOutsideMaterial = new THREE.MeshStandardMaterial({
-  map: textureLabelFronte,
-  opacity: 1,
-  transparent: true,
-  side: THREE.FrontSide,
-})
-
-const labelFronteInsideMaterial = new THREE.MeshStandardMaterial({
-  map: textureLabelFronte,
-  opacity: 0.05,
-  transparent: true,
-  side: THREE.BackSide,
-  depthWrite: false,
-  depthTest: true,
-})
+const loadingManager = new THREE.LoadingManager()
 
 export const bottle = new THREE.Object3D()
 export const glass = new THREE.Object3D()
 const group = new THREE.Object3D()
 
-new OBJLoader().load(
-  './resources/obj/bartenura.obj',
-  model => {
-    model.traverse(function (child) {
-      if (child instanceof THREE.Mesh) {
-        if (child.name == "Label_fronte_outside") {
-          child.material = labelFronteOutsideMaterial
-        }
-        else if (child.name == "Label_fronte_inside") {
-          child.material = labelFronteInsideMaterial
-        }
-        else if (child.name == "Tappo") {
-          child.material = tappoMaterial
-        }
-        else if (child.name == "Label_tappo") {
-          child.material = labelTappoMaterial
-        }
-        else if (child.name == "Vino") {
-          child.material = vinoMaterial
-          // child.visible = false
-        }
-        else if (child.name == "Bottiglia") {
-          child.material = bottigliaMaterial
-        }
-      }
+
+let hdrEquirect = null
+function getHdrEqui() {
+  if (!hdrEquirect) {
+    hdrEquirect = new THREE.CubeTextureLoader(loadingManager)
+      .setPath('./resources/img/texture/bartenura/cubemap/')
+      .load(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']);
+    hdrEquirect.encoding = THREE.sRGBEncoding;
+    // hdrEquirect = new RGBELoader(loadingManager)
+    //   .setPath('./resources/img/texture/bartenura/')
+    //   .load('bismarckturm_hillside_1k.hdr', () => hdrEquirect.mapping = THREE.EquirectangularReflectionMapping)
+  }
+  return hdrEquirect
+}
+
+let glassMaterialGood = null
+function getGlassMaterialGood() {
+  if (!glassMaterialGood) {
+    glassMaterialGood = new THREE.MeshPhysicalMaterial({
+      color: 0x202020,
+      metalness: 1,
+      roughness: 0,
+      // thickness: 0.2,
+      ior: 1.3,
+      envMap: getHdrEqui(),
+      envMapIntensity: 0.3,
+      specularIntensity: 1,
+      specularColor: 0xffffff,
+      transparent: false,
+      side: THREE.FrontSide,
+    });
+  }
+  return glassMaterialGood
+}
+
+let tomatoSauce = null
+function getTomatoSauce() {
+  if (!tomatoSauce) {
+    let texture = new THREE.TextureLoader(loadingManager).load("./resources/img/seamless-tomato.jpg")
+    // texture.wrapS = THREE.RepeatWrapping;
+    // texture.wrapT = THREE.RepeatWrapping;
+    // texture.repeat.set(2, 2);
+
+    tomatoSauce = new THREE.MeshPhysicalMaterial({
+      color: 0x501000,
+      map: texture,
+      opacity: 1,
+      roughness: 1,
+      ior: 1.3, // index of refraction: da 1.0 a 2.333
+      clearcoat: 1,
+      envMap: getHdrEqui(),
+      envMapIntensity: 0.3,
+      side: THREE.FrontSide
     })
-    bottle.add(model)
-    group.add(bottle)
-  },
-  xhr => console.log((xhr.loaded / xhr.total * 100) + '% loaded'),
-  error => console.log('An error happened', error)
-)
+  }
+  return tomatoSauce
+}
 
-new GLTFLoader().load('./resources/obj/wine_glass.glb', gltf => {
-  gltf.scene.traverse(child => {
-    if (child instanceof THREE.Mesh) {
-      let equi = new RGBELoader()
-        .setPath('./resources/img/texture/bartenura/')
-        .load('brown_photostudio_01_1k.hdr', () => equi.mapping = THREE.EquirectangularReflectionMapping)
-      child.material = new THREE.MeshPhysicalMaterial({
-        color: 0xffffff,
-        transmission: 0.98,
-        opacity: 1,
-        metalness: 0,
-        roughness: 0,
-        ior: 0.6,
-        envMap: equi,
-        envMapIntensity: 0.1,
-        specularIntensity: 1,
-        specularColor: 0xffffff,
-        // transparent: true,
-        depthWrite: false,
-        depthTest: true,
-        side: THREE.FrontSide,
-      });
-    }
-  })
-  glass.add(gltf.scene)
-  group.add(glass)
-})
+function init() {
+  new GLTFLoader()
+    .setDRACOLoader(new DRACOLoader(loadingManager).setDecoderPath(dracoUrl))
+    .load('./resources/obj/sugoDraco.gltf', gltf => {
+      gltf.scene.traverse(child => {
+        switch (child.name) {
+          case "tappo001":
+            child.material = new THREE.MeshPhysicalMaterial({
+              color: 0xf0f0f0,
+              roughness: 0,
+              metalness: 0.2
+            })
+            break
+          case "bottiglia":
+            child.material = getTomatoSauce()
+            // child.visible = false
+            break
+          case "sugo":
+            child.material = getTomatoSauce()
+            break
+        }
+        console.log("child", child.name)
+      })
+      bottle.add(gltf.scene)
+      group.add(bottle)
+    })
 
-bottle.position.y -= 1.4
-glass.scale.set(0.12, .12, .12)
-glass.position.set(-0.85, 2.7, -1)
-glass.rotateZ(Math.PI * 1 / 20)
 
-let renderAnimation = time => glass && (glass.position.y = 2.7 + Math.sin(time * 0.001) * 0.05)
+  bottle.position.y += 0.5
+}
 
-export const model = group
-export const animation = renderAnimation
+init()
+
+let renderAnimation = time => {
+  // bottle.rotation.y = time * 0.00005
+}
+
+export {
+  init,
+  loadingManager,
+  group as model,
+  renderAnimation as animation
+}

@@ -3,7 +3,7 @@ import Stats from 'Stats'
 
 var stats = new Stats();
 stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
-document.body.appendChild(stats.dom);
+// document.body.appendChild(stats.dom);
 
 class RenderManager {
 
@@ -60,6 +60,7 @@ class RenderManager {
   addRenderer(canvasSelector, options, callback) {
     const renderer = new THREE.WebGLRenderer({
       canvas: document.querySelector(canvasSelector),
+      preserveDrawingBuffer: true,
       ...options
     })
 
@@ -91,6 +92,11 @@ class RenderManager {
 
   render(selector) {
     const rend = this.#getRenderer(selector)
+    if (this.#resizeRendererToDisplaySize(rend.renderer)) {
+      const canvas = rend.renderer.domElement
+      rend.camera.aspect = canvas.clientWidth / canvas.clientHeight
+      rend.camera.updateProjectionMatrix()
+    }
     rend.renderer.render(rend.scene, rend.camera)
   }
 
@@ -107,7 +113,7 @@ class RenderManager {
   }
 
   foreach(callback) {
-    this.renderers.forEach(renderer => callback(renderer.renderer) )
+    this.renderers.forEach(renderer => callback(renderer.renderer))
   }
 }
 
