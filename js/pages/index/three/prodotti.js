@@ -81,7 +81,7 @@ function optimization(time) {
 
       // uso un delta maggiore di quello degli fps per assicurarmi che sia avvenuto il ricalcolo degli fps
       opt.lastTime = time
-      if (fps.current < 45) { // 45
+      if (fps.current < 450) { // 45
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
         opt.level--
@@ -195,7 +195,7 @@ function transitionAnimation(last, curr) {
   let timeline = gsap.timeline({
     onComplete: () => {
       lastModel.visible = false
-      document.querySelector(`#hero-${last}`).closest(".main-canvas-container")
+      document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
       document.querySelector(`#product-side-img-${last}`).classList.add("product-img--hidden")
       if (opt.level == 0) document.querySelector(`#product-img-${last}`).classList.add("product-img--hidden")
     }
@@ -219,7 +219,6 @@ function transitionAnimation(last, curr) {
 
     .fromTo(`#product-side-img-${last}`, { y: '0' }, { y: '80%', duration: 1 }, 1)
     .fromTo(`#product-side-img-${curr}`, { y: '-80%', x: '+=100' }, { y: '0', x: '-=100', duration: 1 }, 1)
-
 }
 
 async function nextProduct() {
