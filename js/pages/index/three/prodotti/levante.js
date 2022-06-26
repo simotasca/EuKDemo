@@ -123,7 +123,10 @@ function init() {
 let renderAnimation = time => {
 }
 
+const imageSrc = './resources/img/index/bartenura.png'
+
 export {
+  imageSrc,
   init,
   loadingManager,
   group as model,

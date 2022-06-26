@@ -110,9 +110,12 @@ let renderAnimation = time => {
   // bottle.rotation.y = time * 0.00005
 }
 
+const imageSrc = './resources/img/index/belfiore.png'
+
 export {
   init,
   loadingManager,
   group as model,
+  imageSrc,
   renderAnimation as animation
 }

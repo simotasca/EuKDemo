@@ -38,11 +38,12 @@ let importedProds = []
 
 async function addProduct(name) {
   const imported = await import(`./prodotti/${name}.js`)
-  importedProds.push({
-    ...imported,
-    glassStartPos: imported.glass.position.x,
-    glassStartRot: imported.glass.rotation.z
-  })
+  importedProds.push(imported)
+  if (opt.level == 0) {
+    addProductImage(importedProds.length - 1, true)
+    return
+  }
+
   scene.add(imported.model)
   await new Promise(resolve => {
     imported.loadingManager.onLoad = () => {
@@ -50,72 +51,6 @@ async function addProduct(name) {
     }
     imported.init()
   })
-}
-
-
-// models[currentProd].position.y = 6
-// gsap.timeline()
-//   .to(models[lastProduct].position, {
-//     y: -4,
-//     duration: 0.4,
-//     ease: 'Power1.easeIn',
-//     onComplete: () => {
-//       models[lastProduct].visible = false
-//       models[currentProd].visible = true
-//     }
-//   })
-//   .to(models[currentProd].position, { y: 0, duration: 0.4, ease: 'Power1.easeInOut' }, '>')
-function transitionAnimation(last, curr) {
-  let currModel = importedProds[curr].model
-  let lastModel = importedProds[last].model
-  let lastGlass = importedProds[last].glass
-  let lastBottle = importedProds[last].bottle
-  let glassStartPos = importedProds[curr].glassStartPos
-  let glassStartRot = importedProds[curr].glassStartRot
-
-  currModel.visible = true
-  currModel.position.y = 6
-  document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
-  document.querySelector(`#product-img-${curr}`).style.display = "block"
-
-  gsap.timeline({
-    onComplete: () => {
-      lastModel.visible = false
-      lastGlass.position.x = glassStartPos
-      lastGlass.rotation.z = glassStartRot
-      document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
-      document.querySelector(`#product-img-${last}`).style.display = "none"
-    }
-  })
-    .fromTo(lastBottle.rotation, { y: 0 }, { y: -Math.PI * 40, duration: 2, ease: 'Power3.easeIn' }, 0)
-    .fromTo(lastGlass.position, { x: glassStartPos }, { x: glassStartPos + 4, duration: 2, ease: 'Power1.easeIn' }, 0)
-    .fromTo(lastGlass.rotation, { z: glassStartRot }, { z: -Math.PI * 0.5, duration: 1.5, ease: 'Power3.easeIn' }, 0)
-    .to(lastModel.position, { y: -6, duration: 1 }, 1)
-    .to(currModel.position, { y: 0, duration: 1 }, 1)
-    .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo(`#product-img-${last}`, { x: '-50%', rotation: 0 }, { x: '50%', rotation: 180, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
-    .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
-    .fromTo(`#product-img-${curr}`, { x: '-150%', rotation: -90 }, { x: '-50%', rotation: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
-}
-
-async function nextProduct() {
-  if (prodotti.length <= 1 || !opt.finished) return
-
-  let lastProduct = currentProd
-
-  currentProd++
-
-  if (currentProd == prodotti.length)
-    currentProd = 0
-
-  if (currentProd > importedProds.length - 1)
-    await addProduct(prodotti[currentProd])
-
-  await new Promise(resolve => setTimeout(resolve, 1000))
-
-  transitionAnimation(lastProduct, currentProd)
 }
 
 //// ANIMATION ///////////////////////////////////////////
@@ -146,7 +81,7 @@ function optimization(time) {
 
       // uso un delta maggiore di quello degli fps per assicurarmi che sia avvenuto il ricalcolo degli fps
       opt.lastTime = time
-      if (fps.current < 45) {
+      if (fps.current < 45) { // 45
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
         opt.level--
@@ -177,17 +112,33 @@ function optimization(time) {
   if (opt.finished) {
     // A COMPLETAMENTO OTTIMIZZAZIONE
     // controllo sui livelli e setting impostazioni di rendering e animazione
-    rendManager.setOnRender(canvSelector, animation)
+    if (opt.level == 0) {
+      rendManager.removeRenderer(canvSelector) +
+        addProductImage(0, false)
+    } else {
+      rendManager.setOnRender(canvSelector, animation)
+    }
   }
 }
 
+function addProductImage(prod, hidden) {
+  // if(document.querySelector(``))
+  let container = document.querySelector('#product-imgs')
+  let img = document.createElement('img')
+  img.src = importedProds[prod].imageSrc
+  img.className = 'product-img'
+  img.className += hidden ? ' product-img--hidden' : ''
+  img.id = `product-img-${prod}`
+  img.alt = ""
+  container.appendChild(img)
+  // <img id="product-img-0" class="product-img" src="./resources/img/index/bicchiere.png" alt=""></img>
+}
+
 //// MAIN ////////////////////////////////////////////////
-let rendex = null
 function manageRenderer(renderer) {
   renderer.toneMapping = ACESFilmicToneMapping
   renderer.toneMappingExposure = 1
   renderer.outputEncoding = sRGBEncoding
-  rendex = renderer
   // renderer.setPixelRatio(1)
 }
 
@@ -228,6 +179,65 @@ function start_(rManager) {
     rendManager.setOnRender(canvSelector, time => importedProds[0].animation(time))
 
   })
+}
+
+function transitionAnimation(last, curr) {
+  let currModel = importedProds[curr].model
+  let lastModel = importedProds[last].model
+  let lastBottle = importedProds[last].bottle
+
+  currModel.visible = true
+  currModel.position.y = 6
+  document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
+  document.querySelector(`#product-side-img-${curr}`).classList.remove("product-img--hidden")
+  if(opt.level == 0) document.querySelector(`#product-img-${curr}`).classList.remove("product-img--hidden")
+
+  let timeline = gsap.timeline({
+    onComplete: () => {
+      lastModel.visible = false
+      document.querySelector(`#hero-${last}`).closest(".main-canvas-container")
+      document.querySelector(`#product-side-img-${last}`).classList.add("product-img--hidden")
+      if(opt.level == 0) document.querySelector(`#product-img-${last}`).classList.add("product-img--hidden")
+    }
+  })
+
+  if (opt.level == 0) {
+    timeline.to(`#product-img-${last}`, { y: '+80%', duration: 1 }, 1)
+    timeline.fromTo(`#product-img-${curr}`, { y: '-80%' }, { y: 0, duration: 1 }, 1)
+  } else {
+    timeline
+      .fromTo(lastBottle.rotation, { y: 0 }, { y: -Math.PI * 40, duration: 2, ease: 'Power3.easeIn' }, 0)
+      .to(lastModel.position, { y: -6, duration: 1 }, 1)
+      .to(currModel.position, { y: 0, duration: 1 }, 1)
+  }
+
+  timeline
+    .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+    .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+
+    .fromTo(`#product-side-img-${last}`, { x: '+=0', rotation: 0 }, { x: '+=100', rotation: 180, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo(`#product-side-img-${curr}`, { x: '-=100', rotation: -90 }, { x: '+=100', rotation: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+
+}
+
+async function nextProduct() {
+  if (prodotti.length <= 1 || !opt.finished) return
+
+  let lastProduct = currentProd
+
+  currentProd++
+
+  if (currentProd == prodotti.length)
+    currentProd = 0
+
+  if (currentProd > importedProds.length - 1)
+    await addProduct(prodotti[currentProd])
+
+  await new Promise(resolve => setTimeout(resolve, 1000))
+
+  transitionAnimation(lastProduct, currentProd)
 }
 
 //// EXPORTS /////////////////////////////////////////////

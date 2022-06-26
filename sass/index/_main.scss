@@ -52,16 +52,17 @@
 }
 
 .product-img {
-  display: none;
+  display: block;
   position: absolute;
   top: 5.5rem;
   left: 50%;
   height: calc(100% - 5.5rem);
   width: auto;
   transform: translateX(-50%);
+  transform-origin: 45% 40%;
 
-  &:nth-child(1) {
-    display: block;
+  &.product-img--hidden {
+    display: none;
   }
 }
 

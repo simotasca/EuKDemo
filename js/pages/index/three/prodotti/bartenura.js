@@ -212,7 +212,7 @@ let optimizationLevels = [
       //--
       bottigliaChild.material.needsUpdate = true
     },
-    reduce: () => bottigliaChild.visible = false
+    reduce: () => bottle.visible = false
   },
   {
     name: 'bottiglia high',
@@ -321,11 +321,14 @@ function renderAnimation(time) {
   // glass && (glass.position.y = 2.7 + Math.sin(time * 0.001) * 0.05)
 }
 
+const imageSrc = './resources/img/index/bartenura.png'
+
 export {
   init,
   group as model,
   bottle,
   glass,
+  imageSrc,
   renderAnimation as animation,
   loadingManager,
   optimizationLevels,
