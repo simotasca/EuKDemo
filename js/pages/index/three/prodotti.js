@@ -81,7 +81,7 @@ function optimization(time) {
 
       // uso un delta maggiore di quello degli fps per assicurarmi che sia avvenuto il ricalcolo degli fps
       opt.lastTime = time
-      if (fps.current < 450) { // 45
+      if (fps.current < 45) { // 45
         levels[opt.level].reduce()
         opt.lastLevel = opt.level
         opt.level--
