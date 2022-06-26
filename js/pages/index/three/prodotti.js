@@ -160,7 +160,7 @@ function start(rManager) {
       // await 2 seconds before optimizaion
       // await new Promise(resolve => setTimeout(resolve, 2000))
 
-      document.querySelector('#loading-overlay').classList.add('loading-overlay--open')
+      document.body.classList.add('loaded')
 
       levels = optProduct.optimizationLevels
       rendManager.setOnRender(canvSelector, time => optimization(time))
