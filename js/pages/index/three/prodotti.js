@@ -190,14 +190,14 @@ function transitionAnimation(last, curr) {
   currModel.position.y = 6
   document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
   document.querySelector(`#product-side-img-${curr}`).classList.remove("product-img--hidden")
-  if(opt.level == 0) document.querySelector(`#product-img-${curr}`).classList.remove("product-img--hidden")
+  if (opt.level == 0) document.querySelector(`#product-img-${curr}`).classList.remove("product-img--hidden")
 
   let timeline = gsap.timeline({
     onComplete: () => {
       lastModel.visible = false
       document.querySelector(`#hero-${last}`).closest(".main-canvas-container")
       document.querySelector(`#product-side-img-${last}`).classList.add("product-img--hidden")
-      if(opt.level == 0) document.querySelector(`#product-img-${last}`).classList.add("product-img--hidden")
+      if (opt.level == 0) document.querySelector(`#product-img-${last}`).classList.add("product-img--hidden")
     }
   })
 
@@ -217,8 +217,8 @@ function transitionAnimation(last, curr) {
     .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
     .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
 
-    .fromTo(`#product-side-img-${last}`, { x: '+=0', rotation: 0 }, { x: '+=100', rotation: 180, duration: 1, ease: 'Power1.easeIn' }, 0)
-    .fromTo(`#product-side-img-${curr}`, { x: '-=100', rotation: -90 }, { x: '+=100', rotation: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+    .fromTo(`#product-side-img-${last}`, { y: '0' }, { y: '80%', duration: 1 }, 1)
+    .fromTo(`#product-side-img-${curr}`, { y: '-80%', x: '+=100' }, { y: '0', x: '-=100', duration: 1 }, 1)
 
 }
 
