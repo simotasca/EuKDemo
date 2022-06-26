@@ -75,14 +75,16 @@ function transitionAnimation(last, curr) {
 
   currModel.visible = true
   currModel.position.y = 6
-  // document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
+  document.querySelector(`#hero-${curr}`).closest(".main-canvas-container").classList.remove("p-evt-none")
+  document.querySelector(`#product-img-${curr}`).style.display = "block"
 
   gsap.timeline({
     onComplete: () => {
       lastModel.visible = false
       lastGlass.position.x = glassStartPos
       lastGlass.rotation.z = glassStartRot
-      // document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
+      document.querySelector(`#hero-${last}`).closest(".main-canvas-container").classList.add("p-evt-none")
+      document.querySelector(`#product-img-${last}`).style.display = "none"
     }
   })
     .fromTo(lastBottle.rotation, { y: 0 }, { y: -Math.PI * 40, duration: 2, ease: 'Power3.easeIn' }, 0)
@@ -90,10 +92,12 @@ function transitionAnimation(last, curr) {
     .fromTo(lastGlass.rotation, { z: glassStartRot }, { z: -Math.PI * 0.5, duration: 1.5, ease: 'Power3.easeIn' }, 0)
     .to(lastModel.position, { y: -6, duration: 1 }, 1)
     .to(currModel.position, { y: 0, duration: 1 }, 1)
-  // .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-  // .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
-  // .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
-  // .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+    .fromTo(`#hero-${last}`, { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo('#firma-rav-1', { rotationY: 0 }, { rotationY: -90, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo(`#product-img-${last}`, { x: 0, rotation: 0 }, { x: 100, rotation: 180, duration: 1, ease: 'Power1.easeIn' }, 0)
+    .fromTo(`#hero-${curr}`, { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+    .fromTo('#firma-rav-2', { rotationY: 90 }, { rotationY: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
+    .fromTo(`#product-img-${curr}`, { x: -100, rotation: -90 }, { x: 0, rotation: 0, duration: 1, ease: 'Power1.easeOut' }, 1)
 }
 
 async function nextProduct() {
@@ -108,6 +112,8 @@ async function nextProduct() {
 
   if (currentProd > importedProds.length - 1)
     await addProduct(prodotti[currentProd])
+
+  await new Promise(resolve => setTimeout(resolve, 1000))
 
   transitionAnimation(lastProduct, currentProd)
 }
@@ -172,7 +178,6 @@ function optimization(time) {
     // A COMPLETAMENTO OTTIMIZZAZIONE
     // controllo sui livelli e setting impostazioni di rendering e animazione
     rendManager.setOnRender(canvSelector, animation)
-    nextProduct()
   }
 }
 

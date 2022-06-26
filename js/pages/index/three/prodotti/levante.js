@@ -4,7 +4,9 @@ import { RGBELoader } from 'RGBELoader';
 
 const loadingManager = new THREE.LoadingManager()
 
-
+const bottle = new THREE.Object3D()
+const glass = new THREE.Object3D()
+const group = new THREE.Object3D()
 
 function init() {
   const hdrEquirect = new RGBELoader(loadingManager)
@@ -79,9 +81,7 @@ function init() {
     depthTest: true,
   })
 
-  const bottle = new THREE.Object3D()
-  const glass = new THREE.Object3D()
-  const group = new THREE.Object3D()
+ 
 
   new OBJLoader(loadingManager).load(
     './resources/obj/bartenura.obj',
@@ -115,6 +115,7 @@ function init() {
   )
 
   bottle.position.y -= 1.4
+  group.visible = false
 }
 
 
@@ -127,5 +128,6 @@ export {
   loadingManager,
   group as model,
   bottle,
+  glass,
   renderAnimation as animation
 }

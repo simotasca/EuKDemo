@@ -1,4 +1,4 @@
-import * as THREE from 'three'
+import { WebGLRenderer } from 'three'
 import Stats from 'Stats'
 
 var stats = new Stats();
@@ -58,7 +58,7 @@ class RenderManager {
   // PUBLIC METHODS
 
   addRenderer(canvasSelector, options, callback) {
-    const renderer = new THREE.WebGLRenderer({
+    const renderer = new WebGLRenderer({
       canvas: document.querySelector(canvasSelector),
       preserveDrawingBuffer: true,
       ...options

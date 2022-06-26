@@ -72,7 +72,7 @@ function prepareData(data) {
 export default function addAziende() {
 
   fetch('../aziende.json').then(r => r.json()).then(data => prepareData(data)).then(aziende => {
-    console.log("numero aziende: ", aziende.length)
+    // console.log("numero aziende: ", aziende.length)
     addLatiLongiPoints(aziende)
 
     // if (window.innerWidth > 470) {

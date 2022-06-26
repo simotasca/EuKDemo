@@ -51,16 +51,17 @@
   pointer-events: none;
 }
 
-#product-image {
-  display: block;
+.product-img {
+  display: none;
   position: absolute;
   top: 5.5rem;
   left: 50%;
   height: calc(100% - 5.5rem);
-  img {
-    height: 100%;
-    width: auto;
-    transform: translateX(-50%);
+  width: auto;
+  transform: translateX(-50%);
+
+  &:nth-child(1) {
+    display: block;
   }
 }
 
