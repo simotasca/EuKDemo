@@ -157,8 +157,10 @@ function start(rManager) {
   addProduct(prodotti[0]).then(() => {
     let optProduct = importedProds[0]
     optProduct.loadingManager.onLoad = async () => {
-      // await 2 seconds
-      await new Promise(resolve => setTimeout(resolve, 2000))
+      // await 2 seconds before optimizaion
+      // await new Promise(resolve => setTimeout(resolve, 2000))
+
+      document.querySelector('#loading-overlay').classList.add('loading-overlay--open')
 
       levels = optProduct.optimizationLevels
       rendManager.setOnRender(canvSelector, time => optimization(time))
