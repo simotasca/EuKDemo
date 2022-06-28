@@ -66,7 +66,7 @@ class MainMenu extends BaseComponent {
 
     if (this.hasAttribute('noTransparent')) {
       this.qSelect('#main-menu').classList.add('scrolled')
-      conts.classList.add('scrolled')
+      // conts.classList.add('scrolled')
     }
 
     this.#onWindowScroll()
