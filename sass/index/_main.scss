@@ -18,41 +18,80 @@
 
 // @include not-device(desktop) {
 //   #homepage-layout-helper {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100vh;
 //     display: grid;
 //     grid-template-columns: 1fr;
 //     grid-template-rows: auto 1fr;
 
-//     z-index: 9999;
+//     z-index: 998;
 
-//     .main-canvas-container,
 //     .main-canvas-inner-container {
 //       display: contents;
 //     }
 //   }
 
 //   #product-imgs {
+//     display: block;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
 //     position: relative;
-//     width: 100%;
 //     transform: unset;
-//     grid-row: 1;
+//     grid-row: 2;
 //     * {
 //       z-index: 7;
+//     }
+
+//     .product-img-cont {
+//       top: 0;
+//       height: 250%;
+//       overflow-x: hidden;
+//     }
+
+//     .product-img {
+//       top: -5vw;
+//       left: 50%;
+//       height: 100%;
+//       // height: auto;
+//       // width: 400%;
+//       transform: translateX(-50%);
 //     }
 //   }
 
 //   #heroes {
+//     top: unset;
+//     left: unset;
 //     position: relative;
-//     width: 100%;
-//     height: 100%;
 //     transform: unset;
-//     grid-row: 0;
-//   }
-
-//   .hero {
-//     position: relative;
-//     z-index: 7;
+//     grid-row: 1;
+//     .hero {
+//       position: relative;
+//       z-index: 7;
+//       width: 80%;
+//       margin: 0 auto;
+//       margin-top: calc(12vw + 16vh);
+//       padding-right: 0rem;
+//       top: unset;
+//       left: unset;
+//     }
 //   }
 // }
+
+@include device(tablet) {
+}
+
+@include device(mobile) {
+  #heroes {
+    .hero {
+      h1 {
+        font-size: $step-2;
+      }
+    }
+  }
+}
 
 .p-evt-none {
   pointer-events: none;
@@ -243,7 +282,7 @@ body.loaded {
 
 #ellipse-1 {
   // background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, #ffb81f 150%);
-  background: radial-gradient(circle at 50% 25%, #dbcc42 5%, #e7db6f 20%, #f2f395 35%);
+  background: radial-gradient(circle at 50% 25%, #ffef11 5%, #ffeb3c 20%, #fbfd69 35%);
   // visibility: hidden;
 }
 
