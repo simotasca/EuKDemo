@@ -1,11 +1,11 @@
 import RenderManager from "./render-manager.js";
-import { start as startProdotti } from './prodotti.js'
+// import { start as startProdotti } from './prodotti.js'
 import { start as startMappa } from './mappa.js'
 // import mappa from './mappa.js'
 
 const rManager = new RenderManager()
 
-startProdotti(rManager)
+// startProdotti(rManager)
 startMappa(rManager)
 
 //// RENDERING ON DEMAND //////////////////////////////////////////////

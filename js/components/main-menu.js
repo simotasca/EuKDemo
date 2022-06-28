@@ -1,12 +1,15 @@
 class MainMenu extends BaseComponent {
   #onWindowScroll() {
     const element = this.qSelect('#main-menu')
+    const conts = document.querySelector('#contatti-container')
 
     if (!this.hasAttribute('noTransparent')) {
       if (window.scrollY > 20) {
         !element.classList.contains("scrolled") && element.classList.add('scrolled')
+        !conts.classList.contains("scrolled") && conts.classList.add('scrolled')
       } else {
         element.classList.remove('scrolled')
+        conts.classList.remove('scrolled')
       }
     }
 
@@ -17,8 +20,15 @@ class MainMenu extends BaseComponent {
     if (!this.isAttribute('locked')) {
       if (window.scrollY > this.lastScrollY) {
         element.style.transform = slot.clientHeight != 0 ? `translateY(calc(-100% + ${slot.clientHeight}px - 1px))` : 'translateY(-100%)'
+        conts.classList.add('scrolled')
       } else {
         element.style.transform = 'translateY(0)'
+        conts.classList.remove('scrolled')
+      }
+
+      if (window.scrollY > (document.body.clientHeight - 20)) {
+        element.style.transform = 'translateY(0)'
+        conts.classList.remove('scrolled')
       }
     }
 
@@ -54,7 +64,11 @@ class MainMenu extends BaseComponent {
 
 
 
-    this.hasAttribute('noTransparent') && this.qSelect('#main-menu').classList.add('scrolled')
+    if (this.hasAttribute('noTransparent')) {
+      this.qSelect('#main-menu').classList.add('scrolled')
+      conts.classList.add('scrolled')
+    }
+
     this.#onWindowScroll()
     window.addEventListener("scroll", this.#onWindowScroll.bind(this))
   }

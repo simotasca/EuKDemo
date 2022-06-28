@@ -60,7 +60,7 @@ class RenderManager {
   addRenderer(canvasSelector, options, callback) {
     const renderer = new WebGLRenderer({
       canvas: document.querySelector(canvasSelector),
-      // preserveDrawingBuffer: true,
+      preserveDrawingBuffer: true,
       ...options
     })
 

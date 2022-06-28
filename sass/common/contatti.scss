@@ -1,0 +1,84 @@
+@import '../base/breakpoints';
+
+#contatti {
+  ul {
+    margin-bottom: 0;
+    & > li:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  padding: 2rem;
+  .max-width-container {
+    display: grid;
+    grid-template-columns: fit-content(20%) auto auto auto calc(10rem + 2vw);
+    gap: 2rem;
+  }
+
+  .mapouter {
+    margin: 1rem 0;
+    max-width: 400px;
+  }
+}
+
+#col-seguici {
+  padding-right: 3rem;
+}
+
+#arrow-contatti {
+  width: 100%;
+  max-width: 3.5rem;
+  display: block;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1050px) {
+  #contatti .max-width-container {
+    grid-template-columns: auto 1fr;
+
+    & > div:nth-child(1) {
+      order: 1;
+    }
+    & > div:nth-child(2),
+    & > div:nth-child(3) {
+      order: 0;
+    }
+    & > div:nth-child(4) {
+      order: 2;
+    }
+  }
+
+  #col-menu {
+    padding-bottom: 3.5rem;
+  }
+}
+
+@include device(mobile) {
+  #contatti .max-width-container {
+    grid-template-columns: 1fr;
+
+    & > div {
+      order: 0;
+    }
+
+    & > div:nth-child(1) {
+      order: 4;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  #col-menu {
+    padding-bottom: 0;
+  }
+
+  #col-seguici {
+    padding-bottom: 6rem;
+    img {
+      display: none;
+    }
+  }
+}

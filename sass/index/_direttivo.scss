@@ -1,0 +1,63 @@
+@import '../base/colors';
+@import '../base/breakpoints';
+@import '../base/typography';
+
+#direttivo {
+  padding: 2rem;
+  .max-width-container {
+    max-width: 1000px;
+  }
+}
+
+.rav-cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.rav-card {
+  h6,
+  h3,
+  p {
+    margin: 0;
+    
+  }
+
+  p {
+    margin-top: 0.5rem;
+  }
+
+  h3 {
+    line-height: $step-3;
+    text-shadow: 0.2rem 0.2rem 0.4rem rgb(160, 160, 160);
+  }
+
+  &.rav-card--red {
+    h6 {
+      color: $red;
+    }
+  }
+
+  &.rav-card--blue {
+    h6 {
+      color: $blue;
+    }
+  }
+}
+
+@include device(tablet) {
+  .rav-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rav-card:nth-child(2) {
+    order: -1;
+  }
+}
+
+@include device(mobile) {
+  .rav-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,5 @@
 import {
+  EquirectangularReflectionMapping,
   Object3D, Mesh,
   LoadingManager, TextureLoader, CubeTextureLoader,
   sRGBEncoding,
@@ -6,7 +7,7 @@ import {
   FrontSide, BackSide, DoubleSide,
 } from 'three'
 import { GLTFLoader } from 'GLTFLoader'
-// import { RGBELoader } from 'RGBELoader';
+import { RGBELoader } from 'RGBELoader';
 import { DRACOLoader } from 'DRACOLoader'
 
 const dracoUrl = 'https://www.gstatic.com/draco/v1/decoders/'
@@ -49,7 +50,7 @@ function getBottigliaMaterialLow() {
       specularIntensity: 0.3,
       // clearcoat: 0.25,
       // opacity: 1,
-      // side: THREE.DoubleSide,
+      // side: DoubleSide,
       // transparent: true,
       // depthWrite: false,
       // depthTest: true,
@@ -108,35 +109,35 @@ function getBottigliaMaterialLow() {
 //   return glassMaterialLow
 // }
 
-// let glassMaterialGood = null
-// function getGlassMaterialGood() {
-//   if (!glassMaterialGood) {
-//     let equi = new RGBELoader()
-//       .setPath('./resources/img/texture/bartenura/')
-//       .load('brown_photostudio_01_1k.hdr', () => equi.mapping = THREE.EquirectangularReflectionMapping)
-//     // let equi = new THREE.CubeTextureLoader(loadingManager)
-//     //   .setPath('./resources/img/texture/bartenura/cubemap2/')
-//     //   .load(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']);
+let glassMaterialGood = null
+function getGlassMaterialGood() {
+  if (!glassMaterialGood) {
+    let equi = new RGBELoader()
+      .setPath('./resources/img/texture/bartenura/')
+      .load('brown_photostudio_01_1k.hdr', () => equi.mapping = EquirectangularReflectionMapping)
+    // let equi = new THREE.CubeTextureLoader(loadingManager)
+    //   .setPath('./resources/img/texture/bartenura/cubemap2/')
+    //   .load(['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']);
 
-//     glassMaterialGood = new THREE.MeshPhysicalMaterial({
-//       color: 0xffffff,
-//       transmission: 0.98,
-//       opacity: 1,
-//       metalness: 0,
-//       roughness: 0,
-//       ior: 0.6,
-//       envMap: equi,
-//       envMapIntensity: 0.2,
-//       specularIntensity: 1,
-//       specularColor: 0xffffff,
-//       // transparent: true,
-//       depthWrite: false,
-//       depthTest: true,
-//       side: THREE.FrontSide,
-//     });
-//   }
-//   return glassMaterialGood
-// }
+    glassMaterialGood = new MeshPhysicalMaterial({
+      color: 0xffffff,
+      transmission: 0.98,
+      opacity: 1,
+      metalness: 0,
+      roughness: 0,
+      ior: 0.6,
+      envMap: equi,
+      envMapIntensity: 0.2,
+      specularIntensity: 1,
+      specularColor: 0xffffff,
+      // transparent: true,
+      depthWrite: false,
+      depthTest: true,
+      side: FrontSide,
+    });
+  }
+  return glassMaterialGood
+}
 
 //// POSITIONING //////////////////////////////////////////////////////////////////
 bottle.position.y -= 1.4
@@ -305,8 +306,8 @@ function init() {
 
   // new GLTFLoader(loadingManager).setDRACOLoader(new DRACOLoader(loadingManager).setDecoderPath(dracoUrl)).load('./resources/obj/wine_glassDraco.glb', gltf => {
   //   gltf.scene.traverse(child => {
-  //     if (child instanceof THREE.Mesh) {
-  //       child.material = getGlassMaterialLow()
+  //     if (child instanceof Mesh) {
+  //       child.material = getGlassMaterialGood()
   //       bicchiereChild = child
   //     }
   //   })

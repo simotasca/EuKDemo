@@ -125,7 +125,7 @@
     // window.addEventListener('scroll', changeEllipseRadius)
     window.addEventListener('resize', resetPanels)
     window.addEventListener('load', () => {
-      changeEllipseRadius()
+      // changeEllipseRadius()
       resetPanels()
       turnOnVisibility()
     })

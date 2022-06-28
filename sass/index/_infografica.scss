@@ -4,7 +4,8 @@
 #diagonals-container {
   position: relative;
   overflow: hidden;
-  margin-top: 100vh;
+  margin-top: min(1200px, 100vh); // max-width-container
+  z-index: 6;
 }
 
 #infografica {
@@ -133,7 +134,9 @@ $panel-light: lighten($dark, 10%);
   position: relative;
 
   img {
-    width: min(450px, 100%);
+    display: block;
+    margin: 0 auto;
+    width: min(450px, 80%);
     filter: drop-shadow(-1.5rem 1.62rem 2.5rem rgb(0 0 0 / 0.7));
   }
 

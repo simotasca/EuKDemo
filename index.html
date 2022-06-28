@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
   <link rel="stylesheet" href="css/pages/index.css">
+  <link rel="stylesheet" href="css/common/contatti.css">
   <script type="importmap">
     {
       "imports": {
@@ -23,51 +24,120 @@
   <script src="./libs/gsap/ScrollTrigger.min.js"></script>
 </head>
 
-<body>
+<body class="loaded">
 
-  <div id="loading-overlay">
+  <!-- <div id="loading-overlay">
     <img src="./resources/img/logo.svg" alt="">
-  </div>
+  </div> -->
 
   <main-menu dark></main-menu>
 
-  <div id="main-bg">
-    <div id="main-bg-ellipse"></div>
+
+
+  <div class="main-bg max-height-container"></div>
+
+  <div class="main-canvas-container p-evt-none">
+    <div class="main-canvas-inner-container">
+
+      <div class="ellipse-container">
+        <div class="main-bg-ellipse">
+          <div id="ellipse-0" class="ellipse-bg main-ellipse"></div>
+          <div id="ellipse-1" class="ellipse-bg"></div>
+        </div>
+      </div>
+      <!-- <div class="ellipse-container">
+        <div id="ellipse-1" class="main-bg-ellipse ellipse--hidden"></div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <div id="product-imgs" class="main-canvas-container max-width-container double-max-height-container p-evt-none">
+    <div class="main-canvas-inner-container">
+      <img id="firma-rav-0" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
+      <img id="firma-rav-1" class="firma-rav d-none" src="./resources/img/index/logo-ebraico.svg" alt="">
+
+      <div id="product-side-img-0" class="product-img-cont">
+        <img class="product-img" src="./resources/img/index/bicchiere.png" alt="">
+      </div>
+
+      <div id="product-img-0" class="product-img-cont">
+        <img class="product-img" src="./resources/img/index/bartenura.png" alt="">
+      </div>
+
+      <div id="product-side-img-1" class="product-img-cont d-none">
+        <img class="product-img" src="./resources/img/index/pomodoro.png" alt="">
+      </div>
+      <div id="product-img-1" class="product-img-cont d-none">
+        <img class="product-img" src="./resources/img/index/belfiore.png" alt="">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="main-canvas-container max-width-container double-max-height-container">
+    <div class="main-canvas-inner-container">
+
+      <div id="hero-0" class="hero">
+        <h1 class="mb-1 light">
+          Garantiamo la qualità della certificazione Kosher, in Italia e in Europa.
+        </h1>
+
+        <div class="buttons">
+          <button class="new-btn new-btn-red">Come certificarsi</button>
+          <button class="new-btn new-btn-outline-white">Cos'è il kosher</button>
+        </div>
+      </div>
+
+      <div id="hero-1" class="hero d-none">
+        <h1 class="mb-1">
+          Cerchi alimenti Kosher? Scoprili nella nostra <span class="red">lista prodotti</span>
+        </h1>
+        <div class="buttons">
+          <button class="new-btn new-btn-red">Lista Prodotti</button>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <!-- firma -->
-  <div class="main-canvas-container max-width-container p-evt-none">
+  <!-- <div class="main-canvas-container max-width-container p-evt-none">
     <div class="main-canvas-inner-container">
 
       <img id="firma-rav-1" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
       <img id="firma-rav-2" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
 
     </div>
-  </div>
+  </div> -->
 
   <!-- immagini prodotti  -->
-  <div class="main-canvas-container p-evt-none">
+  <!-- <img id="product-side-img-0" class="product-img" src="./resources/img/index/bicchiere.png" alt="">
+  <img id="product-side-img-1" class="product-img product-img--hidden" src="./resources/img/index/pomodoro.png" alt="">
+  <img id="product-side-img-2" class="product-img product-img--hidden" src="./resources/img/index/bicchiere.png" alt=""> -->
+  <!-- <div class="main-canvas-container p-evt-none">
     <div id="product-imgs" class="main-canvas-inner-container p-evt-none">
-      
-      <img id="product-side-img-0" class="product-img" src="./resources/img/index/bicchiere.png" alt="">
-      <img id="product-side-img-1" class="product-img product-img--hidden" src="./resources/img/index/pomodoro.png" alt="">
-      <img id="product-side-img-2" class="product-img product-img--hidden" src="./resources/img/index/bicchiere.png" alt="">
+
+
+      <div class="ellipse-container">
+        <div id="ellipse-0" class="main-bg-ellipse"></div>
+      </div>
 
     </div>
-  </div>
+  </div> -->
 
 
   <!-- canvas prodotti -->
-  <div class="main-canvas-container p-evt-none">
+  <!-- <div class="main-canvas-container p-evt-none">
     <div class="main-canvas-inner-container p-evt-none">
 
       <canvas id="main-canvas" class="p-evt-none"></canvas>
 
     </div>
-  </div>
+  </div> -->
 
   <!-- hero -->
-  <div class="main-canvas-container max-width-container">
+  <!-- <div class="main-canvas-container max-width-container">
     <div class="main-canvas-inner-container">
 
       <div id="hero-0" class="hero">
@@ -81,10 +151,10 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <!-- hero -->
-  <div class="main-canvas-container max-width-container p-evt-none">
+  <!-- <div class="main-canvas-container max-width-container p-evt-none">
     <div class="main-canvas-inner-container">
 
       <div id="hero-1" class="hero">
@@ -97,13 +167,30 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
   <!-- hero -->
-  <div class="main-canvas-container max-width-container p-evt-none">
+  <!-- <div class="main-canvas-container max-width-container p-evt-none">
     <div class="main-canvas-inner-container">
 
-      <div id="hero-2" class="hero">
+      <div id="hero-0" class="hero">
+        <h1 class="mb-1">
+          Garantiamo la qualità della certificazione <span class="red">Kosher</span>, in Italia e in <span class="blue">Euro</span>pa.
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Come certificarsi</button>
+          <button class="btn btn-red">Cos'è il kosher</button>
+        </div>
+      </div>
+      <div id="hero-1" class="hero hero--hidden">
+        <h1 class="mb-1">
+          Scegli i prodotti certificati Eurokosher, scoprili nella nostra lista prodotti
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Lista Prodotti</button>
+        </div>
+      </div>
+      <div id="hero-2" class="hero hero--hidden">
         <h1 class="mb-1">
           Visita il nostro editoriale <span class="blue">Eurokosher BLOG</span>:
         </h1>
@@ -116,11 +203,22 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
+
+
+  <!-- immagini prodotti  -->
+  <!-- <div class="main-canvas-container p-evt-none">
+      <div id="product-imgs" class="main-canvas-inner-container p-evt-none">
+  
+        <img id="product-img-0" class="product-img" src="./resources/img/index/bartenura.png" alt="">
+        <img id="product-img-1" class="product-img product-img--hidden" src="./resources/img/index/belfiore.png" alt="">
+  
+      </div>
+    </div> -->
 
   <!-- contatti -->
-  <div id="contatti-container">
-    <div class="max-width-container">
+  <div id="contatti-container" class="max-height-container p-evt-none">
+    <div class="max-width-container p-evt">
       <div id="social-icons">
         <a href="/">
           <img class="mb-05" src="./resources/img/social/fb.svg" alt="">
@@ -241,6 +339,8 @@
       </div>
 
       <div class="spacer"></div>
+      <div class="spacer"></div>
+
 
     </section>
 
@@ -262,6 +362,11 @@
 
     <!-- mappa 3d -->
     <section id="map-3d">
+
+      <div class="max-width-container">
+        <h1 ID="map-title" class="light ml-1 max-width-container">ENTRA NEL MONDO DI EUROKOSHER</h1>
+      </div>
+
       <div id="fade-in">
         <div id="sfondo"></div>
 
@@ -342,11 +447,138 @@
 
   </div>
 
+
+
+  <section id="direttivo" class="bg-light">
+
+    <div class="spacer"></div>
+
+    <div class="max-width-container">
+
+      <h1>La nostra <span class="red">Storia</span></h1>
+      <p class="h5">
+        Fondata a Milano negli anni 80, è in grado di garantire un elevato valore aggiunto nel complesso mondo del Food.
+        Quarant'anni fa il <span class="red">rabbino Garelik</span> avviò la procedura di certificazione mettendo il <span class="blue">rabbino Avraham Hazan</span> a capo del progetto; oggi è affincato dal <span class="red">rabbino Levi Hazan</span>, suo figlio, nella direzione e gestione dell'azienda.
+        All'inizio Eurokosher si concentrava prevalentemente sulla certificazione del vino di alcune cantine italiane che producono per il mercato statunitense, dove è forte la richiesta di prodotti certificati kosher. Da allora Eurokosher ha emesso migliaia di certificazioni per impianti e aziende alimentari, principalmente in Italia e in tutta Europa. Ha dimostratro di avere una visione del mondo Food all'avanguardia, infatti nel corso degli anni il tema della kasherut ha preso piede in tutto il mondo.
+        Oggi in quasi tutti i paesi si trovano stabilimenti che rispettano le norme kosher e utilizzano ingredienti kosher. In numerosi segmenti di mercato i <span class="blue">consumatori, di fede ebraica e non</span>, riconoscono i prodotti kosher come più salutari e <span class="red"> qualitativamente migliori</span>.
+        Tra le numerose industrie alimentari conusciute e apprezzate in tutta europa, che ricevono la loro certificazione da Eurokosher vi sono: Martini, Campari, Cantine Piemontesi, Fratelli Branca, Carapelli, De Cecco, ItalPizza, Lavazza, Illy caffè, Rio Mare, Conserve Italia e tante altre.
+      </p>
+
+      <div class="spacer"></div>
+
+      <h1>Il <span class="blue">Contributo</span> di Eurokosher</h1>
+      <p class="h5 mb-1">
+        La certificazione kosher è fondamentale soprattutto per la <span class="blue">comunità ebraica</span>, ma deve essere vista con un'ottica di più ampio raggio.
+        <br>
+        Tante <span class="red">aziende Israeliane</span> in cerca di nuovi prodotti da importare guardano al mercato italiano con grande interesse, purchè i prodotti siano certificati kosher. Ma non è tutto: sono in costante aumento anche le richieste da mercati in cui la componente ebraica è particolarmente osservante, come quello americano, francese e russo.
+      </p>
+      <p class="h5">
+        <i>
+          "Le industrie si rivolgono a noi per la certificazione, perchè i loro clienti richiedono prodotti garantiti kosher.
+          Il nostro lavoro, realizzato da uno staff capeggiato da quattro rabbini, consiste nel controllo delle materie prime, dei processi di produzione e di industrializzazione. L'assistenza viene fornita attraverso una supervisione (hashgachà) da parte di un team di esperti, i mashghichim, che aiutano l'azienda nell'ottenimento della certificazione kosher"
+        </i>
+        <br>
+        <b>(Rav Avraham Hazan, Presidente di Eurokosher).</b>
+      </p>
+
+      <div class="spacer"></div>
+
+      <h1 class="blue">Il Direttivo</h1>
+      <p class="h5">
+        L’affidabilità del nostro servizio è garantita dalla presenza di figure rinomate in tutta la comunità
+        e con un’<span class="red">esperienza decennale</span> nel settore.
+      </p>
+
+      <div class="rav-cards">
+        <div class="rav-card rav-card--blue">
+          <h6>PRESIDENTE</h6>
+          <h3>Rav Avraham Hazan</h3>
+          <p>
+            Direttore dell’Organizzazione Giovanile Lubavitch,
+            fondatore del centro Beit Menachem a Milano e della Casa Chabad nel ghetto di Venezia
+            e direttore della scuola del Merkos.
+            E’ rabbino della sinagoga milanese Ohel Yaakov.
+          </p>
+        </div>
+        <div class="rav-card rav-card--red">
+          <h6>FONDATORE</h6>
+          <h3>Rav Ghershon Mendel Garelik</h3>
+          <p>
+            Direttore dell’Organizzazione Giovanile Lubavitch, fondatore del centro Beit Menachem a Milano e della Casa Chabad nel ghetto di Venezia e direttore della scuola del Merkos.
+            E’ rabbino della sinagoga milanese Ohel Yaakov.
+          </p>
+        </div>
+        <div class="rav-card rav-card--blue">
+          <h6>DIRETTORE</h6>
+          <h3>Rav Levi Hazan</h3>
+          <p>
+            Direttore dell’Organizzazione Giovanile Lubavitch, fondatore del centro Beit Menachem a Milano e della Casa Chabad nel ghetto di Venezia e direttore della scuola del Merkos.
+            E’ rabbino della sinagoga milanese Ohel Yaakov.
+          </p>
+        </div>
+        <div class="rav-card rav-card--red">
+          <h6>COORDINATORE RABBINICO</h6>
+          <h3>Rav Menachem Mendel Kaplan</h3>
+          <p>
+            Direttore dell’Organizzazione Giovanile Lubavitch, fondatore del centro Beit Menachem a Milano e della Casa Chabad nel ghetto di Venezia e direttore della scuola del Merkos.
+            E’ rabbino della sinagoga milanese Ohel Yaakov.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="spacer"></div>
+
+  </section>
+
+  <section id="contatti" class="bg-dark light">
+    <div class="max-width-container">
+      <div id="col-seguici">
+        <h3 class="fw-300">Seguici</h3>
+        <img id="arrow-contatti" src="./resources/img/curved-arrow.svg" alt="">
+      </div>
+      <div>
+        <h3 class="fw-300">Contatti</h3>
+        <ul>
+          <li>Via Benvenuto Cellini 2/A - 20129 Milano</li>
+          <li>Tel: +39 02.294.14.170</li>
+          <li>Fax: +39 02.294.14.170</li>
+          <li>Email: info@eurokosher.it</li>
+          <li>P. IVA: 07120880963</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="fw-300">Dove Siamo</h3>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe title="Sede legale Eurokosher" id="gmap_canvas" src="https://maps.google.com/maps?q=Via%20Benvenuto%20Cellini%202%20milano&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <a href="https://123movies-org.net"></a>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div id="col-menu">
+        <h3 class="fw-300">Menu</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Cos'è il kosher</a></li>
+          <li><a href="/">Come certificarsi</a></li>
+          <li><a href="/">Lista Prodotti</a></li>
+          <li><a href="/">Editoriale</a></li>
+          <li><a href="/">Area Riservata</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
 </body>
+<!-- Per usare three.js come module -->
 <script async src="https://unpkg.com/es-module-shims@0.13.1/dist/es-module-shims.js"></script>
 <script src="./js/pages/index/three/rendering.js" type="module"></script>
 <!-- <script src="./js/pages/index/index.js" type="module"></script> -->
 <script src="./js/pages/index/panels.js" type="module"></script>
+<script src="./js/pages/index/main-animation.js"></script>
 
 <script src="./js/components/BaseComponent.js"></script>
 <script src="./js/components/main-menu.js"></script>
