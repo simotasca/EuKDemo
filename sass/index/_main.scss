@@ -198,7 +198,7 @@ body.loaded {
 
 #ellipse-1 {
   // background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, #ffb81f 150%);
-  background: radial-gradient(circle at 50% 25%, #dbcc42 5%, #e7db6f 20%, #f2f395 35%);
+  background: radial-gradient(circle at 50% 25%, #ffef11 5%, #ffeb3c 20%, #fbfd69 35%);
   // visibility: hidden;
 }
 
@@ -234,7 +234,7 @@ main {
     font-weight: 600;
     // text-shadow: 0.2rem 0.2rem 0.2rem #8c8c8c6e;
     font-size: $step-4;
-
+    
     @include device(mobile) {
       font-size: $step-3;
     }
@@ -260,7 +260,10 @@ main {
   top: calc(18% + 5rem);
   left: 62%;
   width: 38%;
+ 
 }
+
+
 
 .firma-rav {
   position: absolute;
