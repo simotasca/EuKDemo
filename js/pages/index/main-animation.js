@@ -33,8 +33,6 @@ function nextProduct() {
   if (currentProduct == totProducts)
     currentProduct = 0
 
-  console.log(currentProduct, lastProduct)
-
   document.querySelector(`#product-img-${currentProduct}`).classList.remove('d-none')
   document.querySelector(`#product-side-img-${currentProduct}`).classList.remove('d-none')
   document.querySelector(`#hero-${currentProduct}`).classList.remove('d-none')

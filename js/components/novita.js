@@ -11,7 +11,7 @@ class Novita extends HTMLElement {
         </style>
 
         <div id="container">
-          <img src="./resources/tonno.png" alt="">
+          <img src="./resources/img/index/tonno.png" alt="">
           <p id="azienda">${this.hasAttribute('azienda') ? this.getAttribute('azienda') : '-'}</p>
           <p id="prodotto">${this.hasAttribute('prodotto') ? this.getAttribute('prodotto') : '-'}</p>
         </div>

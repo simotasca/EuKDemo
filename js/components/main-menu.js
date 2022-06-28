@@ -1,15 +1,15 @@
 class MainMenu extends BaseComponent {
   #onWindowScroll() {
     const element = this.qSelect('#main-menu')
-    const conts = document.querySelector('#contatti-container')
+    // const conts = document.querySelector('#contatti-container')
 
     if (!this.hasAttribute('noTransparent')) {
       if (window.scrollY > 20) {
         !element.classList.contains("scrolled") && element.classList.add('scrolled')
-        !conts.classList.contains("scrolled") && conts.classList.add('scrolled')
+        // !conts.classList.contains("scrolled") && conts.classList.add('scrolled')
       } else {
         element.classList.remove('scrolled')
-        conts.classList.remove('scrolled')
+        // conts.classList.remove('scrolled')
       }
     }
 
@@ -20,15 +20,15 @@ class MainMenu extends BaseComponent {
     if (!this.isAttribute('locked')) {
       if (window.scrollY > this.lastScrollY) {
         element.style.transform = slot.clientHeight != 0 ? `translateY(calc(-100% + ${slot.clientHeight}px - 1px))` : 'translateY(-100%)'
-        conts.classList.add('scrolled')
+        // conts.classList.add('scrolled')
       } else {
         element.style.transform = 'translateY(0)'
-        conts.classList.remove('scrolled')
+        // conts.classList.remove('scrolled')
       }
 
       if (window.scrollY > (document.body.clientHeight - 20)) {
         element.style.transform = 'translateY(0)'
-        conts.classList.remove('scrolled')
+        // conts.classList.remove('scrolled')
       }
     }
 
@@ -50,7 +50,7 @@ class MainMenu extends BaseComponent {
           <nav class="only-on-desktop">
             <a href="/">Homepage</a>
             <a href="/lista-prodotti.html">Lista prodotti</a>
-            <a href="/">Come Certificarsi</a>
+            <a href="/come-certificarsi.html">Come Certificarsi</a>
             <a href="/">Dizionario kosher</a>
             <a href="/blog.html" id="menu-editoriale">Editoriale</a>
             <div id="menu-underline"></div>

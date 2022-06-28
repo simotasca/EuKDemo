@@ -135,5 +135,5 @@ export default function initScrollAnimation() {
     .to(camera.rotation, { ...camRotObj(6), ...getBasicConfig(2) }, 'sud-scene')
 
     .add('polpogba') // 2
-    .to(camera.position, { ...camPosObj(6), ...getBasicConfig(1), onComplete: aziendeOff }, 'polpogba')
+    .to(camera.position, { ...camPosObj(6), ...getBasicConfig(0.2), onComplete: aziendeOff }, 'polpogba')
 }
