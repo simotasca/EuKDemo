@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/pages/index.css">
-  <link rel="stylesheet" href="./css/common/contatti.css">
-  <script src="./libs/gsap/gsap.min.js"></script>
-  <script src="./libs/gsap/ScrollTrigger.min.js"></script>
+  <title>Homepage</title>
+  <link rel="stylesheet" href="css/pages/index.css">
+  <link rel="stylesheet" href="css/common/contatti.css">
   <script type="importmap">
     {
       "imports": {
@@ -22,31 +20,44 @@
       }
     }
   </script>
+  <script src="./libs/gsap/gsap.min.js"></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js"></script>
 </head>
 
-<body>
+<body class="loaded">
+
+  <!-- <div id="loading-overlay">
+    <img src="./resources/img/logo.svg" alt="">
+  </div> -->
+
   <main-menu dark></main-menu>
 
-  <main class="h-100 bg-dark">
 
-    <div class="h-100 max-height-container">
 
-      <div class="h-100 max-width-container">
+  <div class="main-bg max-height-container"></div>
 
-        <div class="nav-spacer"></div>
+  <div class="main-canvas-container p-evt-none">
+    <div class="main-canvas-inner-container">
 
-        <div id="main-ellipse-container">
-          <div id="main-ellipse">
-            <div id="ellipse-0" class="ellipse-bg ellipse-bg--top"></div>
-            <div id="ellipse-1" class="ellipse-bg"></div>
-          </div>
+      <div class="main-ellipse-container">
+        <div class="main-bg-ellipse">
         </div>
+      </div>
+      <!-- <div class="ellipse-container">
+        <div id="ellipse-1" class="main-bg-ellipse ellipse--hidden"></div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <div id="homepage-layout-helper">
 
 
-        <img id="firma-0" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
-        <div id="product-group-0" class="product-img-container">
-          <img id="side-0" class="product-img" src="./resources/img/index/bicchiere.png" alt="">
-          <img id="product-0" class="product-img" src="./resources/img/index/bartenura.png" alt="">
+    <div id="product-imgs" class="main-canvas-container max-width-container double-max-height-container p-evt-none">
+      <div class="main-canvas-inner-container">
+        <img id="firma-rav-0" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
+        <div id="product-side-img-0" class="product-img-cont">
+          <img class="product-img" src="./resources/img/index/bicchiere.png" alt="">
         </div>
         <div id="hero-0" class="hero">
           <h1 class="mb-1 light">
@@ -58,12 +69,56 @@
             <button class="new-btn new-btn-outline-white">Cos'è il kosher</button>
           </div>
         </div>
+      </div>
+    </div>
 
-        <img id="firma-1" class="firma-rav d-none" src="./resources/img/index/logo-ebraico.svg" alt="">
-        <div id="product-group-1" class="product-img-container">
-          <img id="side-1" class="product-img d-none" src="./resources/img/index/pomodoro.png" alt="">
-          <img id="product-1" class="product-img d-none" src="./resources/img/index/belfiore.png" alt="">
+    <div class="main-canvas-container max-width-container double-max-height-container p-evt-none">
+      <div class="main-canvas-inner-container">
+       
+        <div id="product-img-0" class="product-img-cont">
+          <img class="product-img" src="./resources/img/index/bartenura.png" alt="">
         </div>
+      </div>
+    </div>
+
+    <!-- <div id="product-imgs" class="main-canvas-container max-width-container double-max-height-container p-evt-none">
+        <div class="main-canvas-inner-container">
+          <img id="firma-rav-0" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
+          <img id="firma-rav-1" class="firma-rav d-none" src="./resources/img/index/logo-ebraico.svg" alt="">
+
+          <div id="product-side-img-0" class="product-img-cont">
+            <img class="product-img" src="./resources/img/index/bicchiere.png" alt="">
+          </div>
+
+          <div id="product-img-0" class="product-img-cont">
+            <img class="product-img" src="./resources/img/index/bartenura.png" alt="">
+          </div>
+
+          <div id="product-side-img-1" class="product-img-cont d-none">
+            <img class="product-img" src="./resources/img/index/pomodoro.png" alt="">
+          </div>
+          <div id="product-img-1" class="product-img-cont d-none">
+            <img class="product-img" src="./resources/img/index/belfiore.png" alt="">
+          </div>
+
+        </div>
+      </div> -->
+
+
+    <!-- <div id="heroes" class="main-canvas-container max-width-container double-max-height-container">
+      <div class="main-canvas-inner-container">
+
+        <div id="hero-0" class="hero">
+          <h1 class="mb-1 light">
+            Garantiamo la qualità della certificazione Kosher, in Italia e in Europa.
+          </h1>
+
+          <div class="buttons">
+            <button class="new-btn new-btn-red">Come certificarsi</button>
+            <button class="new-btn new-btn-outline-white">Cos'è il kosher</button>
+          </div>
+        </div>
+
         <div id="hero-1" class="hero d-none">
           <h1 class="mb-1">
             Cerchi alimenti Kosher? Scoprili nella nostra <span class="red">lista prodotti</span>
@@ -73,24 +128,144 @@
           </div>
         </div>
 
-        <div id="main-contatti" class="contatti-0">
-          <div id="social-icons">
-            <a href="/">
-              <img class="mb-05" src="./resources/img/social/fb.svg" alt="">
-            </a>
-            <a href="/">
-              <img src="./resources/img/social/ig.svg" alt="">
-            </a>
-          </div>
+      </div>
+    </div> -->
 
-          <h4 id="btn-contatti" onclick="nextProduct()">CONTATTACI</h4>
-        </div>
+  </div>
 
+
+  <!-- firma -->
+  <!-- <div class="main-canvas-container max-width-container p-evt-none">
+    <div class="main-canvas-inner-container">
+
+      <img id="firma-rav-1" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
+      <img id="firma-rav-2" class="firma-rav" src="./resources/img/index/firma.svg" alt="">
+
+    </div>
+  </div> -->
+
+  <!-- immagini prodotti  -->
+  <!-- <img id="product-side-img-0" class="product-img" src="./resources/img/index/bicchiere.png" alt="">
+  <img id="product-side-img-1" class="product-img product-img--hidden" src="./resources/img/index/pomodoro.png" alt="">
+  <img id="product-side-img-2" class="product-img product-img--hidden" src="./resources/img/index/bicchiere.png" alt=""> -->
+  <!-- <div class="main-canvas-container p-evt-none">
+    <div id="product-imgs" class="main-canvas-inner-container p-evt-none">
+
+
+      <div class="ellipse-container">
+        <div id="ellipse-0" class="main-bg-ellipse"></div>
       </div>
 
     </div>
+  </div> -->
 
-  </main>
+
+  <!-- canvas prodotti -->
+  <!-- <div class="main-canvas-container p-evt-none">
+    <div class="main-canvas-inner-container p-evt-none">
+
+      <canvas id="main-canvas" class="p-evt-none"></canvas>
+
+    </div>
+  </div> -->
+
+  <!-- hero -->
+  <!-- <div class="main-canvas-container max-width-container">
+    <div class="main-canvas-inner-container">
+
+      <div id="hero-0" class="hero">
+        <h1 class="mb-1">
+          Garantiamo la qualità della certificazione <span class="red">Kosher</span>, in Italia e in <span class="blue">Euro</span>pa.
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Come certificarsi</button>
+          <button class="btn btn-red">Cos'è il kosher</button>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- hero -->
+  <!-- <div class="main-canvas-container max-width-container p-evt-none">
+    <div class="main-canvas-inner-container">
+
+      <div id="hero-1" class="hero">
+        <h1 class="mb-1">
+          Scegli i prodotti certificati Eurokosher, scoprili nella nostra lista prodotti
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Lista Prodotti</button>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+  <!-- hero -->
+  <!-- <div class="main-canvas-container max-width-container p-evt-none">
+    <div class="main-canvas-inner-container">
+
+      <div id="hero-0" class="hero">
+        <h1 class="mb-1">
+          Garantiamo la qualità della certificazione <span class="red">Kosher</span>, in Italia e in <span class="blue">Euro</span>pa.
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Come certificarsi</button>
+          <button class="btn btn-red">Cos'è il kosher</button>
+        </div>
+      </div>
+      <div id="hero-1" class="hero hero--hidden">
+        <h1 class="mb-1">
+          Scegli i prodotti certificati Eurokosher, scoprili nella nostra lista prodotti
+        </h1>
+        <div class="buttons">
+          <button class="btn btn-blue">Lista Prodotti</button>
+        </div>
+      </div>
+      <div id="hero-2" class="hero hero--hidden">
+        <h1 class="mb-1">
+          Visita il nostro editoriale <span class="blue">Eurokosher BLOG</span>:
+        </h1>
+        <h3>
+          Non perderti gli ultimi articoli sulla kasherut e sugli insegnamenti della torah
+        </h3>
+        <div class="buttons">
+          <button class="btn btn-red">Blog</button>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+
+  <!-- immagini prodotti  -->
+  <!-- <div class="main-canvas-container p-evt-none">
+      <div id="product-imgs" class="main-canvas-inner-container p-evt-none">
+  
+        <img id="product-img-0" class="product-img" src="./resources/img/index/bartenura.png" alt="">
+        <img id="product-img-1" class="product-img product-img--hidden" src="./resources/img/index/belfiore.png" alt="">
+  
+      </div>
+    </div> -->
+
+  <!-- contatti -->
+  <div id="contatti-container" class="max-height-container p-evt-none">
+    <div class="max-width-container p-evt">
+      <div id="social-icons">
+        <a href="/">
+          <img class="mb-05" src="./resources/img/social/fb.svg" alt="">
+        </a>
+        <a href="/">
+          <img src="./resources/img/social/ig.svg" alt="">
+        </a>
+      </div>
+
+      <div id="btn-contatti" onclick="nextProduct()">
+        <h5 class="">CONTATTACI</h5>
+      </div>
+    </div>
+  </div>
 
   <div id="diagonals-container" class="bg-dark light">
 
@@ -431,7 +606,6 @@
   </section>
 
 </body>
-
 <!-- Per usare three.js come module -->
 <script async src="https://unpkg.com/es-module-shims@0.13.1/dist/es-module-shims.js"></script>
 <script src="./js/pages/index/three/rendering.js" type="module"></script>
@@ -441,6 +615,5 @@
 
 <script src="./js/components/BaseComponent.js"></script>
 <script src="./js/components/main-menu.js"></script>
-
 
 </html>

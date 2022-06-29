@@ -57,14 +57,14 @@ section,
 }
 
 .nav-spacer {
-  height: 5rem;
+  height: 5.5rem;
 }
 
-@include not-device(desktop) {
-  .nav-spacer {
-    height: 10vh;
-  }
-}
+// @include not-device(desktop) {
+//   .nav-spacer {
+//     height: 10vh;
+//   }
+// }
 
 .buttons {
   position: relative;
