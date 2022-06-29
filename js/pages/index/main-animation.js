@@ -53,7 +53,7 @@ function nextProduct() {
     }
   })
 
-  if (window.innerWidth >= 950) {
+  if (window.innerWidth >= 475) {
     timeline
       .fromTo(`#product-${lastProduct}`, { x: 0, rotation: 0 }, { x: '-100%', rotation: -10, duration: 1, ease: "Power2.easeIn" }, 0.4)
       .fromTo(`#product-${currentProduct}`, { x: '100%', rotation: 10 }, { x: 0, rotation: 0, duration: 1, ease: "Power2.easeOut" }, 1.1)
@@ -69,7 +69,6 @@ function nextProduct() {
         // va fatto qui perchè uso la position relative
         document.querySelector(`#hero-${currentProduct}`).classList.remove('d-none')
         document.querySelector(`#hero-${lastProduct}`).classList.add('d-none')
-        document.querySelector(`#contatti`).className = `contatti-${currentProduct}`
       }, 1)
       .fromTo(`#hero-${currentProduct}`, { x: "50", autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.7 }, 1.15)
 
@@ -82,15 +81,14 @@ function nextProduct() {
 
   timeline
     .fromTo(`#hero-${lastProduct}`, { x: 0, autoAlpha: 1 }, { x: '-20', autoAlpha: 0, duration: 0.4 }, 0.2)
-    .fromTo(`#product-group-${lastProduct}`, { x: 0 }, { x: '-100%', duration: 1, ease: "Power2.easeIn" }, '>')
+    .fromTo(`#product-group-${lastProduct}`, { x: 0 }, { x: '-100%', duration: 0.7, ease: "Power2.easeIn" }, '>')
     .add(() => {
       // va fatto qui perchè uso la position relative
       document.querySelector(`#hero-${currentProduct}`).classList.remove('d-none')
       document.querySelector(`#hero-${lastProduct}`).classList.add('d-none')
-      document.querySelector(`#contatti`).className = `contatti-${currentProduct}`
     }, '>')
     .fromTo(`#hero-${currentProduct}`, { x: "20", autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.7 }, '>')
-    .fromTo(`#product-group-${currentProduct}`, { x: '100%' }, { x: 0, duration: 1, ease: "Power2.easeOut" }, 1.9)
+    .fromTo(`#product-group-${currentProduct}`, { x: '100%' }, { x: 0, duration: 0.7, ease: "Power2.easeOut" }, 1.9)
     .fromTo(`#ellipse-${currentProduct}`, { x: '100%' }, { x: 0, duration: 2 }, 0.9)
 
 

@@ -75,14 +75,18 @@ main {
 
 #ellipse-0 {
   // background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, $dark-blue 80%);
-  // background: radial-gradient(circle at 50% 30%, #315cca 0%, #2b478f 40%, #272727 80%);
-  background: #315cca;
+  background: radial-gradient(circle at 50% 30%, #315cca 0%, #2b478f 40%, #272727 80%);
+  @include device(mobile) {
+    background: #2c4faa;
+  }
 }
 
 #ellipse-1 {
   // background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, #ffb81f 150%);
-  // background: radial-gradient(circle at 50% 25%, #ffef11 5%, #ffeb3c 20%, #fbfd69 35%);
-  background: #ffeb3c;
+  background: radial-gradient(circle at 50% 25%, #ffef11 5%, #ffeb3c 20%, #fbfd69 35%);
+  @include device(mobile) {
+    background: #ffeb3c;
+  }
 }
 
 .product-img-container {
@@ -216,10 +220,6 @@ main {
     bottom: 10%;
   }
 
-  .firma-rav {
-    display: none;
-  }
-
   @media (orientation: landscape) {
     #main-contatti {
       position: relative;
@@ -230,5 +230,11 @@ main {
 @include device(tablet) {
   .hero {
     margin-top: 10%;
+  }
+}
+
+@include device(mobile) {
+  .firma-rav {
+    display: none;
   }
 }
