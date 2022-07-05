@@ -91,16 +91,16 @@ main {
 
 .product-img-container {
   width: 100%;
-  height: calc(200% - 5.5rem);
+  height: 200%;
   position: absolute;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 99;
 }
 
 .product-img {
   position: absolute;
   left: 50%;
-  height: 100%;
+  height: calc(100% - 5.5rem);
   transform: translateX(-50%);
 }
 
@@ -175,18 +175,7 @@ main {
   letter-spacing: 0.1rem;
   cursor: pointer;
   text-shadow: 0.1rem 0.1rem 0.5rem black;
-}
-
-.contatti-0 {
-  #btn-contatti {
-    color: white;
-  }
-}
-
-.contatti-1 {
-  #btn-contatti {
-    color: white;
-  }
+  color: white;
 }
 
 #social-icons {
