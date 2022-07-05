@@ -178,10 +178,10 @@ main {
   color: white;
 }
 
-#social-icons {
+.social-icons {
   img {
-    width: 2rem;
     display: block;
+    width: 2rem;
     filter: drop-shadow(0.05rem 0.2rem 0.1rem rgb(0 0 0 / 0.2));
   }
 }

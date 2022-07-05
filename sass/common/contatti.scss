@@ -11,7 +11,7 @@
   padding: 2rem;
   .max-width-container {
     display: grid;
-    grid-template-columns: fit-content(20%) auto auto auto calc(10rem + 2vw);
+    grid-template-columns: fit-content(20%) auto auto auto;
     gap: 2rem;
   }
 
@@ -48,10 +48,6 @@
       order: 2;
     }
   }
-
-  #col-menu {
-    padding-bottom: 3.5rem;
-  }
 }
 
 @include device(mobile) {
@@ -71,13 +67,11 @@
     }
   }
 
-  #col-menu {
-    padding-bottom: 0;
-  }
-
   #col-seguici {
-    padding-bottom: 6rem;
-    img {
+    .social-icons {
+      margin-top: 2rem;
+    }
+    #arrow-contatti {
       display: none;
     }
   }

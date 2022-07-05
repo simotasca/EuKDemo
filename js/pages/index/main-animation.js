@@ -79,17 +79,17 @@ function nextProduct() {
 
 
 
-  // timeline
-  //   .fromTo(`#hero-${lastProduct}`, { x: 0, autoAlpha: 1 }, { x: '-20', autoAlpha: 0, duration: 0.4 }, 0.2)
-  //   .fromTo(`#product-group-${lastProduct}`, { x: 0 }, { x: '-100%', duration: 0.7, ease: "Power2.easeIn" }, '>')
-  //   .add(() => {
-  //     // va fatto qui perchè uso la position relative
-  //     document.querySelector(`#hero-${currentProduct}`).classList.remove('d-none')
-  //     document.querySelector(`#hero-${lastProduct}`).classList.add('d-none')
-  //   }, '>')
-  //   .fromTo(`#hero-${currentProduct}`, { x: "20", autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.7 }, '>')
-  //   .fromTo(`#product-group-${currentProduct}`, { x: '100%' }, { x: 0, duration: 0.7, ease: "Power2.easeOut" }, 1.9)
-  //   .fromTo(`#ellipse-${currentProduct}`, { x: '100%' }, { x: 0, duration: 2 }, 0.9)
+  timeline
+    .fromTo(`#hero-${lastProduct}`, { x: 0, autoAlpha: 1 }, { x: '-20', autoAlpha: 0, duration: 0.4 }, 0.2)
+    .fromTo(`#product-group-${lastProduct}`, { x: 0 }, { x: '-100%', duration: 0.7, ease: "Power2.easeIn" }, '>')
+    .add(() => {
+      // va fatto qui perchè uso la position relative
+      document.querySelector(`#hero-${currentProduct}`).classList.remove('d-none')
+      document.querySelector(`#hero-${lastProduct}`).classList.add('d-none')
+    }, '>')
+    .fromTo(`#hero-${currentProduct}`, { x: "20", autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.7 }, '>')
+    .fromTo(`#product-group-${currentProduct}`, { x: '100%' }, { x: 0, duration: 0.7, ease: "Power2.easeOut" }, 1.9)
+    .fromTo(`#ellipse-${currentProduct}`, { x: '100%' }, { x: 0, duration: 2 }, 0.9)
 
 
 }
