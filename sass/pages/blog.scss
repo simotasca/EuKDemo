@@ -1,5 +1,5 @@
-@import '../base/base';
-@import '../base/classes';
+@import '../base/_base.scss';
+@import '../base/_classes.scss';
 
 .font-lora {
   font-family: 'Lora', serif;
@@ -116,6 +116,7 @@ main {
     background: white;
   }
 }
+
 
 h1 {
   font-weight: 700;
