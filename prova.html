@@ -6,42 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./libs/gsap/gsap.min.js"></script>
+  <script src="./libs/gsap/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-  <div id="contenitore">
-    <h1>ciao</h1>
-    <h1 id="titolo-rosso" class="titolo-blue">rosso</h1>
-    <h1 class="titolo-blue">blue</h1>
-    <h2 class="titolo-blue">titolo 2</h2>
-    <span>SPANN <h1>CIAO</h1> sachasdasd ujahsd aoikusd</span>
-    <span>SPANN</span>
-  </div>
+  <section></section>
+  <section id="st">
+    <h1 id="uno">CIAOO UNO</h1>
+    <h1 id="due">CIAOO DUE</h1>
+    <h1 id="tre">CIAOO TRE</h1>
+    <h1 id="quattro">CIAOO QUATTREO</h1>
+  </section>
+  <section></section>
+
   <style>
-    #contenitore {
-      background: black;
-      padding: 20px;
-      box-shadow: 20px 20px 100px blue, 20px 20px 10px red;
-      margin-top: 100px;
-      margin-right: 100px;
+    section {
+      min-height: 100vh;
     }
 
-    h1 {
-      color: rgb(52, 218, 52);
+    #st {
+      position: relative;
+      background-color: aliceblue;
+      color: aqua;
+      padding: 2rem;
+      display: grid;
     }
 
-    #titolo-rosso {
-      color: red;
-    }
-
-    .titolo-blue {
-      color: #00c0ff;
-    }
-
-    h2.titolo-blue {
-      color: #0020ff;
+    #st h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   </style>
+  <script>
+    timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#st',
+        // pin: true,
+        // element viewport
+        start: 'top top',
+        end: "top+=400%",
+        scrub: 0.2,
+      }
+    })
+     
+  </script>
 </body>
 
 </html>

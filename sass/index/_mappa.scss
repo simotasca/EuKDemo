@@ -4,11 +4,27 @@
 
 #map-3d {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
-
+  height: 1520vh;
+  width: 100%;
   z-index: $map-z;
 }
+
+#map-st-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#map-st-inner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+}
+
 
 #map-title {
   text-align: center;

@@ -25,6 +25,7 @@ function getDistance(a, b) {
 
 function calculateShifts(p, newP, minDist) {
   let inclinazione = (newP.lati - p.lati) / (newP.longi - p.longi)
+  inclinazione = inclinazione || 0
   let angolo = Math.atan(inclinazione)
   let ipotenusa = minDist / 2
   let catetoLati = Math.cos(angolo) * ipotenusa
@@ -40,13 +41,13 @@ function spacePoints(points, newPoint) {
   let problems = false
   points.forEach(p => {
     if (getDistance(p, newPoint) < minDistance) {
-      let { shiftLati, shiftLongi } = calculateShifts(p, newPoint, minDistance)
-      newPoint.lati += shiftLati
-      newPoint.longi += shiftLongi
+      let shift = calculateShifts(p, newPoint, minDistance)
+      newPoint.lati += shift.lati
+      newPoint.longi += shift.longi
       problems = true
     }
   })
-  return { problems, newPoint };
+  return { problems: problems, newPoint: newPoint };
 }
 
 function prepareData(data) {
@@ -57,15 +58,16 @@ function prepareData(data) {
     let nome = azienda.azienda
     let newPoint = { lati: lati, longi: longi, nome: nome }
     while (true) {
-      const { problems, newPoint: newPoint2 } = spacePoints(result, newPoint)
-      if (!problems) {
-        result.push(newPoint2)
+      const spRes = spacePoints(result, newPoint)
+      if (!spRes.problems) {
+        result.push(spRes.newPoint)
         break
       } else {
-        newPoint = newPoint2
+        newPoint = spRes.newPoint
       }
     }
   })
+  console.log(data.aziende, result)
   return result
 }
 

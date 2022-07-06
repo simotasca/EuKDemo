@@ -1,8 +1,11 @@
 let currentProduct = 0
 let totProducts = 2
 let animating = false
+let checkFinish = 0
 
-let timout
+let timout = null
+
+let elementsPerProduct = 0
 
 function settalo() {
   timout = setTimeout(nextProduct, 5 * 1000)
@@ -12,21 +15,6 @@ function clear() {
   clearTimeout(timout)
   timout = null
 }
-
-// settalo()
-function initElements() {
-  document.querySelectorAll('[data-anim]').forEach(elem => {
-    elem.classList.add('d-none')
-    elem.classList.add('animation-out')
-    elem.addEventListener('animationend', () => {
-      if (elem.classList.contains('animation-out'))
-        elem.classList.add('d-none')
-    })
-  })
-  makeIn(0)
-}
-
-initElements()
 
 function makeIn(prod) {
   document.querySelectorAll(`[data-anim='${prod}']`).forEach(elem => {
@@ -42,16 +30,55 @@ function makeOut(prod) {
   })
 }
 
+function initElements() {
+  let elems = document.querySelectorAll('[data-anim]')
+
+  elementsPerProduct = elems.length / totProducts
+
+  elems.forEach(elem => {
+    elem.classList.add('d-none')
+    elem.classList.add('animation-out')
+    elem.addEventListener('animationend', () => {
+      if (elem.classList.contains('animation-out')) {
+        elem.classList.add('d-none')
+        checkFinish++
+        if (checkFinish >= elementsPerProduct)
+          animating = false
+          !timout && settalo()
+      }
+
+    })
+  })
+
+  makeIn(0)
+}
+
 function nextProduct() {
+  if (animating) return
+
+  if (window.scrollY > 300) {
+    clear()
+    settalo()
+    return
+  }
+
+  if (timout) clear()
+
+  animating = true
+  checkFinish = 0
+
   let lastProduct = currentProduct
   currentProduct++
   if (currentProduct == totProducts)
     currentProduct = 0
 
-
   makeOut(lastProduct)
   makeIn(currentProduct)
 }
+
+
+settalo()
+initElements()
 
 // function nextProduct() {
 //   if (animating) return

@@ -60,17 +60,34 @@ export function onRenderScrollAnimation(time) {
   })
 }
 
-
+let timeline = null
 export default function initScrollAnimation() {
-  gsap.timeline({
+  timeline = gsap.timeline({
     scrollTrigger: {
       trigger: '#map-3d',
-      pin: true,
+      // pin: true,
       // element viewport
       start: 'top top',
-      end: window.innerWidth > 470 ? "top+=1520%" : "top+=1020%",
+      // end: "top+=1520%",
+      end: "bottom bottom",
       scrub: 0.5,
-      onEnterBack: window.innerWidth > 470 ? aziendeOn : null
+      onEnter: () => {
+        document.querySelector('#map-st-container').style.position = 'fixed'
+      },
+      onLeave: () => {
+        document.querySelector('#map-st-container').style.position = 'absolute'
+        document.querySelector('#map-st-container').style.bottom = '0'
+        document.querySelector('#map-st-container').style.top = 'unset'
+      },
+      onLeaveBack: () => {
+        document.querySelector('#map-st-container').style.position = 'absolute'
+        document.querySelector('#map-st-container').style.bottom = 'unset'
+        document.querySelector('#map-st-container').style.top = '0'
+      },
+      onEnterBack: () => {
+        document.querySelector('#map-st-container').style.position = 'fixed'
+        aziendeOn()
+      }
     }
   })
     .add("first-scene") // 1
@@ -135,5 +152,5 @@ export default function initScrollAnimation() {
     .to(camera.rotation, { ...camRotObj(6), ...getBasicConfig(2) }, 'sud-scene')
 
     .add('polpogba') // 2
-    .to(camera.position, { ...camPosObj(6), ...getBasicConfig(0.2), onComplete: aziendeOff }, 'polpogba')
+    .to(camera.position, { ...camPosObj(6), ...getBasicConfig(0.5), onComplete: aziendeOff }, 'polpogba')
 }

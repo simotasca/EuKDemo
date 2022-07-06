@@ -1,0 +1,1504 @@
+{
+  "aziende": [
+    {
+      "coords": [42.09847256814639, 14.210748505951955],
+      "azienda": "de cecco",
+      "regione": "abruzzo"
+    },
+    {
+      "coords": [42.37911926033454, 14.136035237856241],
+      "azienda": "mokambo caffè",
+      "regione": "abruzzo"
+    },
+    {
+      "coords": [40.74109554380558, 15.812512654989288],
+      "azienda": "pastificio de sortis",
+      "regione": "basilicata"
+    },
+    {
+      "coords": [38.47726735804064, 15.931053212586221],
+      "azienda": "gioia succhi",
+      "regione": "calabria"
+    },
+    {
+      "coords": [38.88588576244436, 16.60683045492851],
+      "azienda": "delizie di calabria",
+      "regione": "calabria"
+    },
+    {
+      "coords": [40.786291202329025, 14.56578839732008],
+      "azienda": "la regina di san marzano",
+      "regione": "campania"
+    },
+    {
+      "coords": [40.88739553195849, 14.838500353146705],
+      "azienda": "basso fedele",
+      "regione": "campania"
+    },
+    {
+      "coords": [41.05900108763048, 14.654178437811058],
+      "azienda": "olio dante",
+      "regione": "campania"
+    },
+    {
+      "coords": [40.84346490153755, 14.231986024309837],
+      "azienda": "kimbo caffè",
+      "regione": "campania"
+    },
+    {
+      "coords": [40.994875048390924, 14.299364029857491],
+      "azienda": "caffè borbone",
+      "regione": "campania"
+    },
+    {
+      "coords": [40.63592358086249, 15.230229739644338],
+      "azienda": "pastificio orogiallo",
+      "regione": "campania"
+    },
+    {
+      "coords": [40.70525921106313, 14.512341697317321],
+      "azienda": "pastificio garofalo",
+      "regione": "campania"
+    },
+    {
+      "coords": [40.70842677115395, 14.51139396848214],
+      "azienda": "pastificio liguori",
+      "regione": "campania"
+    },
+    {
+      "coords": [44.86859075617253, 12.175252800203296],
+      "azienda": "conserve italia",
+      "regione": "emilia romagna"
+    },
+    {
+      "coords": [44.662543141071495, 10.937947529986085],
+      "azienda": "pastificio zanini",
+      "regione": "emilia romagna"
+    },
+    {
+      "coords": [44.66683575722259, 10.939496982114374],
+      "azienda": "caffè molinari",
+      "regione": "emilia romagna"
+    },
+    {
+      "coords": [44.171104996246996, 12.218417626273224],
+      "azienda": "orogel",
+      "regione": "emilia romagna"
+    },
+    {
+      "coords": [44.75278498032314, 10.479524895611442],
+      "azienda": "grissin bon",
+      "regione": "emilia romagna"
+    },
+    {
+      "coords": [44.7795411750557, 11.09618996862462],
+      "azienda": "monari federzoni",
+      "regione": "emilia romagna"
+    },
+    {
+      "coords": [45.61353383680853, 13.81953183981994],
+      "azienda": "illy caffè",
+      "regione": "friuli venezia giulia"
+    },
+    {
+      "coords": [45.833093454198256, 13.233444199591574],
+      "azienda": "kemira",
+      "regione": "friuli venezia giulia"
+    },
+    {
+      "coords": [41.59324643243851, 12.641156097347386],
+      "azienda": "bolton alimentari",
+      "regione": "lazio"
+    },
+    {
+      "coords": [41.481711716952425, 13.145293739672843],
+      "azienda": "verdeoro srl",
+      "regione": "lazio"
+    },
+    {
+      "coords": [41.68981041599479, 12.524905337832465],
+      "azienda": "colavita",
+      "regione": "lazio"
+    },
+    {
+      "coords": [43.89295933836068, 8.037387655098536],
+      "azienda": "fratelli carli",
+      "regione": "liguria"
+    },
+    {
+      "coords": [44.77285312475344, 8.751363070471877],
+      "azienda": "campari",
+      "regione": "liguria"
+    },
+    {
+      "coords": [45.41087267971884, 9.153366468647755],
+      "azienda": "san pellegrino",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.496994769440036, 9.177656068650967],
+      "azienda": "fratelli branca",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.556053265552556, 9.967210988250939],
+      "azienda": "bialetti",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.29291758271405, 8.597914453302007],
+      "azienda": "riso gallo",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.564179586299964, 9.534271237970584],
+      "azienda": "pastificio annoni",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.190011303940686, 9.200038895627483],
+      "azienda": "riso scotti",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.55557443456445, 9.229008120928984],
+      "azienda": "pernod ricard",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [45.61133586521062, 9.038234212831991],
+      "azienda": "illva",
+      "regione": "saronno"
+    },
+    {
+      "coords": [45.71034900704382, 9.034253855164936],
+      "azienda": "sacco srl",
+      "regione": "lombardia"
+    },
+    {
+      "coords": [43.82740224109905, 13.047125553248776],
+      "azienda": "ultramar caffè",
+      "regione": "marche"
+    },
+    {
+      "coords": [41.58503982646911, 14.669291024334965],
+      "azienda": "pastificio la molisana",
+      "regione": "molise"
+    },
+    {
+      "coords": [44.83420733014799, 7.591501612803377],
+      "azienda": "chialva menta",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.96560123500519, 7.841095583972819],
+      "azienda": "martini & rossi",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.49442344708364, 7.547700295602053],
+      "azienda": "alpenfrucht",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.66795206194916, 7.090123268973072],
+      "azienda": "monviso",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.95566437313731, 7.789383406703918],
+      "azienda": "caffè vergnano",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.497604590582775, 7.484506653272867],
+      "azienda": "pasta natura",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.55692315834788, 7.7178253819938245],
+      "azienda": "lavazza",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.542955279823786, 7.488011868615959],
+      "azienda": "granda zuccheri",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [44.69904446003808, 8.023075553280169],
+      "azienda": "ferrero",
+      "regione": "piemonte"
+    },
+    {
+      "coords": [41.42093693853006, 15.635377495326054],
+      "azienda": "rosso gargano",
+      "regione": "puglia"
+    },
+    {
+      "coords": [41.246014981648145, 16.29225557219521],
+      "azienda": "olio levante",
+      "regione": "puglia"
+    },
+    {
+      "coords": [41.4148973650166, 15.632643775896002],
+      "azienda": "barilla",
+      "regione": "puglia"
+    },
+    {
+      "coords": [41.6026315918594, 15.832211582006218],
+      "azienda": "clemente",
+      "regione": "puglia"
+    },
+    {
+      "coords": [38.009155166988606, 12.513832310723942],
+      "azienda": "sosalt",
+      "regione": "sicilia"
+    },
+    {
+      "coords": [38.18691796684291, 15.555912810729566],
+      "azienda": "miscela d'oro",
+      "regione": "sicilia"
+    },
+    {
+      "coords": [38.098074542285, 13.495128670244968],
+      "azienda": "balistreri girolamo",
+      "regione": "sicilia"
+    },
+    {
+      "coords": [38.12485420132535, 14.719989522374046],
+      "azienda": "eurofood",
+      "regione": "sicilia"
+    },
+    {
+      "coords": [43.56057819396102, 11.185588710909958],
+      "azienda": "castel dei chianti",
+      "regione": "toscana"
+    },
+    {
+      "coords": [43.575596523536525, 11.209573768581155],
+      "azienda": "carapelli",
+      "regione": "toscana"
+    },
+    {
+      "coords": [43.575596523536525, 11.209573768581155],
+      "azienda": "hans zipperle",
+      "regione": "trentino alto adige"
+    },
+    {
+      "coords": [46.37102579213777, 11.037168896674489],
+      "azienda": "a.d. chini",
+      "regione": "trentino alto adige"
+    },
+    {
+      "coords": [42.7739405854049, 12.753360897388193],
+      "azienda": "pietro coricelli",
+      "regione": "umbria"
+    },
+    {
+      "coords": [42.76515463891072, 12.764949212729375],
+      "azienda": "monini",
+      "regione": "umbria"
+    },
+    {
+      "coords": [42.76891275605766, 12.750989539717276],
+      "azienda": "costa d'oro",
+      "regione": "umbria"
+    },
+    {
+      "coords": [43.08122303942801, 12.332424310892925],
+      "azienda": "nestlè italiana",
+      "regione": "umbria"
+    },
+    {
+      "azienda": "Olio Levante",
+      "coords": [41.246014981648145, 16.29225557219521],
+      "regione": "puglia"
+    },
+    {
+      "azienda": "Barilla",
+      "coords": [41.4148973650166, 15.632643775896002],
+      "regione": "puglia"
+    },
+    {
+      "azienda": "Clemente",
+      "coords": [41.6026315918594, 15.832211582006218],
+      "regione": "puglia"
+    },
+    {
+      "azienda": "Sosalt",
+      "coords": [38.009155166988606, 12.513832310723942],
+      "regione": "sicilia"
+    },
+    {
+      "azienda": "Miscela d'Oro",
+      "coords": [38.18691796684291, 15.555912810729566],
+      "regione": "sicilia"
+    },
+    {
+      "azienda": "Balistrieri Girolamo",
+      "coords": [38.098074542285, 13.495128670244968],
+      "regione": "sicilia"
+    },
+    {
+      "azienda": "Eurofood",
+      "coords": [38.12485420132535, 14.719989522374046],
+      "regione": "sicilia"
+    },
+    {
+      "azienda": "Castel dei Chianti",
+      "coords": [43.56057819396102, 11.185588710909958],
+      "regione": "toscana"
+    },
+    {
+      "azienda": "Carapelli",
+      "coords": [43.575596523536525, 11.209573768581155],
+      "regione": "toscana"
+    },
+    {
+      "azienda": "Hans Zipperle",
+      "coords": [43.575596523536525, 11.209573768581155],
+      "regione": "trentino alto adige"
+    },
+    {
+      "azienda": "A.D. Chini",
+      "coords": [46.37102579213777, 11.037168896674489],
+      "regione": "trentino alto adige"
+    },
+    {
+      "azienda": "Pietro Coricelli",
+      "coords": [42.7739405854049, 12.753360897388193],
+      "regione": "umbria"
+    },
+    {
+      "azienda": "Monini",
+      "coords": [42.76515463891072, 12.764949212729375],
+      "regione": "umbria"
+    },
+    {
+      "azienda": "Costa d'Oro",
+      "coords": [42.76891275605766, 12.750989539717276],
+      "regione": "umbria"
+    },
+    {
+      "azienda": "Nestlè Italiana",
+      "coords": [43.08122303942801, 12.332424310892925],
+      "regione": "umbria"
+    },
+    {
+      "azienda": "Compagnia del Caffè",
+      "coords": [42.4281437, 14.0543087],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Italsur",
+      "coords": [42.654145, 13.894698],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Oliveri Group",
+      "coords": [42.746847, 13.888296],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Saquella 1856",
+      "coords": [42.3102619, 13.9575901],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Bioalimenta",
+      "coords": [42.0898152, 14.2053326],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Madama Oliva",
+      "coords": [42.098927, 3.084888],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Tato",
+      "coords": [42.9961784, 13.7617959],
+      "regione": "Abruzzo"
+    },
+    {
+      "azienda": "Arpor Società Cooperativa Agricola",
+      "coords": [40.2104595, 16.6763759],
+      "regione": "Basilicata"
+    },
+    {
+      "azienda": "Fattincasa di Delle Fave Nunzia & C. snc",
+      "coords": [40.4012383, 16.2315939],
+      "regione": "Basilicata"
+    },
+    {
+      "azienda": "Capua",
+      "coords": [38.216069, 15.659192],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Citroservice Food & Soft Drinks di Valentina Lombardo",
+      "coords": [38.1035389, 15.6397556],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Oleificio Sagario",
+      "coords": [39.900902, 15.779276],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Mangiatorella",
+      "coords": [38.4766124, 16.4672633],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Verdeoro",
+      "coords": [38.954989, 16.641105],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Agrumaria Reggina",
+      "coords": [38.1035389, 15.6397556],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Calabrian Citrus Center",
+      "coords": [42.089937, 14.381217],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Labor",
+      "coords": [40.7499887, 14.5269491],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Agriconserve Rega",
+      "coords": [40.8158549, 14.5764685],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Alfonso Sellito",
+      "coords": [40.7833028, 14.7557276],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Consar",
+      "coords": [40.7833028, 14.7557276],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Italtipici",
+      "coords": [40.632913, 15.369658],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Cesare Trucillo",
+      "coords": [40.4194416, 15.3107562],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "La Formica",
+      "coords": [40.7499887, 14.5269491],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "MI.FRA - Glutiniente",
+      "coords": [40.6689045, 15.0326148],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Franzese",
+      "coords": [40.8674331, 14.5499642],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Oleificio Serra Marina",
+      "coords": [40.2195354, 15.1771512],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Compagnia Mercantile d'Oltremare",
+      "coords": [40.7833028, 14.7557276],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "ICAB",
+      "coords": [40.632913, 15.369658],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Rispoli Luigi",
+      "coords": [40.5302405, 15.1310307],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Antonio Petti Fu Pasquale",
+      "coords": [40.7415603, 14.6715039],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Ciro Velleca",
+      "coords": [40.866911, 14.404833],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Pastificio Antonio Pallante",
+      "coords": [41.0441395, 14.303337],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Pastificio di Martino Gaetano e Fratelli",
+      "coords": [40.6899999, 14.5210654],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "De Matteis Agroalimentare",
+      "coords": [41.077821, 15.147747],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Limoncello di Capri",
+      "coords": [40.639206, 14.418237],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "G.A.C. Gruppo Alimentare Campano",
+      "coords": [40.7833028, 14.7557276],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Alfaterna",
+      "coords": [40.6175146, 15.0569438],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Nappi 1911",
+      "coords": [40.8536831, 14.5303909],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "I.GI",
+      "coords": [40.632913, 15.369658],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "VI.SA",
+      "coords": [40.7472133, 14.6433202],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Cav. Uff. Pietro Grimaldi",
+      "coords": [40.7338419, 14.597044],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "GRS Chemical Technologies",
+      "coords": [40.9188361, 14.1536107],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Italcastagne",
+      "coords": [40.9623951, 14.8109591],
+      "regione": "Campania"
+    },
+    {
+      "azienda": "Veritas Biofrutta",
+      "coords": [44.759074, 11.751132],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Distillerie Vener",
+      "coords": [44.8013678, 10.3280833],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Balchem Italia",
+      "coords": [44.148665, 12.134235],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Le due Valli",
+      "coords": [44.745678, 11.943521],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Rodolfi Mansueto",
+      "coords": [44.8013678, 10.3280833],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Pastificio Barbieri",
+      "coords": [44.770561, 10.7797829],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Oleificio Speroni",
+      "coords": [44.866522, 10.0611939],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Eulip Industria Chimica Alimentare",
+      "coords": [44.8013678, 10.3280833],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Lesaffre Italia",
+      "coords": [44.9362237, 10.2702605],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Marchesi",
+      "coords": [44.4766739, 11.6383385],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Tampieri",
+      "coords": [44.2855555, 11.8832055],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Distillerie Mazzari",
+      "coords": [44.43697, 12.05533],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Consorzi Agrari d'Italia",
+      "coords": [44.8394154, 11.1431653],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Progeo",
+      "coords": [44.5384728, 10.9359609],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Moljno Dallagiovanna",
+      "coords": [45.013163, 9.568964],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Natural Colors Italy",
+      "coords": [44.5966405, 10.4113919],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Verwerkaf",
+      "coords": [44.8099007, 10.1772596],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "B&V",
+      "coords": [44.7956839, 10.4445566],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Mazzoni",
+      "coords": [44.815979, 11.894719],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Babbi",
+      "coords": [44.148665, 12.134235],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Silcompa",
+      "coords": [44.770561, 10.7797829],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Emilfill",
+      "coords": [44.3996319, 11.247554],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Olitalia",
+      "coords": [44.2227278, 12.041273],
+      "regione": "Emilia Romagna"
+    },
+    {
+      "azienda": "Biofarma",
+      "coords": [46.0497523, 13.0427514],
+      "regione": "Friuli Venezia Giulia"
+    },
+    {
+      "azienda": "Demus",
+      "coords": [45.6496485, 13.7772781],
+      "regione": "Friuli Venezia Giulia"
+    },
+    {
+      "azienda": "Biosint",
+      "coords": [41.549314, 12.984893],
+      "regione": "Lazio"
+    },
+    {
+      "azienda": "Di Marco Corrado",
+      "coords": [41.9842734, 12.6953191],
+      "regione": "Lazio"
+    },
+    {
+      "azienda": "Puratos Italia",
+      "coords": [44.1673897, 9.8853542],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Carbonitalia",
+      "coords": [44.1467747, 9.876327],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Cavanna Olii",
+      "coords": [44.5355862, 8.9967857],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Santagata 1907",
+      "coords": [44.40726, 8.9338624],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Parodi Nutra",
+      "coords": [44.507337, 8.8901102],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "SAAR Depositi portuali",
+      "coords": [44.5195894, 9.1803105],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Intercontinental Specialty Fats Italy",
+      "coords": [44.5195894, 9.1803105],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Depositi costieri Savona",
+      "coords": [44.2334238, 8.2525727],
+      "regione": "Liguria"
+    },
+    {
+      "azienda": "Olon",
+      "coords": [45.3734919, 9.3979929],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "AB Mauri Italy",
+      "coords": [45.2803877, 9.3602247],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "La Moderna Cartotecnica",
+      "coords": [45.6119057, 8.8520522],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Fratelli Pagani",
+      "coords": [45.4641943, 9.1896346],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Refresco Italy",
+      "coords": [45.7103554, 9.0410922],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Viola Gianmaria",
+      "coords": [45.0749275, 9.0507905],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Cantina di Casteggio",
+      "coords": [45.0141141, 9.1235778],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Molino Galli",
+      "coords": [45.5571522, 9.307382],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Melavì",
+      "coords": [46.174996, 9.977851],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Torrefazione Caffè Solomoni",
+      "coords": [45.1692628, 10.6708365],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Beauty & Business",
+      "coords": [45.616078, 9.589053],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Essedi",
+      "coords": [45.5792526, 8.7823717],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Molino Nicoli",
+      "coords": [45.661981, 9.793957],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Chemiferm",
+      "coords": [45.192268, 9.54646],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "JRS Silvateam Food Ingredients",
+      "coords": [39.3319934, 16.1843828],
+      "regione": "Calabria"
+    },
+    {
+      "azienda": "Aromata Group",
+      "coords": [45.589675, 9.335948],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Fiorio Colori",
+      "coords": [45.5543877, 9.4351918],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Caldic",
+      "coords": [45.5976933, 9.0180613],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Società di Macinazione Molini Certosa",
+      "coords": [45.257015, 9.1481137],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Tris Moka",
+      "coords": [45.6598764, 9.9550703],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Agro Horizon Lechitin &Solutiuons",
+      "coords": [45.6119057, 8.8520522],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "A.D.E.A.",
+      "coords": [45.6119057, 8.8520522],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "B&C",
+      "coords": [45.6443309, 8.8978959],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Goglio",
+      "coords": [45.7784026, 8.7718279],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Polenghi Food",
+      "coords": [45.081966, 9.697165],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Flavourart",
+      "coords": [45.5972309, 8.6370679],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "EPO",
+      "coords": [45.3559126, 9.2020722],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Oleificio F.lli Barbi",
+      "coords": [45.7795804, 10.425873],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Naturex",
+      "coords": [45.5971023, 9.0509248],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Molino Filippini",
+      "coords": [46.172675, 10.0641264],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Alce Quistello",
+      "coords": [45.0065791, 10.9804599],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Roha Italy",
+      "coords": [45.4741307, 10.8462482],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "AEB",
+      "coords": [45.7795804, 10.425873],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Mitaca",
+      "coords": [45.5201112, 8.7692822],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Pasta Lensi",
+      "coords": [45.7795804, 10.425873],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Calza Clemente",
+      "coords": [45.2208641, 10.037038],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Paride Venturelli",
+      "coords": [45.361172, 9.612958],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "L'Italiana Aromi",
+      "coords": [45.6765494, 9.2371619],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Innospec Performance Chemicals Italia",
+      "coords": [45.3896766, 10.4888745],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Italmatch Chemicals",
+      "coords": [45.5499106, 9.0782851],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Co.Ri.So",
+      "coords": [45.332162, 8.556336],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Enervit",
+      "coords": [45.904582, 9.180539],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Comax",
+      "coords": [45.4641943, 9.1896346],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Curti",
+      "coords": [45.153058, 8.668542],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Interflavors di Dolara Scarrone Maria Serena & C.",
+      "coords": [45.589675, 9.335948],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Diemme Food",
+      "coords": [45.5586454, 9.2141955],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "P.A. Aromatics Flavors",
+      "coords": [45.6256764, 9.0373283],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Extracta",
+      "coords": [45.5931952, 9.2271378],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Girelli Alcool",
+      "coords": [45.3600002, 9.1060279],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Idealfoods",
+      "coords": [45.6715427, 9.6117418],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Irca",
+      "coords": [45.7248471, 8.6940232],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "ICAM",
+      "coords": [45.7773453, 9.1811482],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Witor's",
+      "coords": [45.6119173, 8.8514545],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Farcoderma",
+      "coords": [45.4470628, 9.8692461],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Ital Lemon",
+      "coords": [45.1600664, 9.70437],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Micro Milk",
+      "coords": [45.3949172, 9.6395534],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "F.lli Feccia",
+      "coords": [45.1793292, 9.6483958],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "BBE International",
+      "coords": [45.4110598, 9.4317571],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Kerry Ingredients & Flavours Italia",
+      "coords": [45.69868, 9.608652],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "Prosol",
+      "coords": [45.6499571, 9.5479634],
+      "regione": "Lombardia"
+    },
+    {
+      "azienda": "C.O.VAL.M.",
+      "coords": [42.9541727, 13.5593592],
+      "regione": "Marche"
+    },
+    {
+      "azienda": "O.R.T.O. Verde",
+      "coords": [43.7442811, 13.1809732],
+      "regione": "Marche"
+    },
+    {
+      "azienda": "Performance Additives Italy ",
+      "coords": [41.9983273, 14.9939366],
+      "regione": "Molise"
+    },
+    {
+      "azienda": "S.I.P.A. International",
+      "coords": [41.9983273, 14.9939366],
+      "regione": "Molise"
+    },
+    {
+      "azienda": "Oleificio Colavita",
+      "coords": [41.62043, 14.875234],
+      "regione": "Molise"
+    },
+    {
+      "azienda": "F.lli Ferro Semolerie Molisane",
+      "coords": [41.611029, 14.662729],
+      "regione": "Molise"
+    },
+    {
+      "azienda": "Principato di Lucedio",
+      "coords": [45.5553826, 8.3462837],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Cereal Food",
+      "coords": [45.1909588, 7.8871864],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Europiemont",
+      "coords": [44.763839, 7.537125],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Gambarotta",
+      "coords": [44.76085, 8.789551],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Riseria Ceriotti",
+      "coords": [45.58425, 8.545997],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Sedamyl",
+      "coords": [44.6446052, 7.4926009],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Esseco",
+      "coords": [45.4319653, 8.735293],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Biemme",
+      "coords": [44.6446052, 7.4926009],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Silvachimica",
+      "coords": [44.3770311, 7.911036],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Zschimmer & Schwarz Italiana",
+      "coords": [45.235757, 8.325333],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Pastificio Mediterranea",
+      "coords": [44.6869148, 8.6749599],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Riseria Vignola Giovanni",
+      "coords": [45.1830051, 8.402652],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Sacchetto",
+      "coords": [44.6249277, 7.5555762],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Azienda Agrimontana",
+      "coords": [44.3286517, 7.4874561],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Torrefazione Caffè Excelsior",
+      "coords": [44.518132, 7.474328],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "In.Al.Pi",
+      "coords": [44.763839, 7.537125],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Distilleria Scardina",
+      "coords": [44.8870659, 8.9802506],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Lino",
+      "coords": [45.54976, 7.832216],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Barry Callebaut MFG Italia",
+      "coords": [45.9347918, 8.5740796],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "La Suissa",
+      "coords": [44.6878448, 8.8853385],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "F.lli Milan",
+      "coords": [45.2009688, 7.6489751],
+      "regione": "Piemonte"
+    },
+    {
+      "azienda": "Azienda Olearia Basile Snc",
+      "coords": [41.2276463, 16.2954346],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Patano",
+      "coords": [41.1257843, 16.8620293],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Pantaleo Agricoltura Società Agricola",
+      "coords": [40.7913913, 17.4598637],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "D'Aries",
+      "coords": [41.5082727, 15.3376465],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "AZIENDA TERRA DI PARIGI G.",
+      "coords": [39.948618, 18.088826],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Olearia Schiralli",
+      "coords": [41.0241649, 16.7095806],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Medsol",
+      "coords": [41.1992456, 16.5968279],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Andriani",
+      "coords": [40.819725, 16.422779],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Gluten Free Foods",
+      "coords": [40.819725, 16.422779],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Casa Olearia Italiana",
+      "coords": [40.9522369, 17.299948],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Bio Organica Italia",
+      "coords": [41.2648121, 15.8996651],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Industria Molitoria F.lli Martimucci",
+      "coords": [40.8285595, 16.5527314],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Industria Molitoria Mininni ",
+      "coords": [40.8285595, 16.5527314],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Di Molfetta Pantaleo & C.",
+      "coords": [41.2402745, 16.5010109],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Terradiva - Azienda Agricola Biologica",
+      "coords": [41.0850517, 16.0777763],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Tarall'oro",
+      "coords": [40.8879866, 16.9494555],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Nicola Pantaleo ",
+      "coords": [40.834432, 17.358399],
+      "regione": "Puglia"
+    },
+    {
+      "azienda": "Sicillemon",
+      "coords": [38.1483059, 15.2175523],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Anastasi",
+      "coords": [37.7871598, 14.8338448],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "L.R. Flavours & Fragrances Industries",
+      "coords": [37.5377497, 14.9817604],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Curaba",
+      "coords": [37.6828513, 12.7955336],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "L' Aroma",
+      "coords": [37.5736052, 15.0517267],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Sicilia Production",
+      "coords": [37.1464505, 14.3941802],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "La Mora Siciliana",
+      "coords": [38.144902414, 15.2167908],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Candifrucht",
+      "coords": [38.144902414, 15.2167908],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Bionap",
+      "coords": [37.5377497, 14.9817604],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Campisi Citrus",
+      "coords": [36.9762673, 15.197661],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Di Bartolo",
+      "coords": [37.8224449, 15.2276362],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "F.lli Calabretta di Calabretta Giuseppe & C.",
+      "coords": [37.6127773, 15.1658804],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "I.A.C. - Ingredienti Alimentari Cosmetici",
+      "coords": [37.8224449, 15.2276362],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Simone Gatto",
+      "coords": [38.1589177, 15.351874],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Oleificio Asaro",
+      "coords": [37.727841, 12.88854],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Oleificio D'Alì Ruggero",
+      "coords": [38.0382301, 12.5871823],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Agrumaria Corleone",
+      "coords": [38.1112268, 13.3524434],
+      "regione": "Sicilia"
+    },
+    {
+      "azienda": "Gisea",
+      "coords": [43.4677993, 11.0432115],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Drogheria e Alimentari",
+      "coords": [43.9614743, 11.3248285],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Oleificio Fabbri",
+      "coords": [43.8420391, 10.5735254],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "La Dispensa di Campagna",
+      "coords": [43.1607424, 10.6110056],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Mediterranea Belfiore ",
+      "coords": [43.3113449, 10.5173443],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Salov",
+      "coords": [43.8676499, 10.3397157],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Pastificio Mennucci",
+      "coords": [43.9083609, 10.5342488],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Pastificio Palandri",
+      "coords": [43.9740957, 10.8687081],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Bordoni Italia",
+      "coords": [43.770985, 11.107215],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Fiorentini Firenze",
+      "coords": [43.4274923, 11.1304746],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Italian Food",
+      "coords": [43.0284672, 10.603229],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Le Bontà",
+      "coords": [43.8216342, 11.1366776],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Valpesana",
+      "coords": [43.3900591, 11.2233891],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Italcol",
+      "coords": [43.6056068, 10.9712484],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Corsino Corsini",
+      "coords": [43.4055479, 11.7678031],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Enrico Giotti",
+      "coords": [43.4055479, 11.7678031],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Dial",
+      "coords": [46.0605291, 11.2406747],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Molino Merano",
+      "coords": [46.6160189, 11.1448586],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Pastificio Felicetti",
+      "coords": [46.3123614, 11.6026938],
+      "regione": "Toscana"
+    },
+    {
+      "azienda": "Perugina",
+      "coords": [43.1070321, 12.4029962],
+      "regione": "Umbria"
+    },
+    {
+      "azienda": "Molini Spigadoro",
+      "coords": [43.0677554, 12.5495816],
+      "regione": "Umbria"
+    },
+    {
+      "azienda": "Oleificio Coppini Angelo",
+      "coords": [42.6539486, 12.4396574],
+      "regione": "Umbria"
+    },
+    {
+      "azienda": "Umbria Olii",
+      "coords": [42.8228682, 12.7762635],
+      "regione": "Umbria"
+    },
+    {
+      "azienda": "Molino sul Clitunno",
+      "coords": [42.90232, 12.73562],
+      "regione": "Umbria"
+    }
+  ]
+}

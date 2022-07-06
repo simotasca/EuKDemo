@@ -8,6 +8,8 @@ const canvasSelector = '#map-canvas'
 
 initScrollAnimation()
 
+
+
 function animation(time) {
   onRenderScrollAnimation(time)
   onRenderAziende(time)

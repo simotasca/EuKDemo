@@ -163,8 +163,7 @@
           <div>
             <img class="infog-img mb-1" src="./resources/img/index/chart.svg" alt="">
             <p class="h5 infog-text">
-              I prodotti certificati kosher raggiungono un vasto numero di utenti all'interno di un <b
-                class="blue">mercato in costante crescita</b>.
+              I prodotti certificati kosher raggiungono un vasto numero di utenti all'interno di un <b class="blue">mercato in costante crescita</b>.
             </p>
           </div>
         </div>
@@ -178,8 +177,7 @@
           <div>
             <img class="infog-img mb-1" src="./resources/img/index/chart.svg" alt="">
             <p class="h5 infog-text">
-              I prodotti certificati kosher raggiungono un vasto numero di utenti all'interno di un <b
-                class="blue">mercato in costante crescita</b>.
+              I prodotti certificati kosher raggiungono un vasto numero di utenti all'interno di un <b class="blue">mercato in costante crescita</b>.
             </p>
           </div>
         </div>
@@ -224,89 +222,97 @@
     </div>
 
     <!-- mappa 3d -->
+
     <section id="map-3d">
 
-      <div class="max-width-container">
-        <h1 ID="map-title" class="light ml-1 max-width-container">ENTRA NEL MONDO DI EUROKOSHER</h1>
-      </div>
+      <div id="map-st-container">
+        <div id="map-st-inner">
 
-      <div id="fade-in">
-        <div id="sfondo"></div>
-
-        <div id="logoi">
-          <div class="logoi-col">
-            <img src="./resources/img/design-aziende/branca.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/cirio.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/clemente.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/de_cecco.svg" alt="logo" class="logo">
+          <div class="max-width-container">
+            <h1 ID="map-title" class="light ml-1 max-width-container">ENTRA NEL MONDO DI EUROKOSHER</h1>
           </div>
 
-          <div class="logoi-col">
-            <img src="./resources/img/design-aziende/de_cecco.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/illy.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/kimbo.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/lavazza.svg" alt="logo" class="logo">
-          </div>
+          <div id="fade-in">
+            <div id="sfondo"></div>
 
-          <div class="logoi-col">
-            <img src="./resources/img/design-aziende/levante.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/san_pellegrino.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/segafredo.svg" alt="logo" class="logo">
-            <img src="./resources/img/design-aziende/valfrutta.svg" alt="logo" class="logo">
-          </div>
-        </div>
-      </div>
+            <div id="logoi">
+              <div class="logoi-col">
+                <img src="./resources/img/design-aziende/branca.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/cirio.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/clemente.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/de_cecco.svg" alt="logo" class="logo">
+              </div>
 
-      <canvas id="map-canvas"></canvas>
+              <div class="logoi-col">
+                <img src="./resources/img/design-aziende/de_cecco.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/illy.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/kimbo.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/lavazza.svg" alt="logo" class="logo">
+              </div>
 
-      <div id="map-not-overflow">
-
-        <div class="map-titles light">
-          <h1 id="scroll-title-1" class="slide-appear map-title">
-            I marchi certificati eurokosher sono riconosciuti in tutto il mondo
-          </h1>
-          <div class="map-titles--spacer"></div>
-          <h1 id="scroll-title-2" class="slide-appear map-title">
-            Certifichiamo il meglio del kosher made in Italy che viene esportato all'estero
-          </h1>
-        </div>
-
-        <div class="map-titles light">
-          <h1 id="scroll-title-3" class="slide-appear map-title">
-            I migliori enti di certificazione al mondo si appoggiano a Eurokosher per le loro certificazioni in italia
-            <div id="logoi-enti">
-              <img id="logo-ok" src="./resources/img/ok-kosher.svg" alt="">
-              <img id="logo-ou" src="./resources/img/orthodox-union.svg" alt="">
+              <div class="logoi-col">
+                <img src="./resources/img/design-aziende/levante.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/san_pellegrino.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/segafredo.svg" alt="logo" class="logo">
+                <img src="./resources/img/design-aziende/valfrutta.svg" alt="logo" class="logo">
+              </div>
             </div>
-          </h1>
-        </div>
-
-        <div class="map-titles light">
-          <div id="scroll-title-4" class="slide-appear map-titles--row">
-            <span class="map-title map-title--num" data-number=231></span>
-            <h1 class="map-title">
-              Aziende certificate in Italia
-            </h1>
           </div>
-          <div class="map-titles--spacer"></div>
-          <div id="scroll-title-5" class="slide-appear map-titles--row">
-            <span class="map-title map-title--num" data-number=77></span>
-            <h1 class="map-title">
-              Aziende certificate per Orthodox Union e OK Kosher
-            </h1>
-          </div>
-        </div>
 
+          <canvas id="map-canvas"></canvas>
+
+          <div id="map-not-overflow">
+
+            <div class="map-titles light">
+              <h1 id="scroll-title-1" class="slide-appear map-title">
+                I marchi certificati eurokosher sono riconosciuti in tutto il mondo
+              </h1>
+              <div class="map-titles--spacer"></div>
+              <h1 id="scroll-title-2" class="slide-appear map-title">
+                Certifichiamo il meglio del kosher made in Italy che viene esportato all'estero
+              </h1>
+            </div>
+
+            <div class="map-titles light">
+              <h1 id="scroll-title-3" class="slide-appear map-title">
+                I migliori enti di certificazione al mondo si appoggiano a Eurokosher per le loro certificazioni in italia
+                <div id="logoi-enti">
+                  <img id="logo-ou" src="./resources/img/orthodox-union.svg" alt="">
+                  <img id="logo-ok" src="./resources/img/ok-kosher.svg" alt="">
+                </div>
+              </h1>
+            </div>
+
+            <div class="map-titles light">
+              <div id="scroll-title-4" class="slide-appear map-titles--row">
+                <span class="map-title map-title--num" data-number=231></span>
+                <h1 class="map-title">
+                  Aziende certificate in Italia
+                </h1>
+              </div>
+              <div class="map-titles--spacer"></div>
+              <div id="scroll-title-5" class="slide-appear map-titles--row">
+                <span class="map-title map-title--num" data-number=77></span>
+                <h1 class="map-title">
+                  Aziende certificate per Orthodox Union e OK Kosher
+                </h1>
+              </div>
+            </div>
+
+          </div>
+
+          <div id="aziende-container">
+            <div class="label-azienda">
+              <p class="nome-azienda h3">Frero</p>
+              <p><u>Lista prodotti</u></p>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div id="aziende-container">
-        <div class="label-azienda">
-          <p class="nome-azienda h3">Frero</p>
-          <p><u>Lista prodotti</u></p>
-        </div>
-      </div>
-
-    </section> <!-- map-3d -->
+    </section>
+    <!-- map-3d -->
 
   </div>
 
@@ -323,8 +329,7 @@
         Fondata a Milano negli anni 80, Eurokosher è in grado di garantire un elevato valore aggiunto nel complesso
         mondo del Food.
         Quarant'anni fa il <span class="red">rabbino Garelik</span> avviò la procedura di certificazione mettendo il
-        <span class="blue">rabbino Avraham Hazan</span> a capo del progetto; oggi è affincato dal <span
-          class="red">rabbino Levi Hazan</span>, suo figlio, nella direzione e gestione dell'azienda.
+        <span class="blue">rabbino Avraham Hazan</span> a capo del progetto; oggi è affincato dal <span class="red">rabbino Levi Hazan</span>, suo figlio, nella direzione e gestione dell'azienda.
         All'inizio Eurokosher si concentrava prevalentemente sulla certificazione del vino di alcune cantine italiane
         che producono per il mercato statunitense, dove è forte la richiesta di prodotti certificati kosher. Da allora
         Eurokosher ha emesso migliaia di certificazioni per impianti e aziende alimentari, principalmente in Italia e in
@@ -456,9 +461,7 @@
         <h3 class="fw-300">Dove Siamo</h3>
         <div class="mapouter">
           <div class="gmap_canvas">
-            <iframe title="Sede legale Eurokosher" id="gmap_canvas"
-              src="https://maps.google.com/maps?q=Via%20Benvenuto%20Cellini%202%20milano&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <iframe title="Sede legale Eurokosher" id="gmap_canvas" src="https://maps.google.com/maps?q=Via%20Benvenuto%20Cellini%202%20milano&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             <a href="https://123movies-org.net"></a>
             <br>
           </div>

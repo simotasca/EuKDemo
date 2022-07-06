@@ -189,8 +189,8 @@ main {
 
 @include not-device(desktop) {
   .hero {
-    position: relative;
-    top: 0;
+    // position: relative;
+    top: 5.5rem;
     margin-top: 20%;
     left: 10%;
     width: 80%;

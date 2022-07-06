@@ -40,11 +40,11 @@ function addLatiLongiPoints(data) {
   new OBJLoader().load(
     '../../resources/obj/pointer.obj',
     model => {
-      data.forEach(azienda => {
+      data.forEach((azienda, idx) => {
         let pointerModel = new Object3D()
         pointerModel.copy(model)
 
-        let color = Math.random() > 0.5 ? 'white' : 'orange'
+        let color = (idx + 1) % 2 ? 'white' : 'orange'
         const material = new MeshPhongMaterial({ color: color })
         pointerModel.children[0].material = material
         pointerModel.baseColor = color
