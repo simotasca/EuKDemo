@@ -19,7 +19,6 @@ class MainMenu extends BaseComponent {
 
     const slot = this.qSelect('#extra')
 
-    // console.log("is locked", this.isAttribute('locked'))
 
     if (!this.isAttribute('locked')) {
       if (window.scrollY > this.lastScrollY) {
@@ -29,11 +28,6 @@ class MainMenu extends BaseComponent {
         element.style.transform = 'translateY(0)'
         // conts.classList.remove('scrolled')
       }
-
-      // if (window.scrollY > (document.body.clientHeight - 20)) {
-      //   element.style.transform = 'translateY(0)'
-      //   // conts.classList.remove('scrolled')
-      // }
     }
 
     this.lastScrollY = window.scrollY
@@ -60,10 +54,32 @@ class MainMenu extends BaseComponent {
             <div id="menu-underline"></div>
           </nav>
           <!--<img id="menu-hamb" class="hide-on-desktop" src="/resources/img/icons/hamburger.svg" alt="">-->
-          <object id="menu-hamb" class="hide-on-desktop pointer" type="image/svg+xml" data="/resources/img/icons/hamburger.svg"></object>
+          <div id="menu-hamb" class="hide-on-desktop pointer">
+            <object type="image/svg+xml" data="/resources/img/icons/hamburger.svg"></object>
+          </div>
         </div>
         <div id="extra" class="max-width-container"><slot/></div>
-      </header>`)
+      </header>
+      <div id="mobile-panel" class="${this.hasAttribute('dark') ? 'bg-dark light' : 'bg-light dark'}">
+        <ul>
+          <li class="h4"><a href="/">Homepage</a></li>
+          <li class="h4"><a href="/lista-prodotti.html">Lista prodotti</a></li>
+          <li class="h4"><a href="/come-certificarsi.html">Come Certificarsi</a></li>
+          <li class="h4"><a href="/">Dizionario kosher</a></li>
+          <li class="h4"><a href="/blog.html" id="menu-editoriale">Editoriale</a></li>
+          <li class="social-icons">
+            <div class="social-icons">
+              <a href="/">
+                <img class="mb-05" src="/resources/img/social/fb.svg" alt="">
+              </a>
+              <a href="/">
+                <img src="/resources/img/social/ig.svg" alt="">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      `)
 
     this.lastScrollY = 0
 
@@ -74,19 +90,37 @@ class MainMenu extends BaseComponent {
 
     this.#onWindowScroll()
     window.addEventListener("scroll", this.#onWindowScroll.bind(this))
-    this.qSelect('img').addEventListener('click', this.hambClick.bind(this))
+    this.qSelect('#menu-hamb').addEventListener('click', this.hambClick.bind(this))
 
   }
 
   hambClick() {
-    let svgDoc = this.qSelect("#menu-hamb").contentDocument
+    let svgDoc = this.qSelect("#menu-hamb > object").contentDocument
     let line1 = svgDoc.getElementById('line-1')
     let line2 = svgDoc.getElementById('line-2')
     let line3 = svgDoc.getElementById('line-3')
-    if(!this.isOpen) {
+    if (!this.isOpen) {
+      line1.classList.remove('line-1--close')
+      line2.classList.remove('line-2--close')
+      line3.classList.remove('line-3--close')
       line1.classList.add('line-1--open')
       line2.classList.add('line-2--open')
       line3.classList.add('line-3--open')
+      this.qSelect('#mobile-panel').classList.add("open")
+      this.qSelect('#mobile-panel').classList.remove("close")
+      document.body.style.overflowY = "hidden"
+      this.isOpen = true
+    } else {
+      line1.classList.remove('line-1--open')
+      line2.classList.remove('line-2--open')
+      line3.classList.remove('line-3--open')
+      line1.classList.add('line-1--close')
+      line2.classList.add('line-2--close')
+      line3.classList.add('line-3--close')
+      this.qSelect('#mobile-panel').classList.remove("open")
+      this.qSelect('#mobile-panel').classList.add("close")
+      document.body.style.overflowY = null
+      this.isOpen = false
     }
   }
 }

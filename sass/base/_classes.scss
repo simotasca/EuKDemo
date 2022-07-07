@@ -58,6 +58,9 @@ section,
 
 .nav-spacer {
   height: 5.5rem;
+  @include not-device(desktop) {
+    height: 6.5rem;
+  }
 }
 
 // @include not-device(desktop) {
