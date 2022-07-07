@@ -27,7 +27,8 @@
     gap: 2rem;
   }
 
-  img {
+  img,
+  object {
     height: 3.4rem;
     padding: 0.2rem 0;
     filter: drop-shadow(0.05rem 0.2rem 0.1rem rgb(0 0 0 / 0.2));
@@ -50,7 +51,6 @@
     font-weight: 550;
     $shadow-size: 0.1rem 0.1rem 0.2rem;
     text-shadow: $shadow-size #00000028;
-
 
     &#menu-editoriale {
       color: $red;
@@ -94,8 +94,11 @@
 
 @include device(mobile) {
   #main-menu {
-    padding: 1rem 1.2rem;
-    img {
+    .navbar {
+      padding: 1rem 1.2rem;
+    }
+    img,
+    object {
       height: 3rem;
     }
   }
@@ -118,3 +121,4 @@
     background: $light;
   }
 }
+
