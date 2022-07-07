@@ -77,7 +77,7 @@ main {
   // background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, $dark-blue 80%);
   background: radial-gradient(circle at 50% 30%, #315cca 0%, #2b478f 40%, #272727 80%);
   @include device(mobile) {
-    background: #2c4faa;
+    background: #2f72bd;
   }
 }
 
@@ -85,7 +85,7 @@ main {
   // background: radial-gradient(circle at 50% 25%, lighten($light, 0) 0%, #ffb81f 150%);
   background: radial-gradient(circle at 50% 25%, #ffef11 5%, #ffeb3c 20%, #fbfd69 35%);
   @include device(mobile) {
-    background: #ffeb3c;
+    background: #ffe031;
   }
 }
 
