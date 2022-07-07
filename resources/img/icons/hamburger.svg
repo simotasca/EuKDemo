@@ -3,23 +3,60 @@
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#3E5F67;}
-	.st1{fill:#FFFFFF;}
+	.st0{fill:#FFFFFF;}
+  
+
+@keyframes openline1 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(10%) rotate(0);
+  }
+  100% {
+    transform: translateY(10%) rotate(45deg);
+  }
+}
+
+@keyframes openline2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes openline3 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10%) rotate(0);
+  }
+  100% {
+    transform: translateY(-10%) rotate(-45deg);
+  }
+}
+
+.line-1--open {
+  transform-origin: center center;
+  animation: openline1 2s linear;
+}
+
+.line-2--open {
+  transform-origin: center center;
+  animation: openline2 2s linear;
+}
+
+.line-3--open {
+  transform-origin: center center;
+  animation: openline3 2s linear;
+}
 </style>
 <g>
-	<path class="st0" d="M35.2,48H12.8C5.7,48,0,42.3,0,35.2V12.8C0,5.7,5.7,0,12.8,0h22.5C42.3,0,48,5.7,48,12.8v22.5
-		C48,42.3,42.3,48,35.2,48z"/>
-</g>
-<g>
-	<path class="st1" d="M36.6,36.4H11.4c-1,0-1.7-0.8-1.7-1.7v-0.4c0-1,0.8-1.7,1.7-1.7h25.2c1,0,1.7,0.8,1.7,1.7v0.4
-		C38.3,35.6,37.6,36.4,36.6,36.4z"/>
-</g>
-<g>
-	<path class="st1" d="M36.6,25.9H11.4c-1,0-1.7-0.8-1.7-1.7v-0.4c0-1,0.8-1.7,1.7-1.7h25.2c1,0,1.7,0.8,1.7,1.7v0.4
-		C38.3,25.1,37.6,25.9,36.6,25.9z"/>
-</g>
-<g>
-	<path class="st1" d="M36.6,15.5H11.4c-1,0-1.7-0.8-1.7-1.7v-0.4c0-1,0.8-1.7,1.7-1.7h25.2c1,0,1.7,0.8,1.7,1.7v0.4
-		C38.3,14.7,37.6,15.5,36.6,15.5z"/>
+	<path id="line-1" class="st0" d="M42.8,16.6h-38v-2.3h38V16.6z"/>
+	<path id="line-2" class="st0" d="M42.8,25.1h-38v-2.3h38V25.1z"/>
+	<path id="line-3" class="st0" d="M42.8,33.7h-38v-2.3h38V33.7z"/>
 </g>
 </svg>
