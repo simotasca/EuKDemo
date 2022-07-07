@@ -3,60 +3,129 @@
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
-  
+  :root {
+    --line-shift: 20%;
+  }
 
-@keyframes openline1 {
-  0% {
-    transform: translateY(0) rotate(0);
+	.st0 {
+    fill:#FFFFFF;
+    transform-origin: center center;
   }
-  50% {
-    transform: translateY(10%) rotate(0);
-  }
-  100% {
-    transform: translateY(10%) rotate(45deg);
-  }
-}
 
-@keyframes openline2 {
-  0% {
-    opacity: 1;
+  #line-1 {
+    transform: translateY(-20%);
   }
-  50% {
+
+  #line-3 {
+    transform: translateY(20%);
+  }
+
+  @keyframes openline1 {
+    0% {
+      transform: translateY(calc(var(--line-shift) * -1)) rotate(0);
+    }
+    50% {
+      transform: translateY(0) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(45deg);
+    }
+  }
+
+  @keyframes openline2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes openline3 {
+    0% {
+      transform: translateY(var(--line-shift)) rotate(0);
+    }
+    50% {
+      transform: translateY(0%) rotate(0);
+    }
+    100% {
+      transform: translateY(0%) rotate(-45deg);
+    }
+  }
+
+  @keyframes closeline1 {
+    100% {
+      transform: translateY(calc(var(--line-shift) * -1)) rotate(0);
+    }
+    50% {
+      transform: translateY(0) rotate(0);
+    }
+    0% {
+      transform: translateY(0) rotate(45deg);
+    }
+  }
+
+  @keyframes closeline2 {
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes closeline3 {
+    100% {
+      transform: translateY(var(--line-shift)) rotate(0);
+    }
+    50% {
+      transform: translateY(0%) rotate(0);
+    }
+    0% {
+      transform: translateY(0%) rotate(-45deg);
+    }
+  }
+
+  .line-1--open {
+    animation: openline1 0.3s linear forwards;
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .line-2--open {
+    animation: openline2 0.3s linear forwards;
     opacity: 0;
   }
-}
 
-@keyframes openline3 {
-  0% {
-    transform: translateY(0) rotate(0);
+  .line-3--open {
+    animation: openline3 0.3s linear forwards;
+    transform: translateY(0) rotate(-45deg);
   }
-  50% {
-    transform: translateY(-10%) rotate(0);
+
+  .line-1--close {
+    animation: closeline1 0.3s linear forwards;
+    transform: translateY(-20%);
   }
-  100% {
-    transform: translateY(-10%) rotate(-45deg);
+
+  .line-2--close {
+    animation: closeline2 0.3s linear forwards;
+    opacity: 0;
   }
-}
 
-.line-1--open {
-  transform-origin: center center;
-  animation: openline1 2s linear;
-}
+  .line-3--close {
+    animation: closeline3 0.3s linear forwards;
+    transform: translateY(20%);
+  }
 
-.line-2--open {
-  transform-origin: center center;
-  animation: openline2 2s linear;
-}
-
-.line-3--open {
-  transform-origin: center center;
-  animation: openline3 2s linear;
-}
 </style>
 <g>
-	<path id="line-1" class="st0" d="M42.8,16.6h-38v-2.3h38V16.6z"/>
+	<path id="line-1" class="st0" d="M42.8,25.1h-38v-2.3h38V25.1z"/>
 	<path id="line-2" class="st0" d="M42.8,25.1h-38v-2.3h38V25.1z"/>
-	<path id="line-3" class="st0" d="M42.8,33.7h-38v-2.3h38V33.7z"/>
+	<path id="line-3" class="st0" d="M42.8,25.1h-38v-2.3h38V25.1z"/>
 </g>
 </svg>
