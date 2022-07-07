@@ -1,17 +1,20 @@
 {
+  "name": "euk-demo",
+  "description": "Demo sito eurokosher per dimostrazioni",
+  "version": "1.0.0",
+  "repository": "https://github.com/simotasca/EuKDemo.git",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
   "scripts": {
     "start": "node app.js",
     "sass": "sass sass:css -w --style compressed"
   },
-  "dependencies": {
-    "express": "^4.13.4"
-  },
-  "name": "euk-demo",
-  "version": "1.0.0",
-  "description": "demo sito eurokosher per dimostrazioni",
-  "main": "app.js",
-  "repository": "https://github.com/simotasca/EuKDemo.git",
-  "author": "simotasca <simo.tasca@gmail.com>",
+  "author": "Simone Tasca <simo.tasca@gmail.com>",
+  "contributors": [
+    "Emanuele Hazan <emanuele.hazan@gmail.com"
+  ],
   "engines": {
     "node": "14.x"
   }
