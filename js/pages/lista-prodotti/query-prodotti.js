@@ -98,7 +98,7 @@ function buildQueryString() {
 
 /**
  * Una fetch che converte i risultati in oggetti Prodotto.
- * @param {string} url the url to fetch.
+ * @param {string} url url della fetch.
  * @returns Promise<Array<Prodotto>>
  */
 async function fetchProdotti(url) {
