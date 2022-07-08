@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it" prefix="og: https://ogp.me/ns#">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Eurokosher</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eurokosher">
+  <meta property="og:url" content="http://www.eurokosher.it/">
+  <meta property="og:description" content="Garantiamo la qualità della certificazione kosher, in Italia e in Europa.">
+  <meta property="og:image" content="/resources/img/opengraph.png">
+  <!-- FONTS -->
+  <link rel="preload" href="/resources/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/resources/fonts/poppins-v20-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/resources/fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/pages/index.css">
   <link rel="stylesheet" href="/css/common/contatti.css">
+  <!-- JS -->
   <script src="/libs/gsap/gsap.min.js"></script>
   <script src="/libs/gsap/ScrollTrigger.min.js"></script>
   <script type="importmap">
@@ -25,6 +36,7 @@
 </head>
 
 <body>
+
   <main-menu dark></main-menu>
 
   <main class="h-100 bg-dark">
@@ -37,53 +49,62 @@
 
         <div id="main-ellipse-container">
           <div id="main-ellipse">
+            <div id="ellipse-fallback" class="ellipse-bg"></div>
             <div data-anim=0 id="ellipse-0" class="ellipse-bg"></div>
             <div data-anim=1 id="ellipse-1" class="ellipse-bg"></div>
           </div>
         </div>
 
 
-        <img data-anim=0 id="firma-0" class="firma-rav" src="/resources/img/index/firma.svg" alt="">
-        <div id="product-group-0" class="product-img-container">
-          <img data-anim=0 id="side-0" class="product-img-side" src="/resources/img/index/bicchiere.png" alt="">
-          <img data-anim=0 id="product-0" class="product-img" src="/resources/img/index/bartenura.png" alt="">
-        </div>
-        <div data-anim=0 id="hero-0" class="hero">
+        <img data-anim=0 id="firma-0" class="firma-rav ready" src="/resources/img/index/firma.svg" alt="">
+        <!-- <div id="product-group-0" class="product-img-container"> -->
+        <img data-anim=0 id="side-0" class="product-img-side" src="/resources/img/index/bicchiere.png" alt="">
+        <img data-anim=0 id="product-0" class="product-img" src="/resources/img/index/bartenura.png" alt="">
+        <!-- </div> -->
+        <div data-anim=0 id="hero-0" class="hero ready">
           <h1 class="mb-1 light">
             Garantiamo la qualità della certificazione Kosher, in Italia e in Europa.
           </h1>
 
           <div class="buttons">
-            <button class="new-btn new-btn-red">Come certificarsi</button>
-            <button class="new-btn new-btn-outline-white">Cos'è il kosher</button>
+            <button class="new-btn new-btn-red">
+              <a href="/come-certificarsi.html">Come certificarsi</a>
+            </button>
+            <button class="new-btn new-btn-outline-white">
+              <a href="/come-certificarsi.html">Cos'è il kosher</a>
+            </button>
           </div>
         </div>
 
         <img data-anim=1 id="firma-1" class="firma-rav" src="/resources/img/index/logo-ebraico.svg" alt="">
-        <div id="product-group-1" class="product-img-container">
-          <img data-anim=1 id="side-1" class="product-img-side" src="/resources/img/index/pomodoro.png" alt="">
-          <img data-anim=1 id="product-1" class="product-img" src="/resources/img/index/belfiore.png" alt="">
-        </div>
+        <!-- <div id="product-group-1" class="product-img-container"> -->
+        <img data-anim=1 id="side-1" class="product-img-side" src="/resources/img/index/pomodoro.png" alt="">
+        <img data-anim=1 id="product-1" class="product-img" src="/resources/img/index/belfiore.png" alt="">
+        <!-- </div> -->
         <div data-anim=1 id="hero-1" class="hero">
           <h1 class="mb-1">
             Cerchi alimenti Kosher? Scoprili nella nostra <span class="red">lista prodotti</span>
           </h1>
           <div class="buttons">
-            <button class="new-btn new-btn-red">Lista Prodotti</button>
+            <button class="new-btn new-btn-red">
+              <a href="/lista-prodotti.html">
+                Lista Prodotti
+              </a>
+            </button>
           </div>
         </div>
 
         <div id="main-contatti" class="contatti-0">
           <div class="social-icons">
-            <a href="/">
+            <a href="https://www.facebook.com/Eurokosher-100197019424819" target="_blank">
               <img class="mb-05" src="/resources/img/social/fb.svg" alt="">
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/eurokosher/" target="_blank">
               <img src="/resources/img/social/ig.svg" alt="">
             </a>
           </div>
 
-          <h4 id="btn-contatti" onclick="nextProduct()">CONTATTACI</h4>
+          <h4 id="btn-contatti" onclick="nextProduct()">></h4>
         </div>
 
       </div>
@@ -229,7 +250,7 @@
         <div id="map-st-inner">
 
           <div class="max-width-container">
-            <h1 ID="map-title" class="light ml-1 max-width-container">ENTRA NEL MONDO DI EUROKOSHER</h1>
+            <h1 ID="map-title" class="light ml-1 max-width-container">ENTRA NEL MONDO <br> DI EUROKOSHER</h1>
           </div>
 
           <div id="fade-in">
@@ -315,8 +336,6 @@
     <!-- map-3d -->
 
   </div>
-
-
 
   <section id="direttivo" class="bg-light">
 
@@ -439,10 +458,10 @@
         <h3 class="fw-300">Seguici</h3>
         <img id="arrow-contatti" src="/resources/img/curved-arrow.svg" alt="">
         <div class="social-icons">
-          <a href="/">
-            <img src="/resources/img/social/fb.svg" alt="">
+          <a href="https://www.facebook.com/Eurokosher-100197019424819" target="_blank">
+            <img src="/resources/img/social/fb.svg" alt="" class="mb-05">
           </a>
-          <a href="/">
+          <a href="https://www.instagram.com/eurokosher/" target="_blank">
             <img src="/resources/img/social/ig.svg" alt="">
           </a>
         </div>
@@ -471,11 +490,9 @@
         <h3 class="fw-300">Menu</h3>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/">Cos'è il kosher</a></li>
-          <li><a href="/">Come certificarsi</a></li>
-          <li><a href="/">Lista Prodotti</a></li>
-          <li><a href="/">Editoriale</a></li>
-          <li><a href="/">Area Riservata</a></li>
+          <li><a href="/lista-prodotti.html">Lista Prodotti</a></li>
+          <li><a href="/come-certificarsi.html">Come certificarsi</a></li>
+          <li class="blue"><a href="/">Area Riservata</a></li>
         </ul>
       </div>
     </div>
@@ -483,15 +500,14 @@
 
 </body>
 
-<!-- Per usare three.js come module -->
+<!-- Per usare three.js come module in firefox -->
 <script async src="https://unpkg.com/es-module-shims@0.13.1/dist/es-module-shims.js"></script>
+
 <script src="/js/pages/index/three/rendering.js" type="module"></script>
 <!-- <script src="/js/pages/index/index.js" type="module"></script> -->
 <script src="/js/pages/index/panels.js" type="module"></script>
 <script src="/js/pages/index/main-animation.js"></script>
-
 <script src="/js/components/BaseComponent.js"></script>
 <script src="/js/components/main-menu.js"></script>
-
 
 </html>

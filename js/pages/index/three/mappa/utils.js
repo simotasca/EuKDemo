@@ -1,5 +1,7 @@
 import { Vector3 } from "three"
 
+export const DRACO_PATH = '/libs/draco/'
+
 export function toScreenPosition(canvas, obj, camera) {
   var vector = new Vector3()
 

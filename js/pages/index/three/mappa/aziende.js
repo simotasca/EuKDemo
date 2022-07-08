@@ -67,7 +67,6 @@ function prepareData(data) {
       }
     }
   })
-  console.log(data.aziende, result)
   return result
 }
 

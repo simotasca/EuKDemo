@@ -44,16 +44,16 @@ class MainMenu extends BaseComponent {
       <header id="main-menu" class="${this.hasAttribute('dark') && 'main-menu--dark'}">
         <div id="background"></div>
         <div class="navbar max-width-container">
-          <img src="/resources/img/logo.svg" alt="" ${this.hasAttribute('noLogo') && 'style="visibility: hidden;"'}>
+        <a href="/" ${this.hasAttribute('noLogo') && 'style="visibility: hidden;"'}>
+          <img src="/resources/img/logo.svg" alt="">
+        </a>
           <nav class="only-on-desktop">
-            <a href="/">Homepage</a>
+            <a href="/">Home</a>
             <a href="/lista-prodotti.html">Lista prodotti</a>
             <a href="/come-certificarsi.html">Come Certificarsi</a>
-            <a href="/">Dizionario kosher</a>
             <a href="/blog.html" id="menu-editoriale">Area riservata</a>
             <div id="menu-underline"></div>
           </nav>
-          <!--<img id="menu-hamb" class="hide-on-desktop" src="/resources/img/icons/hamburger.svg" alt="">-->
           <div id="menu-hamb" class="hide-on-desktop pointer">
             <object type="image/svg+xml" data="/resources/img/icons/hamburger.svg"></object>
           </div>
@@ -62,18 +62,17 @@ class MainMenu extends BaseComponent {
       </header>
       <div id="mobile-panel" class="${this.hasAttribute('dark') ? 'bg-dark light' : 'bg-light dark'}">
         <ul>
-          <li class="h4"><a href="/">Homepage</a></li>
+          <li class="h4"><a href="/">Home</a></li>
           <li class="h4"><a href="/lista-prodotti.html">Lista prodotti</a></li>
           <li class="h4"><a href="/come-certificarsi.html">Come Certificarsi</a></li>
-          <li class="h4"><a href="/">Dizionario kosher</a></li>
           <li class="h4"><a href="/blog.html" id="menu-editoriale">Area riservata</a></li>
           <li class="social-icons">
             <div class="social-icons">
-              <a href="/">
-                <img class="mb-05" src="/resources/img/social/fb.svg" alt="">
+              <a href="https://www.facebook.com/Eurokosher-100197019424819" target="_blank">
+                <img class="mb-05" src="/resources/img/social/fb.svg" alt="ig">
               </a>
-              <a href="/">
-                <img src="/resources/img/social/ig.svg" alt="">
+              <a href="https://www.instagram.com/eurokosher/" target="_blank">
+                <img src="/resources/img/social/ig.svg" alt="fb">
               </a>
             </div>
           </li>
@@ -92,6 +91,28 @@ class MainMenu extends BaseComponent {
     window.addEventListener("scroll", this.#onWindowScroll.bind(this))
     this.qSelect('#menu-hamb').addEventListener('click', this.hambClick.bind(this))
 
+    window.addEventListener('resize', (e) => {
+      if (this.isOpen) {
+        this.close()
+      }
+    })
+  }
+
+  close() {
+    let svgDoc = this.qSelect("#menu-hamb > object").contentDocument
+    let line1 = svgDoc.getElementById('line-1')
+    let line2 = svgDoc.getElementById('line-2')
+    let line3 = svgDoc.getElementById('line-3')
+    line1.classList.remove('line-1--open')
+    line2.classList.remove('line-2--open')
+    line3.classList.remove('line-3--open')
+    line1.classList.add('line-1--close')
+    line2.classList.add('line-2--close')
+    line3.classList.add('line-3--close')
+    this.qSelect('#mobile-panel').classList.remove("open")
+    this.qSelect('#mobile-panel').classList.add("close")
+    document.body.style.overflowY = null
+    this.isOpen = false
   }
 
   hambClick() {
@@ -111,16 +132,7 @@ class MainMenu extends BaseComponent {
       document.body.style.overflowY = "hidden"
       this.isOpen = true
     } else {
-      line1.classList.remove('line-1--open')
-      line2.classList.remove('line-2--open')
-      line3.classList.remove('line-3--open')
-      line1.classList.add('line-1--close')
-      line2.classList.add('line-2--close')
-      line3.classList.add('line-3--close')
-      this.qSelect('#mobile-panel').classList.remove("open")
-      this.qSelect('#mobile-panel').classList.add("close")
-      document.body.style.overflowY = null
-      this.isOpen = false
+      this.close()
     }
   }
 }
