@@ -50,7 +50,7 @@ class MainMenu extends BaseComponent {
             <a href="/lista-prodotti.html">Lista prodotti</a>
             <a href="/come-certificarsi.html">Come Certificarsi</a>
             <a href="/">Dizionario kosher</a>
-            <a href="/blog.html" id="menu-editoriale">Editoriale</a>
+            <a href="/blog.html" id="menu-editoriale">Area riservata</a>
             <div id="menu-underline"></div>
           </nav>
           <!--<img id="menu-hamb" class="hide-on-desktop" src="/resources/img/icons/hamburger.svg" alt="">-->
@@ -66,7 +66,7 @@ class MainMenu extends BaseComponent {
           <li class="h4"><a href="/lista-prodotti.html">Lista prodotti</a></li>
           <li class="h4"><a href="/come-certificarsi.html">Come Certificarsi</a></li>
           <li class="h4"><a href="/">Dizionario kosher</a></li>
-          <li class="h4"><a href="/blog.html" id="menu-editoriale">Editoriale</a></li>
+          <li class="h4"><a href="/blog.html" id="menu-editoriale">Area riservata</a></li>
           <li class="social-icons">
             <div class="social-icons">
               <a href="/">
