@@ -19,8 +19,10 @@ function clear() {
 function makeIn(prod) {
   document.querySelectorAll(`[data-anim='${prod}']`).forEach(elem => {
     elem.classList.remove('d-none')
-    elem.classList.remove('animation-out')
-    elem.classList.add('animation-in')
+    if(elem.classList.contains('animation-out')) {
+      elem.classList.remove('animation-out')
+      elem.classList.add('animation-in')
+    }
   })
 }
 function makeOut(prod) {
@@ -36,8 +38,10 @@ function initElements() {
   elementsPerProduct = elems.length / totProducts
 
   elems.forEach(elem => {
-    elem.classList.add('d-none')
-    elem.classList.add('animation-out')
+    if(!elem.classList.contains("ready")) {
+      elem.classList.add('d-none')
+      elem.classList.add('animation-out')
+    }
     elem.addEventListener('animationend', () => {
       if (elem.classList.contains('animation-out')) {
         elem.classList.add('d-none')
@@ -46,11 +50,9 @@ function initElements() {
           animating = false
           !timout && settalo()
       }
-
     })
+    elem.classList.add('ready')
   })
-
-  makeIn(0)
 }
 
 function nextProduct() {
@@ -76,9 +78,15 @@ function nextProduct() {
   makeIn(currentProduct)
 }
 
-
 settalo()
 initElements()
+makeIn(0)
+
+// window.addEventListener('load', () => {
+
+  
+// })
+
 
 // function nextProduct() {
 //   if (animating) return

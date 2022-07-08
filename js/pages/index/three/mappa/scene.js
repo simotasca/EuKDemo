@@ -5,8 +5,7 @@ import { GLTFLoader } from 'GLTFLoader'
 import worldMap, { worldCenter } from './latiLongi.js'
 import addAziende from "./aziende.js";
 import * as auraShaders from './auraShaders.js'
-
-const dracoUrl = 'https://www.gstatic.com/draco/v1/decoders/'
+import { DRACO_PATH } from './utils.js';
 
 const objModelPath = '../resources/obj/worldDraco.gltf'
 const objTexturePath = '../resources/obj/model.jpeg'
@@ -28,7 +27,7 @@ function addEarthModel() {
   const material = new THREE.MeshPhongMaterial({ map: texture, flatShading: false })
 
   new GLTFLoader()
-    .setDRACOLoader(new DRACOLoader().setDecoderPath(dracoUrl))
+    .setDRACOLoader(new DRACOLoader().setDecoderPath(DRACO_PATH))
     .load(objModelPath, gltf => {
       gltf.scene.traverse(child => {
         if (child instanceof THREE.Mesh) {

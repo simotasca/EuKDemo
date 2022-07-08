@@ -3,6 +3,10 @@ resources/img/texture/bartenura/cubemap2
 resources/img/texture/bartenura/cubemap/128
 resources/img/texture/bartenura/cubemap/256
 resources/img/texture/bartenura/cubemap/512
+<<<<<<< HEAD
 resources/img/texture/bartenura/cubemap/1024
 css
 .gitignore
+=======
+resources/img/texture/bartenura/cubemap/1024
+>>>>>>> 98cfef90efa9d38f07645ccec592d7dd061c48c0

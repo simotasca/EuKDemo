@@ -25,7 +25,6 @@
   top: 0;
 }
 
-
 #map-title {
   text-align: center;
   position: absolute;
@@ -33,8 +32,9 @@
   left: 50%;
   transform: translateX(-50%);
   margin-top: 15rem;
-  font-size: $step-5 * $scale * $scale * $scale;
-  line-height: $step-5 * $scale * $scale;
+  width: 100%;
+  font-size: min($step-5 * $scale * $scale * $scale, 9vw);
+  line-height: min($step-5 * $scale * $scale, 8vw);
   color: #6e6e6e;
 }
 

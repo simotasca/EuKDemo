@@ -1,3 +1,10 @@
+:root {
+  --nav-space: 5.6rem;
+  @include not-device(desktop) {
+    --nav-space: 6.1rem;
+  }
+}
+
 .max-height-container {
   max-height: 1200px;
 }
@@ -8,7 +15,7 @@
 }
 
 .d-none {
-  display: none;
+  display: none !important
 }
 
 main {
@@ -25,9 +32,10 @@ main {
 
 #main-ellipse-container {
   position: absolute;
+  top: var(--nav-space);
   left: 50%;
   width: 100vw;
-  height: calc(100% - 5.5rem);
+  height: calc(100% - var(--nav-space));
   overflow: hidden;
   transform: translateX(-50%);
 }
@@ -89,19 +97,26 @@ main {
   }
 }
 
-.product-img-container {
-  width: 100%;
-  height: 200%;
-  position: absolute;
-  overflow: hidden;
-  z-index: 99;
+#ellipse-fallback {
+  background: radial-gradient(circle at 50% 30%, #315cca 0%, #2b478f 40%, #272727 80%);
+  @include device(mobile) {
+    background: #2f72bd;
+  }
 }
+
+// .product-img-container {
+//   width: 100%;
+//   height: 200%;
+//   position: absolute;
+//   overflow: hidden;
+//   z-index: 99;
+// }
 
 .product-img,
 .product-img-side {
   position: absolute;
   left: 50%;
-  height: calc(100% - 5.5rem);
+  height: calc(200% - 5.5rem);
   transform: translateX(-50%);
 }
 
@@ -233,6 +248,13 @@ main {
 // ANIMATION ===============================================
 // ANIMATION ===============================================
 // ANIMATION ===============================================
+
+[data-anim] {
+  display: none;
+  &.ready {
+    display: block;
+  }
+}
 
 $power2-easeIn: cubic-bezier(0.6, 0, 0.8, 0.3);
 $power2-easeOut: cubic-bezier(0.3, 0.8, 0.6, 1);
